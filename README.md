@@ -74,8 +74,7 @@ As a seasoned engineer and developer, my vision is to empower businesses through
 ## 🚀 Projects
 
 - 🏦 **[Bankinter VISA PDF to CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)**: A Python tool to process VISA statements.  
-- 📊 **[Personal Finance Dashboard](https://github.com/serbenda/personal-finance-dashboard)**: Power BI dashboard for expense tracking.  
-- 🧠 **[Learn to Code with AI](https://github.com/serbenda/ai-code-learner)**: A project to teach programming using AI.
+- 🛡️ **[FrameBlock](https://github.com/serbenda/frameblock)**: Blockchain-based framework for building secure and scalable Web3 applications.
 
 ---
 
