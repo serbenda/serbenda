@@ -1,91 +1,100 @@
-# 👋 Hi, I'm Serbenda! 🚀
+<div align="center">
 
-![Header](https://img.shields.io/badge/-Welcome%20to%20my%20GitHub-blueviolet?style=for-the-badge)
+# Hi, I'm Santiago 👋
 
-## 🌟 About Me
+**Automation Platform Engineer** · Madrid, Spain 🇪🇸
 
-👋 Hi there! I'm **Sergio Santiago Bendaña Quesada**, an experienced **Automation Platform Engineer** and **Full-Stack Developer** with over 15 years of expertise in **infrastructure automation**, **systems engineering**, and **software development**. My diverse skill set bridges the gap between engineering and programming, allowing me to design, develop, and deploy robust solutions that drive efficiency and scalability.
+I automate infrastructure, review the automation other teams build, and make sure it reaches production safely.
 
-💻 My journey has been marked by a deep passion for solving technical challenges through code and automation. From scripting complex workflows with **Shell Script** and **Python** to developing dynamic applications using **JavaScript**, **Node.js**, and **React**, I thrive in creating systems that are not only functional but also maintainable and secure.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/serbenda)
+[![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
+
+</div>
 
 ---
 
-### 🔧 Technical Toolkit
+## 🧭 About me
 
-#### **Programming**
-![Python](https://img.shields.io/badge/-Python-333?style=flat&logo=python&logoColor=yellow)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Shell Script](https://img.shields.io/badge/-Shell_Script-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
-![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
+I'm **Sergio Santiago Bendaña Quesada**, an engineer with 15+ years in **infrastructure automation**, **systems engineering** and **software development**.
 
-#### **Infrastructure Automation**
-![Terraform](https://img.shields.io/badge/-Terraform-623CE4?style=flat&logo=terraform&logoColor=white)
+These days most of my work sits between development and production:
+
+- ⚙️ **Rundeck automation** — reviewing jobs built by technical teams (Shell Script and Python plugins) together with the code that backs them in GitHub.
+- 🔍 **Code review & release gatekeeping** — checking that each job is correct, safe and maintainable before promoting it to production.
+- 🗂️ **GitHub as the source of truth** — GitHub Projects to track every request from delivery to production, and GitHub Actions to automate the boring parts.
+
+Outside work I build small things for fun: browser games for my kids, Web3 experiments and a homelab I keep tinkering with.
+
+---
+
+## 🛠️ Toolkit
+
+**Automation & CI/CD**<br>
+![Rundeck](https://img.shields.io/badge/-Rundeck-F73F39?style=flat)
 ![Ansible](https://img.shields.io/badge/-Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
+![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
 ![Packer](https://img.shields.io/badge/-Packer-02A8EF?style=flat&logo=packer&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/-Jenkins-D24939?style=flat&logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 
-#### **Cloud Platforms**
-![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat&logo=microsoft-azure&logoColor=white)
-![OpenStack](https://img.shields.io/badge/-OpenStack-ED1944?style=flat&logo=openstack&logoColor=white)
-
-#### **Containerization and Orchestration**
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
-
-#### **Big Data**
-![Cloudera](https://img.shields.io/badge/-Cloudera-F9470B?style=flat&logo=cloudera&logoColor=white)
-![Hortonworks](https://img.shields.io/badge/-Hortonworks-FF6600?style=flat)
-
-#### **Web3 and Blockchain**
-![Blockchain](https://img.shields.io/badge/-Blockchain-121D33?style=flat&logo=blockchain-dot-com&logoColor=white)
+**Languages**<br>
+![Shell Script](https://img.shields.io/badge/-Shell_Script-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
 ![Solidity](https://img.shields.io/badge/-Solidity-363636?style=flat&logo=solidity&logoColor=white)
 
----
+**Cloud & platforms**<br>
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
+![OpenStack](https://img.shields.io/badge/-OpenStack-ED1944?style=flat&logo=openstack&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![Cloudera](https://img.shields.io/badge/-Cloudera-F96702?style=flat&logo=cloudera&logoColor=white)
 
-## ✅ Core Values
-
-- 🤝 **Collaboration**: Building synergy in cross-functional teams to achieve outstanding results.
-- 📚 **Continuous Learning**: Staying updated with evolving technologies to bring cutting-edge solutions.
-- ⚙️ **Adaptability**: Seamlessly integrating traditional engineering practices with modern development methodologies.
-
----
-
-## 🏆 Key Achievements
-
-✅ Automated infrastructure provisioning with **Terraform Enterprise**, reducing deployment times significantly.  
-✅ Developed custom scripts in **Python** and **Shell Script** to automate repetitive workflows, saving hours of manual effort.  
-✅ Built RESTful APIs with **Node.js** and integrated them with **React**-based frontends for seamless user experiences.  
-✅ Migrated **VMware servers to OpenStack**, optimizing resource utilization and reducing costs.  
-✅ Designed and deployed secure **CI/CD pipelines** to enhance developer productivity.  
-✅ Implemented **Big Data solutions** with Cloudera, enabling real-time analytics for large datasets.  
-
----
-
-## 🌐 My Vision
-
-As a seasoned engineer and developer, my vision is to empower businesses through innovation in **automation**, **scalable infrastructures**, and **full-stack development**. Whether it's coding efficient systems, building seamless applications, or pioneering solutions in **Web3 technologies**, I aim to deliver meaningful and impactful results.
+**Ways of working**<br>
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub Projects](https://img.shields.io/badge/-GitHub_Projects-181717?style=flat&logo=github&logoColor=white)
+![Code Review](https://img.shields.io/badge/-Code_Review-6E40C9?style=flat)
 
 ---
 
 ## 🚀 Projects
 
-- 🏦 **[Bankinter VISA PDF to CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)**: A Python tool to process VISA statements.  
-- 🛡️ **[FrameBlock](https://github.com/serbenda/frameblock)**: Blockchain-based framework for building secure and scalable Web3 applications.
+| Project | What it is |
+|---|---|
+| 🏃 **[School Rush](https://github.com/serbenda/school-rush)** · [▶ play](https://serbenda.github.io/school-rush/) | A cartoon race to get the kids to school before the 9:00 bell. Vanilla HTML5 Canvas + JavaScript, zero dependencies, mobile-friendly, deployed with GitHub Pages. |
+| 🛡️ **[FrameBlock](https://github.com/serbenda/frameblock)** | Blockchain-based framework for building secure, scalable Web3 applications. |
+| 🏦 **[Bankinter VISA PDF to CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)** | Python tool that turns Bankinter VISA statements into clean CSV files. |
 
 ---
 
-## 📈 Stats
+## 🏆 Highlights
 
-![Serbenda's GitHub stats](https://github-readme-stats.vercel.app/api?username=serbenda&show_icons=true&theme=radical)
+- Run the **review and promotion flow for Rundeck jobs**, with GitHub Projects as the single source of truth from delivery to production.
+- Automated infrastructure provisioning with **Terraform Enterprise**, cutting deployment times significantly.
+- Migrated **VMware workloads to OpenStack**, improving resource usage and reducing costs.
+- Designed secure **CI/CD pipelines** that made teams faster without cutting corners.
+- Built **Python** and **Shell** tooling that removed hours of repetitive manual work.
+- Delivered **Big Data** platforms on Cloudera for real-time analytics.
 
 ---
 
-## 🌐 Connect with Me
+## 🌱 Right now
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)  
-- 🐦 [Twitter](https://x.com/serbenda)
-- 🛰️ [Warpcast](https://warpcast.com/serbenda)
+- 🔍 Making automation reviews faster and more consistent.
+- 🎮 Building small browser games to play with my daughters.
+- 🖧 Growing a small homelab at home.
+
+---
+
+<div align="center">
+
+![Serbenda's GitHub stats](https://github-readme-stats.vercel.app/api?username=serbenda&show_icons=true&theme=radical&hide_border=true)
+
+</div>
