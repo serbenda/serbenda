@@ -125,9 +125,11 @@ Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready f
 <td width="55%" valign="top">
 
 <!-- ACTIVITY:START -->
-- **[school-rush](https://github.com/serbenda/school-rush)** · [▶ demo](https://serbenda.github.io/school-rush/) — A cartoon race to get the kids to school before the 9:00 bell.
-- **[frameblock](https://github.com/serbenda/frameblock)** — Blockchain-based framework for building secure and scalable Web3 applications.
-- **[bankinter-visa-pdf-to-csv](https://github.com/serbenda/bankinter-visa-pdf-to-csv)** — Python tool to process Bankinter VISA statements into CSV.
+- **[hemiciclo-fighters](https://github.com/serbenda/hemiciclo-fighters)** · `HTML` — Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias. <sub>(updated today)</sub>
+- **[school-rush](https://github.com/serbenda/school-rush)** · `HTML` — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated today)</sub>
+- **[chapas](https://github.com/serbenda/chapas)** · `JavaScript` · ⭐ 1 — Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas. <sub>(updated today)</sub>
+- **[skills-introduction-to-github](https://github.com/serbenda/skills-introduction-to-github)** — My clone repository <sub>(updated 10 months ago)</sub>
+- **[testgit](https://github.com/serbenda/testgit)** — No description yet. <sub>(updated 1 year ago)</sub>
 <!-- ACTIVITY:END -->
 
 <sub>🤖 Refreshed every day by a GitHub Action in this repo, because I automate everything.</sub>
