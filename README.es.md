@@ -128,8 +128,8 @@ Extrae los movimientos de los extractos PDF de la VISA de Bankinter a CSV limpio
 - **[hemiciclo-fighters](https://github.com/serbenda/hemiciclo-fighters)** · `HTML` — Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias. <sub>(actualizado hoy)</sub>
 - **[school-rush](https://github.com/serbenda/school-rush)** · `HTML` — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(actualizado hoy)</sub>
 - **[chapas](https://github.com/serbenda/chapas)** · `JavaScript` · ⭐ 1 — Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas. <sub>(actualizado hoy)</sub>
-- **[skills-introduction-to-github](https://github.com/serbenda/skills-introduction-to-github)** — My clone repository <sub>(actualizado hace 10 meses)</sub>
-- **[testgit](https://github.com/serbenda/testgit)** — Sin descripción todavía. <sub>(actualizado hace 1 año)</sub>
+- **[bankinter-visa-pdf-to-csv](https://github.com/serbenda/bankinter-visa-pdf-to-csv)** · `Python` — A Python tool designed to extract transaction data from Bankinter VISA card statements in PDF format and convert it into a structured CSV file for easy analysis. <sub>(actualizado hace 1 año)</sub>
+- **[frameblock](https://github.com/serbenda/frameblock)** · `JavaScript` · ⭐ 2 — This repository is for academic purposes and belongs to Roberto Gonzalez Rey and Sergio Santiago Bendaña Quesada. It is part of a final project for the Master of Blockchain program at the European University of Madrid (UEM). The code contained in this repository is not intended for commercial use and is solely for educational and research purposes. <sub>(actualizado hace 3 años)</sub>
 <!-- ACTIVITY:END -->
 
 <sub>🤖 Se actualiza cada día con una GitHub Action de este repo, porque lo automatizo todo.</sub>
