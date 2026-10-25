@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Santiago · Automation Platform Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#151a35"/>
+      <stop offset="1" stop-color="#22123a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36d399"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <clipPath id="card"><rect width="1200" height="320" rx="18"/></clipPath>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+      .line { opacity: 0; animation: in 0.45s ease-out forwards; }
+      .l1 { animation-delay: 0.3s; }  .l2 { animation-delay: 1.0s; }
+      .l3 { animation-delay: 1.8s; }  .l4 { animation-delay: 2.6s; }
+      .l5 { animation-delay: 3.4s; }  .l6 { animation-delay: 4.2s; }
+      .caret { animation: blink 1s steps(1) infinite; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: 1110px 52px; }
+      @keyframes in { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes pulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#grid)"/>
+    <rect width="1200" height="320" fill="url(#glow)"/>
+    <rect y="314" width="1200" height="6" fill="url(#accent)"/>
+  </g>
+
+  <!-- Left: identity -->
+  <g class="sans">
+    <text x="64" y="104" fill="#94a3b8" font-size="20" letter-spacing="4">HI, I'M</text>
+    <text x="62" y="164" fill="#f8fafc" font-size="60" font-weight="800">Santiago</text>
+    <text x="64" y="208" fill="url(#accent)" font-size="24" font-weight="700">Automation Platform Engineer</text>
+    <text x="64" y="246" fill="#cbd5e1" font-size="18">Rundeck · Shell · Python · IaC · Code review → production</text>
+    <text x="64" y="276" fill="#64748b" font-size="16">Madrid, Spain · 15+ years shipping automation</text>
+  </g>
+
+  <!-- Right: terminal -->
+  <g transform="translate(600 40)">
+    <rect width="540" height="240" rx="12" fill="#0a0e1a" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.08"/>
+    <rect width="540" height="34" rx="12" fill="#ffffff" fill-opacity="0.04"/>
+    <circle cx="22" cy="17" r="6" fill="#ff5f57"/>
+    <circle cx="42" cy="17" r="6" fill="#febc2e"/>
+    <circle cx="62" cy="17" r="6" fill="#28c840"/>
+    <text x="270" y="22" fill="#64748b" font-size="13" text-anchor="middle" class="mono">serbenda@prod-gate: ~</text>
+
+    <g class="mono" font-size="15">
+      <text x="22" y="66" class="line l1"><tspan fill="#36d399">$</tspan><tspan fill="#e2e8f0"> rundeck-review --job nightly-sync --strict</tspan></text>
+      <text x="22" y="94" class="line l2" fill="#94a3b8">  <tspan fill="#36d399">✔</tspan> schema  <tspan fill="#36d399">✔</tspan> no secrets  <tspan fill="#36d399">✔</tspan> idempotent  <tspan fill="#36d399">✔</tspan> timeouts</text>
+      <text x="22" y="122" class="line l3" fill="#94a3b8">  <tspan fill="#36d399">✔</tspan> shellcheck  <tspan fill="#36d399">✔</tspan> ruff  <tspan fill="#36d399">✔</tspan> rollback plan</text>
+      <text x="22" y="160" class="line l4"><tspan fill="#36d399">$</tspan><tspan fill="#e2e8f0"> promote --to production</tspan></text>
+      <text x="22" y="188" class="line l5" fill="#38bdf8">  ▸ approved · tracked in GitHub Projects · deployed</text>
+      <text x="22" y="220" class="line l6"><tspan fill="#36d399">$</tspan><tspan fill="#e2e8f0"> </tspan><tspan class="caret" fill="#e2e8f0">█</tspan></text>
+    </g>
+  </g>
+
+  <!-- status dot -->
+  <g class="pulse">
+    <circle cx="1110" cy="52" r="5" fill="#36d399"/>
+  </g>
+</svg>
