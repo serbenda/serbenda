@@ -24,6 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 READMES = [ROOT / "README.md", ROOT / "README.es.md"]
 STATS_SVG = ROOT / "assets" / "stats.svg"
 MAX_ITEMS = 5
+# Practice / throwaway repos that should not show up on the profile
+EXCLUDE = {"testgit", "skills-introduction-to-github"}
 
 LANG_COLORS = {
     "Python": "#3776ab", "JavaScript": "#f7df1e", "TypeScript": "#3178c6",
@@ -62,7 +64,8 @@ def fetch_repos(user: str) -> list[dict]:
 def visible(repos: list[dict], user: str) -> list[dict]:
     return [r for r in repos
             if not r.get("fork") and not r.get("private") and not r.get("archived")
-            and r["name"].lower() != user.lower()]
+            and r["name"].lower() != user.lower()
+            and r["name"].lower() not in EXCLUDE]
 
 
 def ago(iso: str, labels: dict, now: datetime) -> str:
