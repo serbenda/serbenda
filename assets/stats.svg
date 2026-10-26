@@ -10,6 +10,6 @@
 <text x="30" y="78" class="v">5</text><text x="30" y="100" class="m">public repos</text><text x="190" y="78" class="v">3</text><text x="190" y="100" class="m">stars</text><text x="330" y="78" class="v">3</text><text x="330" y="100" class="m">languages</text>
 <rect x="30" y="128" width="440" height="10" rx="5" fill="#1e293b"/>
 <clipPath id="bar"><rect x="30" y="128" width="440" height="10" rx="5"/></clipPath>
-<g clip-path="url(#bar)"><rect x="30.0" y="128" width="176.0" height="10" fill="#e34f26"/><rect x="206.0" y="128" width="176.0" height="10" fill="#f7df1e"/><rect x="382.0" y="128" width="88.0" height="10" fill="#3776ab"/></g>
-<circle cx="35" cy="162" r="5" fill="#e34f26"/><text x="46" y="166" class="t">HTML <tspan class="m">40%</tspan></text><circle cx="185" cy="162" r="5" fill="#f7df1e"/><text x="196" y="166" class="t">JavaScript <tspan class="m">40%</tspan></text><circle cx="335" cy="162" r="5" fill="#3776ab"/><text x="346" y="166" class="t">Python <tspan class="m">20%</tspan></text>
+<g clip-path="url(#bar)"><rect x="30.0" y="128" width="264.0" height="10" fill="#f7df1e"/><rect x="294.0" y="128" width="88.0" height="10" fill="#e34f26"/><rect x="382.0" y="128" width="88.0" height="10" fill="#3776ab"/></g>
+<circle cx="35" cy="162" r="5" fill="#f7df1e"/><text x="46" y="166" class="t">JavaScript <tspan class="m">60%</tspan></text><circle cx="185" cy="162" r="5" fill="#e34f26"/><text x="196" y="166" class="t">HTML <tspan class="m">20%</tspan></text><circle cx="335" cy="162" r="5" fill="#3776ab"/><text x="346" y="166" class="t">Python <tspan class="m">20%</tspan></text>
 </svg>
