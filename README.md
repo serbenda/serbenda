@@ -125,9 +125,9 @@ Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready f
 <td width="55%" valign="top">
 
 <!-- ACTIVITY:START -->
-- **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated today)</sub>
-- **[hemiciclo-fighters](https://github.com/serbenda/hemiciclo-fighters)** · `HTML` — Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias. <sub>(updated today)</sub>
-- **[chapas](https://github.com/serbenda/chapas)** · `JavaScript` · ⭐ 1 — Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas. <sub>(updated today)</sub>
+- **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` · ⭐ 1 — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated 1 day ago)</sub>
+- **[hemiciclo-fighters](https://github.com/serbenda/hemiciclo-fighters)** · `HTML` — Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias. <sub>(updated 1 day ago)</sub>
+- **[chapas](https://github.com/serbenda/chapas)** · `JavaScript` · ⭐ 1 — Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas. <sub>(updated 1 day ago)</sub>
 - **[bankinter-visa-pdf-to-csv](https://github.com/serbenda/bankinter-visa-pdf-to-csv)** · `Python` — A Python tool designed to extract transaction data from Bankinter VISA card statements in PDF format and convert it into a structured CSV file for easy analysis. <sub>(updated 1 year ago)</sub>
 - **[frameblock](https://github.com/serbenda/frameblock)** · `JavaScript` · ⭐ 2 — This repository is for academic purposes and belongs to Roberto Gonzalez Rey and Sergio Santiago Bendaña Quesada. It is part of a final project for the Master of Blockchain program at the European University of Madrid (UEM). The code contained in this repository is not intended for commercial use and is solely for educational and research purposes. <sub>(updated 3 years ago)</sub>
 <!-- ACTIVITY:END -->
