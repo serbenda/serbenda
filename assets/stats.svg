@@ -7,7 +7,7 @@
 </style>
 <rect width="500" height="220" rx="14" fill="#0f1426" stroke="#ffffff" stroke-opacity="0.08"/>
 <text x="30" y="36" class="h">PUBLIC WORK · AUTO-UPDATED</text>
-<text x="30" y="78" class="v">7</text><text x="30" y="100" class="m">public repos</text><text x="190" y="78" class="v">4</text><text x="190" y="100" class="m">stars</text><text x="330" y="78" class="v">3</text><text x="330" y="100" class="m">languages</text>
+<text x="30" y="78" class="v">7</text><text x="30" y="100" class="m">public repos</text><text x="190" y="78" class="v">5</text><text x="190" y="100" class="m">stars</text><text x="330" y="78" class="v">3</text><text x="330" y="100" class="m">languages</text>
 <rect x="30" y="128" width="440" height="10" rx="5" fill="#1e293b"/>
 <clipPath id="bar"><rect x="30" y="128" width="440" height="10" rx="5"/></clipPath>
 <g clip-path="url(#bar)"><rect x="30.0" y="128" width="251.4" height="10" fill="#f7df1e"/><rect x="281.4" y="128" width="125.7" height="10" fill="#e34f26"/><rect x="407.1" y="128" width="62.9" height="10" fill="#3776ab"/></g>
