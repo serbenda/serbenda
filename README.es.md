@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Santiago · Automation Platform Engineer" width="100%">
+<img src="assets/header.svg" alt="Bendi · Automation Platform Engineer" width="100%">
 
 **Convierto operaciones manuales en automatización revisada y fiable, y soy el último control antes de producción.**
 
@@ -16,7 +16,7 @@
 
 ## 🧭 Sobre mí
 
-Soy **Sergio Santiago Bendaña Quesada**, ingeniero con **más de 15 años** en automatización de infraestructura, ingeniería de sistemas y desarrollo de software.
+Soy **Sergio Santiago Bendaña Quesada**, *Bendi* para los amigos, ingeniero con **más de 15 años** en automatización de infraestructura, ingeniería de sistemas y desarrollo de software.
 
 Mi día a día está justo entre *"en mi máquina funciona"* y *"se ejecuta cada noche en producción"*:
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Santiago · Automation Platform Engineer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Bendi · Automation Platform Engineer">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
@@ -43,7 +43,7 @@
   <!-- Left: identity -->
   <g class="sans">
     <text x="64" y="104" fill="#94a3b8" font-size="20" letter-spacing="4">HI, I'M</text>
-    <text x="62" y="164" fill="#f8fafc" font-size="60" font-weight="800">Santiago</text>
+    <text x="62" y="164" fill="#f8fafc" font-size="60" font-weight="800">Bendi</text>
     <text x="64" y="208" fill="url(#accent)" font-size="24" font-weight="700">Automation Platform Engineer</text>
     <text x="64" y="246" fill="#cbd5e1" font-size="18">Rundeck · Shell · Python · IaC · Code review → production</text>
     <text x="64" y="276" fill="#64748b" font-size="16">Madrid, Spain · 15+ years shipping automation</text>

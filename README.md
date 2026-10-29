@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Santiago · Automation Platform Engineer" width="100%">
+<img src="assets/header.svg" alt="Bendi · Automation Platform Engineer" width="100%">
 
 **I turn manual operations into reviewed, reliable automation, and I'm the last check before it hits production.**
 
@@ -16,7 +16,7 @@
 
 ## 🧭 About me
 
-I'm **Sergio Santiago Bendaña Quesada**, an engineer with **15+ years** across infrastructure automation, systems engineering and software development.
+I'm **Sergio Santiago Bendaña Quesada**, *Bendi* for short, an engineer with **15+ years** across infrastructure automation, systems engineering and software development.
 
 My day-to-day sits right between *"it works on my machine"* and *"it runs every night in production"*:
 
