@@ -16,7 +16,7 @@
 
 ## 🧭 About me
 
-I'm **Sergio Bendaña**, *Bendi* to my friends, an engineer with **15+ years** across infrastructure automation, systems engineering and software development.
+I'm **Sergio Bendaña**, *Bendi* at work, an engineer with **15+ years** across infrastructure automation, systems engineering and software development.
 
 My day-to-day sits right between *"it works on my machine"* and *"it runs every night in production"*:
 

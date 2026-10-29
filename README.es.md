@@ -16,7 +16,7 @@
 
 ## 🧭 Sobre mí
 
-Soy **Sergio Bendaña**, *Bendi* para los amigos, ingeniero con **más de 15 años** en automatización de infraestructura, ingeniería de sistemas y desarrollo de software.
+Soy **Sergio Bendaña**, *Bendi* en el trabajo, ingeniero con **más de 15 años** en automatización de infraestructura, ingeniería de sistemas y desarrollo de software.
 
 Mi día a día está justo entre *"en mi máquina funciona"* y *"se ejecuta cada noche en producción"*:
 
