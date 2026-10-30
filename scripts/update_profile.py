@@ -110,8 +110,8 @@ def stats_svg(repos: list[dict]) -> str:
     total = sum(n for _, n in top) or 1
 
     def kpi(x: int, value: int, label: str, color: str) -> str:
-        return (f'<text x="{x}" y="86" class="b" fill="{color}">{value:03d}</text>'
-                f'<text x="{x}" y="108" class="s" fill="{P.GRAY}">{P.px(label)}</text>')
+        return (f'<text x="{x}" y="88" class="b" fill="{color}">{value}</text>'
+                f'<text x="{x}" y="110" class="s" fill="{P.GRAY}">{P.px(label)}</text>')
 
     # Language bar in 4px steps, each language with its own palette colour
     x, bar, legend = 28.0, [], []
@@ -120,15 +120,15 @@ def stats_svg(repos: list[dict]) -> str:
         bar.append(f'<rect x="{x:.0f}" y="132" width="{max(w, 4):.0f}" height="12" fill="{P.SERIES[i % 6]}"/>')
         x += w
         lx, ly = 28 + (i % 3) * 152, 172 + (i // 3) * 22
-        legend.append(f'<rect x="{lx}" y="{ly - 8}" width="8" height="8" fill="{P.SERIES[i % 6]}"/>'
+        legend.append(f'<rect x="{lx}" y="{ly - 9}" width="8" height="8" fill="{P.SERIES[i % 6]}"/>'
                       f'<text x="{lx + 14}" y="{ly}" class="s" fill="{P.CREAM}">{P.px(lang)} '
                       f'{round(100 * n / total)}%</text>')
 
-    body = (f'<text x="28" y="40" class="p" fill="{P.YELLOW}">GITHUB STATS</text>'
-            f'<text x="472" y="40" class="s" fill="{P.RED}" text-anchor="end">1UP</text>'
-            + kpi(28, len(repos), "REPOS", P.BLUE) + kpi(188, total_stars, "STARS", P.YELLOW)
-            + kpi(340, len(langs), "LANGS", P.GREEN)
-            + f'<rect x="28" y="132" width="444" height="12" fill="#1a1720"/>' + "".join(bar) + "".join(legend))
+    body = (f'<rect x="28" y="30" width="8" height="8" fill="{P.YELLOW}"/>'
+            f'<text x="44" y="39" class="p" fill="{P.CREAM}">GitHub</text>'
+            + kpi(28, len(repos), "public repos", P.BLUE) + kpi(188, total_stars, "stars", P.YELLOW)
+            + kpi(340, len(langs), "languages", P.GREEN)
+            + f'<rect x="28" y="132" width="444" height="12" fill="#141e3d"/>' + "".join(bar) + "".join(legend))
     return P.svg(500, 220, "GitHub stats", body)
 
 

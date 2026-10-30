@@ -179,10 +179,10 @@ def totals(entry: dict) -> tuple[int, int]:
 # ----------------------------------------------------------------------- card
 
 TEXT = {
-    "en": {"head": "VISITS", "repo": "GITHUB", "pages": "PAGES", "since": "SINCE",
-           "none": "INSERT COIN · NO DATA YET", "rank": ["1ST", "2ND", "3RD", "4TH", "5TH"]},
-    "es": {"head": "VISITAS", "repo": "GITHUB", "pages": "PAGES", "since": "DESDE",
-           "none": "INSERTA MONEDA · SIN DATOS", "rank": ["1º", "2º", "3º", "4º", "5º"]},
+    "en": {"head": "Visits", "repo": "views on GitHub", "pages": "game visits", "since": "since",
+           "none": "No data yet"},
+    "es": {"head": "Visitas", "repo": "vistas en GitHub", "pages": "visitas a los juegos", "since": "desde",
+           "none": "Todavía no hay datos"},
 }
 PROJECTS = ROOT / "docs" / "data" / "projects.json"
 
@@ -197,7 +197,7 @@ def titles() -> dict:
 
 
 def card(data: dict, lang: str) -> str:
-    """8-bit high-score card: GitHub views and Pages visits, top five projects."""
+    """Visits card: GitHub views and Pages visits, top five projects."""
     import pixel as P
     t, names = TEXT[lang], titles()
     rows = []
@@ -210,24 +210,25 @@ def card(data: dict, lang: str) -> str:
     pages_total = sum(r[2] for r in rows)
     days = sorted(d for e in data["repos"].values() for d in e.get("views", {}))
 
-    body = [f'<text x="28" y="40" class="p" fill="{P.YELLOW}">{P.px(t["head"])}</text>']
+    body = [f'<rect x="28" y="30" width="8" height="8" fill="{P.YELLOW}"/>'
+            f'<text x="44" y="39" class="p" fill="{P.CREAM}">{P.px(t["head"])}</text>']
     if days:
         body.append(f'<text x="472" y="40" class="s" fill="{P.GRAY}" text-anchor="end">'
                     f'{t["since"]} {days[0][8:10]}/{days[0][5:7]}/{days[0][:4]}</text>')
-    body.append(f'<text x="28" y="86" class="b" fill="{P.BLUE}">{min(repo_total, 999999):06d}</text>'
-                f'<text x="28" y="108" class="s" fill="{P.GRAY}">{t["repo"]}</text>'
-                f'<text x="260" y="86" class="b" fill="{P.GREEN}">{min(pages_total, 999999):06d}</text>'
-                f'<text x="260" y="108" class="s" fill="{P.GRAY}">{t["pages"]}</text>')
+    body.append(f'<text x="28" y="88" class="b" fill="{P.BLUE}">{repo_total:,}</text>'
+                f'<text x="28" y="110" class="s" fill="{P.GRAY}">{t["repo"]}</text>'
+                f'<text x="260" y="88" class="b" fill="{P.GREEN}">{pages_total:,}</text>'
+                f'<text x="260" y="110" class="s" fill="{P.GRAY}">{t["pages"]}</text>')
     peak = max((r[1] + r[2] for r in rows), default=1) or 1
     for i, (name, v, p) in enumerate(rows[:5]):
         y = 140 + i * 24
         wv = round(132 * v / peak / 4) * 4
         wp = round(132 * p / peak / 4) * 4
-        label = name if len(name) <= 20 else name[:19] + "."
+        label = name if len(name) <= 26 else name[:25] + "…"
         body.append(
-            f'<text x="28" y="{y + 9}" class="s" fill="{P.YELLOW}">{P.px(t["rank"][i])}</text>'
-            f'<text x="70" y="{y + 9}" class="s" fill="{P.CREAM}">{P.px(label)}</text>'
-            f'<rect x="268" y="{y}" width="132" height="10" fill="#1a1720"/>'
+            f'<text x="28" y="{y + 9}" class="s" fill="{P.YELLOW}">{i + 1}</text>'
+            f'<text x="50" y="{y + 9}" class="s" fill="{P.CREAM}">{P.px(label)}</text>'
+            f'<rect x="268" y="{y}" width="132" height="10" fill="#141e3d"/>'
             f'<rect x="268" y="{y}" width="{wv}" height="10" fill="{P.BLUE}"/>'
             f'<rect x="{268 + wv}" y="{y}" width="{wp}" height="10" fill="{P.GREEN}"/>'
             f'<text x="472" y="{y + 9}" class="s" fill="{P.CREAM}" text-anchor="end">{v + p}</text>')

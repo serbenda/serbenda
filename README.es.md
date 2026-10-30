@@ -2,7 +2,7 @@
 
 <a href="https://serbenda.github.io/serbenda/"><img src="assets/header.png" alt="Bendi · Player 1 · Automation Platform Engineer" width="100%"></a>
 
-**20 años domando servidores. Ahora hago juegos de 8 bits con mis hijas.**
+**Llevo 20 años automatizando infraestructura. En casa hago juegos de 8 bits con mis hijas.**
 
 [![Mi web](https://img.shields.io/badge/Mi_web-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://serbenda.github.io/serbenda/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)

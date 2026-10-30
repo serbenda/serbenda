@@ -8,34 +8,31 @@
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
   html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #1d2b53; }
-  body { color: #fff1e8; font-family: "IBM Plex Sans", sans-serif; position: relative; }
-  .hud { position: absolute; top: 36px; left: 64px; right: 64px; display: flex; justify-content: space-between;
-    font: 20px/1.6 "Press Start 2P", monospace; }
-  .hud span { color: #ff004d; display: block; }
-  .hud .r { text-align: right; }
-  .me { position: absolute; left: 64px; top: 170px; width: 288px; height: 288px; image-rendering: pixelated; }
-  h1 { position: absolute; left: 400px; top: 170px; margin: 0; font: 400 136px/1 "Press Start 2P", monospace;
-    text-shadow: 8px 8px 0 #7e2553, 16px 16px 0 #000; }
-  .cls { position: absolute; left: 404px; top: 350px; font: 600 22px "JetBrains Mono", monospace; color: #29adff; }
-  .tag { position: absolute; left: 404px; top: 400px; font: 400 32px "IBM Plex Sans", sans-serif; color: #c2c3c7; }
-  .start { position: absolute; left: 404px; top: 480px; font: 24px "Press Start 2P", monospace; color: #ffec27; }
-  .url { position: absolute; right: 64px; bottom: 36px; font: 500 24px "JetBrains Mono", monospace; color: #c2c3c7; }
-  .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 16px; background: #000; box-shadow: 0 -8px 0 #5f574f; }
-  .star { position: absolute; background: #fff1e8; }
+  body { color: #fff1e8; position: relative; font-family: "IBM Plex Sans", sans-serif; }
+  .wrap { position: absolute; inset: 0; display: flex; align-items: center; gap: 56px; padding: 0 72px; }
+  .me { width: 248px; height: 248px; image-rendering: pixelated; background: #18224a; padding: 16px; flex: none;
+    clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px); }
+  .hi { font: 500 24px "JetBrains Mono", monospace; color: #ffec27; }
+  .hi::before { content: ""; display: inline-block; width: 12px; height: 12px; background: #ffec27; box-shadow: 4px 4px 0 #7e2553; margin-right: 14px; }
+  h1 { margin: 16px 0 0; font: 700 72px/1.05 "JetBrains Mono", monospace; letter-spacing: -0.03em; }
+  .cls { font: 600 24px "JetBrains Mono", monospace; color: #29adff; margin-top: 18px; }
+  .tag { font: 400 30px "IBM Plex Sans", sans-serif; color: #b9bcd0; margin-top: 12px; }
+  .url { position: absolute; right: 72px; bottom: 32px; font: 500 22px "JetBrains Mono", monospace; color: #b9bcd0; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; display: flex; }
+  .bar i { flex: 1; }
 </style>
 </head>
 <body>
-  <div class="hud"><div><span>1UP</span>BENDI</div><div class="r"><span>NIVEL</span>21</div></div>
-  <i class="star" style="left:560px;top:120px;width:6px;height:6px"></i>
-  <i class="star" style="left:980px;top:150px;width:4px;height:4px;background:#ffec27"></i>
-  <i class="star" style="left:1110px;top:300px;width:6px;height:6px;background:#29adff"></i>
-  <i class="star" style="left:300px;top:110px;width:4px;height:4px"></i>
-  <img class="me" src="img/bendi.svg" alt="">
-  <h1>BENDI</h1>
-  <div class="cls">Automation Platform Engineer</div>
-  <div class="tag">20 años domando servidores · juegos de 8 bits</div>
-  <div class="start">PULSA START ▶</div>
+  <div class="wrap">
+    <img class="me" src="img/bendi.svg" alt="">
+    <div>
+      <div class="hi">Hola, soy Bendi</div>
+      <h1>Sergio Bendaña</h1>
+      <div class="cls">Automation Platform Engineer</div>
+      <div class="tag">20 años automatizando infraestructura<br>y juegos de 8 bits hechos en casa</div>
+    </div>
+  </div>
   <div class="url">serbenda.github.io/serbenda</div>
-  <div class="ground"></div>
+  <div class="bar"><i style="background:#29adff"></i><i style="background:#00e436"></i><i style="background:#ffec27"></i><i style="background:#ff77a8"></i><i style="background:#7e2553"></i></div>
 </body>
 </html>
