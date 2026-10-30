@@ -1,0 +1,119 @@
+{
+ "goatcounter": "serbenda",
+ "repos": {
+  "bankinter-visa-pdf-to-csv": {
+   "clones": {},
+   "description": "A Python tool designed to extract transaction data from Bankinter VISA card statements in PDF format and convert it into a structured CSV file for easy analysis.",
+   "language": "Python",
+   "pages": false,
+   "pages_hits": {},
+   "pushed_at": "2024-12-06T21:32:41Z",
+   "stars": 0,
+   "url": "https://github.com/serbenda/bankinter-visa-pdf-to-csv",
+   "views": {}
+  },
+  "chapas": {
+   "clones": {},
+   "description": "Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas.",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/chapas/",
+   "pages_url": "https://serbenda.github.io/chapas/",
+   "pushed_at": "2026-10-25T22:28:19Z",
+   "stars": 1,
+   "url": "https://github.com/serbenda/chapas",
+   "views": {}
+  },
+  "deploy-quest": {
+   "clones": {},
+   "description": "Aventura de 8 bits con vista cenital: un dev con su teclado y su Escudo de IaC recorre las Catacumbas de Sistemas, consigue la Terminal SSH y la primera página del Grimorio de la Definition of Done. HTML5 + canvas, sin dependencias.",
+   "language": "HTML",
+   "pages": false,
+   "pages_hits": {},
+   "pushed_at": "2026-10-30T12:16:09Z",
+   "stars": 0,
+   "url": "https://github.com/serbenda/deploy-quest",
+   "views": {}
+  },
+  "dungeons-and-deployments": {
+   "clones": {},
+   "description": "Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil.",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/dungeons-and-deployments/",
+   "pages_url": "https://serbenda.github.io/dungeons-and-deployments/",
+   "pushed_at": "2026-10-30T12:16:11Z",
+   "stars": 1,
+   "url": "https://github.com/serbenda/dungeons-and-deployments",
+   "views": {}
+  },
+  "frameblock": {
+   "clones": {},
+   "description": "This repository is for academic purposes and belongs to Roberto Gonzalez Rey and Sergio Santiago Bendaña Quesada. It is part of a final project for the Master of Blockchain program at the European University of Madrid (UEM). The code contained in this repository is not intended for commercial use and is solely for educational and research purposes.",
+   "language": "JavaScript",
+   "pages": false,
+   "pages_hits": {},
+   "pushed_at": "2023-02-25T10:20:20Z",
+   "stars": 2,
+   "url": "https://github.com/serbenda/frameblock",
+   "views": {}
+  },
+  "hemiciclo-fighters": {
+   "clones": {},
+   "description": "Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias.",
+   "language": "HTML",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/hemiciclo-fighters/",
+   "pages_url": "https://serbenda.github.io/hemiciclo-fighters/",
+   "pushed_at": "2026-10-30T12:16:05Z",
+   "stars": 0,
+   "url": "https://github.com/serbenda/hemiciclo-fighters",
+   "views": {}
+  },
+  "school-rush": {
+   "clones": {},
+   "description": "Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/school-rush/",
+   "pages_url": "https://serbenda.github.io/school-rush/",
+   "pushed_at": "2026-10-30T12:16:04Z",
+   "stars": 1,
+   "url": "https://github.com/serbenda/school-rush",
+   "views": {}
+  },
+  "serbenda": {
+   "clones": {},
+   "description": "Config files for my GitHub profile.",
+   "language": "Python",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/serbenda/",
+   "pages_url": "https://serbenda.github.io/serbenda/",
+   "pushed_at": "2026-10-30T12:17:37Z",
+   "stars": 0,
+   "url": "https://github.com/serbenda/serbenda",
+   "views": {}
+  },
+  "story-reader": {
+   "clones": {},
+   "description": "Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz.",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/story-reader/",
+   "pages_url": "https://serbenda.github.io/story-reader/",
+   "pushed_at": "2026-10-30T12:16:07Z",
+   "stars": 0,
+   "url": "https://github.com/serbenda/story-reader",
+   "views": {}
+  }
+ },
+ "site": {},
+ "updated": "2026-10-30T12:17:46+00:00",
+ "user": "serbenda"
+}
