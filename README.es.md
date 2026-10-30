@@ -7,7 +7,7 @@
 **20 años automatizando infraestructura · Máster en Blockchain · Juegos de 8 bits hechos en casa con mis hijas.**
 
 [![Mi web](https://img.shields.io/badge/Mi_web-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://bendi.dev/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/serbenda/)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
 [![Patrocinar](https://img.shields.io/badge/Patrocinar-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/serbenda)
 
@@ -230,7 +230,7 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 
 <div align="center">
 
-**¿Hablamos?** Si te apetece hablar de automatización, de cacharros o de juegos, escríbeme en <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>.
+**¿Hablamos?** Si te apetece hablar de automatización, de cacharros o de juegos, escríbeme en <a href="https://www.linkedin.com/in/serbenda/">LinkedIn</a>.
 
 <sub>¿Te gustan los juegos? Puedes apoyarlos en <a href="https://github.com/sponsors/serbenda">GitHub Sponsors</a> ❤</sub>
 
