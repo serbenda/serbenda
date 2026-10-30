@@ -474,7 +474,7 @@
    "pages_hits": {},
    "pages_path": "/dungeons-and-deployments/",
    "pages_url": "https://serbenda.github.io/dungeons-and-deployments/",
-   "pushed_at": "2026-10-30T12:53:47Z",
+   "pushed_at": "2026-10-30T14:03:11Z",
    "referrers": [
     {
      "count": 21,
@@ -1012,7 +1012,7 @@
    "pages_hits": {},
    "pages_path": "/serbenda/",
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-30T13:26:23Z",
+   "pushed_at": "2026-10-30T14:05:59Z",
    "referrers": [
     {
      "count": 9,
@@ -1081,6 +1081,134 @@
     ]
    }
   },
+  "serbenda.github.io": {
+   "clones": {
+    "2026-10-17": [
+     0,
+     0
+    ],
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     0,
+     0
+    ]
+   },
+   "description": "Bendi’s personal site: about me, an arcade zone with my games and their visits · bendi.dev",
+   "language": "HTML",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/",
+   "pages_url": "https://serbenda.github.io/",
+   "pushed_at": "2026-10-30T14:05:29Z",
+   "referrers": [],
+   "stars": 0,
+   "url": "https://github.com/serbenda/serbenda.github.io",
+   "views": {
+    "2026-10-17": [
+     0,
+     0
+    ],
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     0,
+     0
+    ]
+   }
+  },
   "story-reader": {
    "clones": {
     "2026-10-16": [
@@ -1146,7 +1274,7 @@
    "pages_hits": {},
    "pages_path": "/story-reader/",
    "pages_url": "https://serbenda.github.io/story-reader/",
-   "pushed_at": "2026-10-30T12:53:14Z",
+   "pushed_at": "2026-10-30T14:01:43Z",
    "referrers": [
     {
      "count": 6,
@@ -1217,6 +1345,6 @@
   }
  },
  "site": {},
- "updated": "2026-10-30T13:26:31+00:00",
+ "updated": "2026-10-30T14:06:07+00:00",
  "user": "serbenda"
 }
