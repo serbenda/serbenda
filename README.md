@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-🤖 <b>Automation</b> · Infrastructure as code with <b>Terraform, Ansible and Packer</b> on AWS, Azure and private cloud<br>
+🤖 <b>Automation</b> · Infrastructure as code with <b>Terraform, Ansible and Packer</b> on AWS, Azure, Google Cloud and private cloud<br>
 ⛓️ <b>Blockchain</b> · <b>Master's in Blockchain</b>: smart contracts in <b>Solidity</b>, NFTs, IPFS and multichain dApps · 🏆 <a href="#blockchain">FrameBlock, best project of the Master's ↓</a><br>
 🕹️ <b>Games</b> · Small 8-bit games in pure HTML + JS, made with my daughters · <a href="https://bendi.dev/#arcade">Play →</a>
 </p>
@@ -179,13 +179,13 @@ flowchart TB
 
 ## 👾 About me
 
-I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain), which won best project of the Master's.
+I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure, Google Cloud and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain), which won best project of the Master's.
 
 Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,bash,py,githubactions,git&perline=8" alt="Automation and systems"><br><br>
-  <img src="https://skillicons.dev/icons?i=aws,azure,kubernetes,js,nodejs,html,css,solidity&perline=8" alt="Cloud and development">
+  <img src="https://skillicons.dev/icons?i=aws,azure,gcp,kubernetes,js,nodejs,html,css,solidity&perline=9" alt="Cloud and development">
 </p>
 
 <p align="center">
