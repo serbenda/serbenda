@@ -4,400 +4,444 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bendi · Sergio Bendaña</title>
-<meta name="description" content="Juegos de 8 bits hechos en casa, 20 años automatizando infraestructura y las visitas de cada proyecto.">
+<meta name="description" content="20 años automatizando infraestructura, juegos de 8 bits hechos en casa y las visitas de cada proyecto.">
 <link rel="icon" href="img/bendi.svg" type="image/svg+xml">
 <link rel="canonical" href="https://serbenda.github.io/serbenda/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bendi">
 <meta property="og:title" content="Bendi · Sergio Bendaña">
-<meta property="og:description" content="Juegos de 8 bits hechos en casa, 20 años automatizando infraestructura y las visitas de cada proyecto.">
+<meta property="og:description" content="20 años automatizando infraestructura, juegos de 8 bits hechos en casa y las visitas de cada proyecto.">
 <meta property="og:url" content="https://serbenda.github.io/serbenda/">
 <meta property="og:image" content="https://serbenda.github.io/serbenda/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Bendi, Player 1">
+<meta property="og:image:alt" content="Sergio Bendaña, Automation Platform Engineer">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@serbenda">
-<meta name="theme-color" content="#1d2b53">
+<meta name="theme-color" content="#0e1324">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
-/* PICO-8 palette, used calmly: navy base, cream text, colour only where it means something */
+/* =========================================================
+   Professional part: calm navy, Bricolage Grotesque + Atkinson
+   ========================================================= */
 :root {
-  --navy: #1d2b53;
-  --deep: #141e3d;
-  --panel: #18224a;
-  --line: #2c3a6b;
-  --black: #000000;
-  --plum: #7e2553;
-  --dkgray: #5f574f;
-  --gray: #b9bcd0;
-  --cream: #fff1e8;
-  --red: #ff004d;
-  --orange: #ffa300;
-  --yellow: #ffec27;
-  --green: #00e436;
-  --blue: #29adff;
-  --lilac: #83769c;
-  --pink: #ff77a8;
-  --peach: #ffccaa;
-  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --sans: "IBM Plex Sans", system-ui, sans-serif;
+  --ink: #0e1324;
+  --panel: #151b31;
+  --line: #242c48;
+  --text: #e6ebf5;
+  --muted: #93a0b8;
+  --repo: #38bdf8;
+  --pages: #36d399;
+  --plays: #f472b6;
+  --violet: #a78bfa;
   --gut: clamp(16px, 4vw, 40px);
 }
 * { box-sizing: border-box; }
-html { background: var(--navy); color: var(--cream); }
-body { margin: 0; font: 17px/1.6 var(--sans); }
-img.pixel, .pixel img { image-rendering: pixelated; }
-a { color: var(--blue); text-underline-offset: 3px; }
-a:hover { color: var(--yellow); }
-:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
-h1, h2, h3 { margin: 0; line-height: 1.25; }
-h2 { font: 700 clamp(24px, 3.2vw, 32px)/1.2 var(--mono); letter-spacing: -0.01em; }
-/* the geek mark on every section heading: one yellow pixel with a plum shadow */
-h2::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--yellow); margin-right: 14px; vertical-align: 0.2em; box-shadow: 4px 4px 0 var(--plum); }
-h3 { font: 600 17px/1.35 var(--mono); }
+html { background: var(--ink); color: var(--text); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; font: 17px/1.6 "Atkinson Hyperlegible", system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+a { color: var(--repo); text-underline-offset: 3px; }
+a:hover { color: var(--text); }
+:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.1; margin: 0; }
+h2 { font-size: clamp(28px, 4vw, 40px); font-variation-settings: "wdth" 85; font-weight: 750; }
+h3 { font-size: 21px; font-weight: 700; }
 p { margin: 0; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--gut); }
-section { padding: 80px 0 16px; }
-.lead { color: var(--gray); max-width: 62ch; margin-top: 12px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 var(--gut); }
+section { padding: 72px 0; border-top: 1px solid var(--line); }
+.lead { color: var(--muted); max-width: 62ch; margin-top: 12px; }
 
-/* Panels: flat, with small notched corners as a quiet nod to pixels */
-.px {
-  background: var(--panel);
-  box-shadow: inset 0 0 0 1px var(--line);
-  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+/* top bar */
+.bar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 16px; }
+.bar nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.bar nav a { color: var(--muted); text-decoration: none; }
+.bar nav a:hover { color: var(--text); }
+.bar nav a.arc { font: 9px/1 "Press Start 2P", monospace; color: #ffec27; align-self: center; }
+.lang { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 14px; cursor: pointer; }
+
+/* hero */
+.hero { padding: 56px 0 72px; }
+.hero h1 { font-size: clamp(64px, 14vw, 168px); font-weight: 800; font-variation-settings: "wdth" 75; letter-spacing: -0.02em; }
+.hero .who { font-size: clamp(20px, 2.4vw, 26px); margin-top: 8px; }
+.hero .pitch { color: var(--muted); max-width: 54ch; margin-top: 20px; font-size: 19px; }
+.links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+.links a { border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; color: var(--text); text-decoration: none; }
+.links a:hover { border-color: var(--repo); }
+.links a.play { border-color: #ffec27; color: #ffec27; font: 10px/1.9 "Press Start 2P", monospace; }
+.links a.play:hover { background: #ffec27; color: #000; }
+
+/* career line: the one moment of motion in the professional part */
+.pipe { margin-top: 56px; }
+.track { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); }
+.track::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: linear-gradient(90deg, var(--line), var(--violet) 40%, var(--pages)); }
+.stage { position: relative; padding-top: 32px; padding-right: 12px; }
+.stage::before { content: ""; position: absolute; top: 4px; left: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--ink); border: 2px solid var(--muted); }
+.stage:last-child::before { border-color: var(--pages); background: var(--pages); }
+.stage b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; }
+.stage span { color: var(--muted); font-size: 15px; }
+.token { position: absolute; top: 2px; left: 0; width: 20px; height: 20px; border-radius: 4px; background: var(--repo); box-shadow: 0 0 0 4px rgba(56, 189, 248, .18); animation: ship 3.2s cubic-bezier(.6, 0, .3, 1) .5s both; }
+@keyframes ship {
+  0% { left: 0; } 30% { left: calc(25% - 2px); } 40% { left: calc(25% - 2px); }
+  70% { left: calc(50% - 2px); } 80% { left: calc(50% - 2px); background: var(--repo); }
+  100% { left: calc(75% - 2px); background: var(--pages); box-shadow: 0 0 0 4px rgba(54, 211, 153, .2); }
 }
-.btn {
-  display: inline-block; font: 600 14px/1 var(--mono); text-decoration: none; padding: 11px 16px;
-  background: var(--yellow); color: var(--black); border: 0; cursor: pointer;
-}
-.btn:hover { background: var(--cream); color: var(--black); }
-.btn:active { transform: translateY(1px); }
-.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 2px var(--line); }
-.btn.ghost:hover { box-shadow: inset 0 0 0 2px var(--blue); color: var(--blue); }
+@media (prefers-reduced-motion: reduce) { .token { animation: none; left: calc(75% - 2px); background: var(--pages); } }
 
-/* ---------- top bar ---------- */
-.hud { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; padding: 18px 0; font: 500 14px var(--mono); }
-.hud .brand { display: flex; align-items: center; gap: 10px; color: var(--cream); text-decoration: none; font-weight: 700; }
-.hud .brand img { width: 28px; height: 28px; image-rendering: pixelated; }
-.hud .end { display: flex; justify-content: flex-end; gap: 18px; align-items: center; }
-.hud nav { display: flex; gap: 18px; }
-.hud nav a { color: var(--gray); text-decoration: none; }
-.hud nav a:hover { color: var(--cream); }
-.lang { font: 600 12px var(--mono); background: none; color: var(--cream); border: 0; padding: 5px 8px; cursor: pointer; box-shadow: inset 0 0 0 1px var(--line); }
-.lang:hover { color: var(--yellow); }
-
-/* ---------- hero: the one fully pixel moment ---------- */
-.title { position: relative; padding: 56px 0 40px; display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
-.title .me { width: 176px; height: 176px; image-rendering: pixelated; background: var(--panel); padding: 12px;
-  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px); }
-.title .hi { font: 500 15px var(--mono); color: var(--yellow); margin-bottom: 8px; }
-.title h1 { font: 700 clamp(38px, 6.4vw, 68px)/1.05 var(--mono); letter-spacing: -0.03em; color: var(--cream); }
-.title .cls { font: 600 17px var(--mono); color: var(--blue); margin-top: 14px; }
-.title .tag { color: var(--gray); margin-top: 12px; max-width: 52ch; font-size: 19px; }
-.title .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
-
-/* ---------- games ---------- */
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-top: 32px; }
-.cart { display: flex; flex-direction: column; }
-.cart:hover, .cart:focus-within { box-shadow: inset 0 0 0 2px var(--yellow); }
-.cart .shot { aspect-ratio: 16 / 9; width: 100%; display: block; object-fit: cover; background: var(--deep); }
-.cart .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-.cart p { color: var(--gray); font-size: 16px; }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.tags li { font: 500 12px var(--mono); color: var(--peach); background: var(--deep); padding: 2px 8px; }
-.cart .act { display: flex; gap: 10px; align-items: center; margin-top: auto; padding-top: 6px; flex-wrap: wrap; }
-.score { display: flex; gap: 16px; flex-wrap: wrap; font: 500 13px var(--mono); color: var(--gray); }
-.score b { font-size: 10px; }
-.c-repo { color: var(--blue); }
-.c-pages { color: var(--green); }
-.c-plays { color: var(--pink); }
+/* about */
+.exp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; margin-top: 36px; }
+.exp .me { display: flex; gap: 20px; align-items: center; }
+.exp .years { font-family: "Bricolage Grotesque", sans-serif; font-size: 56px; font-weight: 800; font-variation-settings: "wdth" 75; line-height: 1; color: var(--violet); }
+.exp .side p { color: var(--muted); margin-top: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding: 0; list-style: none; }
+.chips li { border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 14px; color: var(--muted); }
+.wins { list-style: none; margin: 0; padding: 0; }
+.wins li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.wins li:first-child { padding-top: 0; }
+.wins b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 19px; margin-bottom: 2px; }
+.wins span { color: var(--muted); }
+.career { list-style: none; padding: 0; margin: 48px 0 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.career li { display: grid; grid-template-columns: 120px 200px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.career .y { color: var(--muted); font-size: 15px; }
+.career b { font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; }
+.career span { color: var(--muted); }
+.career .now b { color: var(--pages); }
 .tools { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; }
 .tools li { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
-.tools a { font: 600 15px var(--mono); }
-.tools span { color: var(--gray); }
+.tools a { font-weight: 700; }
+.tools span { color: var(--muted); }
 
-/* ---------- about ---------- */
-.sheet { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 24px; margin-top: 32px; }
-.card { padding: 26px; }
-.card > h3 { color: var(--blue); margin-bottom: 18px; }
-.stats { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; margin: 0; }
-.stats dt { font: 500 13px/1.9 var(--mono); color: var(--gray); }
-.stats dd { margin: 0; }
-.stats dd b { font: 700 15px var(--mono); color: var(--yellow); }
-.inv { margin-top: 26px; display: grid; gap: 14px; }
-.inv h3 { font-size: 13px; color: var(--blue); margin-bottom: 8px; }
-.inv ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.inv li { font: 500 13px var(--mono); padding: 3px 9px; background: var(--deep); box-shadow: inset 0 -2px 0 var(--line); }
-.ach { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px 16px; }
-.ach li { display: grid; grid-template-columns: 10px 1fr; grid-template-rows: auto 1fr; gap: 2px 14px; align-items: start; align-content: start; }
-.ach i { grid-row: span 2; width: 10px; height: 10px; margin-top: 6px; }
-.ach b { font: 700 14px/1.4 var(--mono); color: var(--cream); }
-.ach span { color: var(--gray); font-size: 15px; }
-.worlds { list-style: none; padding: 0; margin: 0; display: grid; }
-.worlds li { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 16px 0; border-top: 1px solid var(--line); }
-.worlds li:first-child { border-top: 0; padding-top: 0; }
-.worlds .w { font: 500 13px/1.6 var(--mono); color: var(--gray); }
-.worlds b { font: 700 16px/1.4 var(--mono); color: var(--cream); display: block; }
-.worlds span { color: var(--gray); }
-.worlds .now b { color: var(--green); }
-.worlds .now b::after { content: "actual"; margin-left: 10px; font: 600 11px var(--mono); color: var(--black); background: var(--green); padding: 2px 6px; vertical-align: 2px; }
-html[lang="en"] .worlds .now b::after { content: "current"; }
-
-/* ---------- visits ---------- */
-.rhead { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
-select { font: 500 14px var(--mono); background: var(--panel); color: var(--cream); border: 0; padding: 8px 10px; box-shadow: inset 0 0 0 1px var(--line); }
-.flabel { display: block; color: var(--gray); font: 500 12px var(--mono); margin-bottom: 4px; }
-.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
-.kpi { padding: 18px 20px; }
-.kpi strong { display: block; font: 700 clamp(26px, 3.4vw, 36px)/1.2 var(--mono); font-variant-numeric: tabular-nums; }
-.kpi span { color: var(--gray); font-size: 15px; }
-.chart { margin-top: 16px; padding: 20px; overflow-x: auto; }
+/* visits dashboard */
+.head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+select { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font: inherit; font-size: 16px; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 32px; }
+.kpi { background: var(--panel); padding: 20px; }
+.kpi strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(30px, 4vw, 44px); font-weight: 750; line-height: 1.1; }
+.kpi span { color: var(--muted); font-size: 15px; }
+.chart { margin-top: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; }
 .chart svg { display: block; width: 100%; min-width: 620px; height: auto; }
-.legend { display: flex; gap: 20px; flex-wrap: wrap; font: 500 13px var(--mono); color: var(--gray); margin-bottom: 10px; }
-.sq { display: inline-block; width: 10px; height: 10px; margin-right: 6px; }
-.axis { fill: var(--gray); font: 500 12px var(--mono); }
-.tip { fill: var(--yellow); font: 600 13px var(--mono); }
-.board { margin-top: 16px; padding: 20px; overflow-x: auto; }
-.board > h3 { color: var(--blue); margin-bottom: 14px; }
-table { width: 100%; border-collapse: collapse; font: 500 14px var(--mono); font-variant-numeric: tabular-nums; }
-th { font: 500 12px var(--mono); color: var(--gray); text-align: right; padding: 8px; white-space: nowrap; border-bottom: 1px solid var(--line); }
-td { text-align: right; padding: 9px 8px; white-space: nowrap; border-bottom: 1px solid var(--deep); }
-th:nth-child(-n+2), td:nth-child(-n+2) { text-align: left; }
-td.rk { font: 600 13px var(--mono); color: var(--yellow); width: 40px; }
+.legend { display: flex; gap: 20px; font-size: 15px; color: var(--muted); margin-bottom: 12px; flex-wrap: wrap; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.axis { fill: var(--muted); font: 12px "Atkinson Hyperlegible", sans-serif; }
+.tip { fill: var(--text); font: 700 13px "Atkinson Hyperlegible", sans-serif; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; margin-top: 20px; }
+.box h3 { margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th { text-align: right; color: var(--muted); font-weight: 400; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { text-align: right; padding: 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
 tbody tr { cursor: pointer; }
-tbody tr:hover td { background: var(--deep); }
-tbody tr.on td { background: var(--plum); }
-.refs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px 28px; font: 500 14px var(--mono); }
-.refs li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; }
-.refs .b { grid-column: 1 / -1; height: 4px; background: var(--deep); }
-.refs .b i { display: block; height: 100%; background: var(--lilac); }
-.note { color: var(--gray); font-size: 14px; margin-top: 14px; max-width: 80ch; }
-.empty { padding: 24px; margin-top: 28px; }
-.empty ol { color: var(--gray); margin: 12px 0 0; padding-left: 24px; }
+tbody tr:hover td { background: rgba(56, 189, 248, .06); }
+tbody tr.on td { background: rgba(167, 139, 250, .12); }
+.spark { vertical-align: middle; }
+.refs { list-style: none; padding: 0; margin: 0; font-size: 15px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); column-gap: 32px; }
+.refs li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.refs .b { grid-column: 1 / -1; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.refs .b i { display: block; height: 100%; background: var(--violet); }
+.note { color: var(--muted); font-size: 14px; margin-top: 16px; max-width: 80ch; }
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 28px; margin-top: 32px; }
+.empty ol { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
 
-/* ---------- contact ---------- */
-.over { padding: 96px 0 64px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-.over p { color: var(--gray); margin-top: 10px; max-width: 52ch; }
-.over .row { display: flex; gap: 12px; flex-wrap: wrap; }
-footer { padding: 24px 0 48px; color: var(--gray); font-size: 14px; border-top: 1px solid var(--line); }
+/* contact */
+.contact { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.contact .cta { background: var(--repo); color: var(--ink); text-decoration: none; font-weight: 700; border-radius: 8px; padding: 12px 20px; }
+.contact .cta:hover { background: var(--text); color: var(--ink); }
+footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 15px; }
 
-@media (max-width: 820px) {
-  .title { grid-template-columns: 1fr; gap: 24px; padding: 24px 0 16px; }
-  .title .me { width: 112px; height: 112px; }
-  section { padding-top: 56px; }
-  .sheet { grid-template-columns: 1fr; }
+/* =========================================================
+   Arcade zone: full 8-bit. PICO-8 palette, Press Start 2P + VT323
+   ========================================================= */
+.arcade {
+  --a-bg: #1d2b53; --a-black: #000; --a-plum: #7e2553; --a-dk: #5f574f; --a-gray: #c2c3c7; --a-cream: #fff1e8;
+  --a-red: #ff004d; --a-orange: #ffa300; --a-yellow: #ffec27; --a-green: #00e436; --a-blue: #29adff; --a-pink: #ff77a8; --a-peach: #ffccaa;
+  position: relative; background: var(--a-bg); color: var(--a-cream);
+  font: 22px/1.25 "VT323", ui-monospace, monospace; -webkit-font-smoothing: none;
+  /* faint CRT scanlines */
+  background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, .12) 0 2px, transparent 2px 4px);
+  padding: 0 0 72px; border: 0;
+}
+/* rainbow pixel strips where the zone starts and ends */
+.arcade::before, .arcade::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 12px;
+  background: linear-gradient(90deg, var(--a-red) 0 16.6%, var(--a-orange) 0 33.3%, var(--a-yellow) 0 50%, var(--a-green) 0 66.6%, var(--a-blue) 0 83.3%, var(--a-pink) 0);
+}
+.arcade::before { top: 0; }
+.arcade::after { bottom: 0; }
+.arcade a { color: var(--a-blue); }
+.arcade a:hover { color: var(--a-yellow); }
+.arcade :focus-visible { outline: 4px solid var(--a-yellow); outline-offset: 2px; border-radius: 0; }
+.a-hud { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; padding: 36px 0 8px; font: 11px/1.7 "Press Start 2P", monospace; }
+.a-hud .l { color: var(--a-red); display: block; }
+.a-hud .c { text-align: center; }
+.a-hud .r { text-align: right; }
+.a-title { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; padding: 40px 0 24px; }
+.a-title img { width: 144px; height: 144px; image-rendering: pixelated; }
+.a-title h2 { font: 400 clamp(26px, 5vw, 52px)/1.3 "Press Start 2P", monospace; color: var(--a-cream); text-shadow: 5px 5px 0 var(--a-plum), 10px 10px 0 var(--a-black); font-variation-settings: normal; }
+.a-title p { color: var(--a-gray); margin-top: 12px; max-width: 52ch; }
+.coin { display: inline-block; margin-top: 18px; font: 12px "Press Start 2P", monospace; color: var(--a-yellow); }
+.coin span { animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .coin span { animation: none; } }
+.a-sub { font: 14px/1.6 "Press Start 2P", monospace; color: var(--a-yellow); text-shadow: 3px 3px 0 var(--a-plum); margin-top: 40px; }
+.pxbox {
+  background: var(--a-black); box-shadow: inset 0 0 0 4px var(--frame, var(--a-dk));
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px), 0 4px, 4px 4px);
+}
+.carts { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-top: 24px; }
+.cart { display: flex; flex-direction: column; padding: 4px; }
+.cart:hover, .cart:focus-within { --frame: var(--a-yellow); }
+.cart .shot { aspect-ratio: 16 / 9; width: 100%; display: block; object-fit: cover; background: var(--a-bg); }
+.cart .shot.pixel { image-rendering: pixelated; }
+.cart .body { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.cart h3 { font: 12px/1.6 "Press Start 2P", monospace; color: var(--a-cream); }
+.cart p { color: var(--a-gray); font-size: 21px; }
+.cart .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.cart .tags li { font-size: 18px; color: var(--a-peach); background: #1a1720; padding: 0 8px; }
+.cart .act { display: flex; gap: 10px; align-items: center; margin-top: auto; padding-top: 6px; flex-wrap: wrap; }
+.cart .sc { display: flex; gap: 14px; flex-wrap: wrap; font-size: 19px; }
+.pbtn {
+  display: inline-block; font: 10px/1 "Press Start 2P", monospace; text-decoration: none; padding: 11px 13px 10px;
+  background: var(--a-yellow); color: var(--a-black) !important; box-shadow: inset -4px -4px 0 var(--a-orange);
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+}
+.pbtn:hover { background: var(--a-cream); box-shadow: inset -4px -4px 0 var(--a-gray); }
+.pbtn:active { transform: translateY(2px); }
+.pbtn.ghost { background: var(--a-dk); color: var(--a-cream) !important; box-shadow: inset -4px -4px 0 #3b3530; }
+.pbtn.ghost:hover { background: #83769c; }
+.hs { margin-top: 24px; padding: 24px; }
+.hs table { font: 11px/1 "Press Start 2P", monospace; }
+.hs th { color: var(--a-red); font-weight: 400; border: 0; padding: 10px 8px; font-size: 9px; }
+.hs td { border: 0; padding: 10px 8px; color: var(--a-cream); }
+.hs tbody tr { cursor: default; }
+.hs tbody tr:hover td { background: transparent; }
+.hs td.rk { color: var(--a-yellow); }
+.hs th:nth-child(2), .hs td:nth-child(2) { text-align: left; }
+.hs tr:nth-child(1) td { color: var(--a-yellow); }
+.c-repo { color: var(--repo); }
+.c-pages { color: var(--pages); }
+.c-plays { color: var(--plays); }
+.arcade .c-repo { color: var(--a-blue); }
+.arcade .c-pages { color: var(--a-green); }
+.arcade .c-plays { color: var(--a-pink); }
+
+@media (max-width: 760px) {
   .kpis { grid-template-columns: repeat(2, 1fr); }
-  .hud nav { display: none; }
-  .worlds li { grid-template-columns: 1fr; gap: 4px; }
+  .exp { grid-template-columns: 1fr; gap: 32px; }
+  .career li { grid-template-columns: 1fr; gap: 2px; }
+  .track { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+  .track::before, .token { display: none; }
+  .bar nav { gap: 14px; font-size: 15px; }
+  .a-hud { grid-template-columns: 1fr 1fr; }
+  .a-hud .c { display: none; }
+  .a-title { grid-template-columns: 1fr; gap: 20px; }
+  .a-title img { width: 96px; height: 96px; }
+  .hs { padding: 14px; }
+  .hs table { font-size: 9px; }
 }
 </style>
-
 </head>
 <body>
 <div class="wrap">
-  <header class="hud">
-    <a class="brand" href="#"><img src="img/bendi.svg" alt="" width="28" height="28">Bendi</a>
-    <div class="end">
-      <nav aria-label="Secciones">
-        <a href="#juegos" data-t="nav.games">Juegos</a>
-        <a href="#sobre-mi" data-t="nav.about">Sobre mí</a>
-        <a href="#visitas" data-t="nav.records">Visitas</a>
-      </nav>
-      <button class="lang" id="lang" type="button" aria-label="Change language">EN</button>
-    </div>
+  <header class="bar">
+    <nav aria-label="Secciones">
+      <a href="#sobre-mi" data-t="nav.about">Sobre mí</a>
+      <a class="arc" href="#arcade" data-t="nav.arcade">ARCADE</a>
+      <a href="#visitas" data-t="nav.visits">Visitas</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Change language">EN</button>
   </header>
 
   <main>
-    <div class="title">
-      <img class="me" src="img/bendi.svg" alt="Bendi en pixel art" width="192" height="192">
-      <div>
-        <p class="hi" data-t="hero.hi">Hola, soy Bendi</p>
-        <h1>Sergio Bendaña</h1>
-        <p class="cls">Automation Platform Engineer</p>
-        <p class="tag" data-t="hero.tag">Llevo 20 años automatizando infraestructura. En casa hago juegos de 8 bits con mis hijas.</p>
-        <div class="cta">
-          <a class="btn" href="#juegos" data-t="hero.games">Ver juegos</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>
+    <div class="hero">
+      <h1>Bendi</h1>
+      <p class="who">Sergio Bendaña · Automation Platform Engineer</p>
+      <p class="pitch" data-t="hero.pitch">Llevo 20 años automatizando infraestructura: de los servidores UNIX en producción a la infraestructura como código. En casa hago juegos de 8 bits con mis hijas.</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>
+        <a href="https://github.com/serbenda">GitHub</a>
+        <a href="https://x.com/serbenda">X</a>
+        <a class="play" href="#arcade" data-t="hero.play">▶ JUGAR</a>
+      </div>
+
+      <div class="pipe" aria-label="De 2005 a hoy" data-t-aria="hero.pipe">
+        <div class="track">
+          <div class="token" aria-hidden="true"></div>
+          <div class="stage"><b>2005</b><span data-t="st.1">Soporte de hardware, software y redes</span></div>
+          <div class="stage"><b>2009</b><span data-t="st.2">UNIX en producción 24x7</span></div>
+          <div class="stage"><b>2016</b><span data-t="st.3">Granjas de 12.000 servidores y OpenStack</span></div>
+          <div class="stage"><b data-t="st.4">Hoy</b><span data-t="st.4d">Infraestructura como código</span></div>
         </div>
       </div>
     </div>
 
-    <section id="juegos">
-      <h2 data-t="games.title">Juegos</h2>
-      <p class="lead" data-t="games.lead">Todos se juegan en el navegador, también en el móvil. Sin instalar nada y sin anuncios.</p>
-      <div class="games" id="games"></div>
-      <h2 style="margin-top:64px" data-t="tools.title">Otros proyectos</h2>
+    <section id="sobre-mi">
+      <h2 data-t="about.title">Sobre mí</h2>
+      <div class="exp">
+        <div class="side">
+          <div class="me">
+            <div><div class="years">20+</div><span data-t="exp.years">años en sistemas y automatización</span></div>
+          </div>
+          <p data-t="exp.lead">Hoy automatizo la infraestructura de un gran banco con Terraform Enterprise, Ansible y Packer, sobre AWS, Azure y nube privada. Antes administré UNIX en producción, migré entornos a OpenStack y monté plataformas Big Data. Tengo un máster en Blockchain.</p>
+          <ul class="chips" aria-label="Stack">
+            <li>Terraform</li><li>Terraform Enterprise</li><li>Ansible</li><li>Packer</li><li>Python</li><li>Bash</li>
+            <li>AWS</li><li>Azure</li><li>VMware</li><li>OpenStack</li><li>Docker</li><li>Red Hat</li>
+            <li>Solaris</li><li>AIX</li><li>Cloudera</li><li>Kerberos</li><li>Grafana</li><li>Solidity</li>
+          </ul>
+        </div>
+        <ul class="wins" id="wins"></ul>
+      </div>
+      <ol class="career" id="career"></ol>
+    </section>
+  </main>
+</div>
+
+<section class="arcade" id="arcade" aria-labelledby="arcade-title">
+  <div class="wrap">
+    <div class="a-hud" aria-hidden="true">
+      <div><span class="l">1UP</span>BENDI</div>
+      <div class="c"><span class="l">HI-SCORE</span><span id="hiscore">000000</span></div>
+      <div class="r"><span class="l">CREDIT</span>99</div>
+    </div>
+    <div class="a-title">
+      <img src="img/bendi.svg" alt="" width="144" height="144">
+      <div>
+        <h2 id="arcade-title" data-t="a.title">ZONA ARCADE</h2>
+        <p data-t="a.lead">Juegos que hago en casa con mis hijas. Todos se juegan en el navegador, también en el móvil, sin instalar nada y sin anuncios.</p>
+        <span class="coin"><span data-t="a.coin">INSERTA MONEDA</span></span>
+      </div>
+    </div>
+    <h3 class="a-sub" data-t="a.select">SELECCIONA JUEGO</h3>
+    <div class="carts" id="games"></div>
+    <h3 class="a-sub" data-t="a.hs">TABLA DE RÉCORDS</h3>
+    <div class="pxbox hs"><table id="hs"></table></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <main>
+    <section id="otros" style="border-top:0">
+      <h2 data-t="tools.title">Otros proyectos</h2>
       <ul class="tools" id="tools"></ul>
     </section>
 
-    <section id="sobre-mi">
-      <h2 data-t="about.title">Sobre mí</h2>
-      <p class="lead" data-t="about.lead">Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de miles de servidores, Big Data y, hoy, infraestructura como código.</p>
-      <div class="sheet">
-        <div class="px card">
-          <dl class="stats">
-            <dt data-t="p.class">Rol</dt><dd data-t="p.classv">Ingeniero de automatización de plataformas</dd>
-            <dt data-t="p.level">Experiencia</dt><dd><b id="level">21</b> <span data-t="p.levelv">años en sistemas</span></dd>
-            <dt data-t="p.base">Base</dt><dd>Madrid</dd>
-            <dt data-t="p.world">Ahora en</dt><dd>Santander Global T&amp;O</dd>
-            <dt data-t="p.ult">Especialidad</dt><dd data-t="p.ultv">Infraestructura como código</dd>
-          </dl>
-          <div class="inv">
-            <div><h3 data-t="inv.auto">Automatización</h3><ul><li>Terraform</li><li>Terraform Enterprise</li><li>Ansible</li><li>Packer</li><li>Python</li><li>Bash</li></ul></div>
-            <div><h3 data-t="inv.cloud">Nube y virtualización</h3><ul><li>AWS</li><li>Azure</li><li>VMware</li><li>OpenStack</li><li>Docker</li></ul></div>
-            <div><h3 data-t="inv.sys">Sistemas</h3><ul><li>Red Hat</li><li>CentOS</li><li>Solaris</li><li>AIX</li><li>HP-UX</li></ul></div>
-            <div><h3 data-t="inv.data">Datos y monitorización</h3><ul><li>Cloudera</li><li>Hortonworks</li><li>Hadoop</li><li>Spark</li><li>Kerberos</li><li>Grafana</li><li>Zabbix</li></ul></div>
-            <div><h3>Web3</h3><ul><li>Solidity</li><li data-t="inv.sc">Contratos inteligentes</li></ul></div>
-          </div>
-        </div>
-        <div class="px card">
-          <h3 data-t="ach.title">Logros</h3>
-          <ul class="ach" id="ach"></ul>
-        </div>
-      </div>
-      <div class="px card" style="margin-top:24px">
-        <h3 data-t="worlds.title">Trayectoria</h3>
-        <ol class="worlds" id="worlds"></ol>
-      </div>
-    </section>
-
     <section id="visitas">
-      <div class="rhead">
+      <div class="head">
         <div>
-          <h2 data-t="rec.title">Visitas</h2>
-          <p class="lead" data-t="rec.lead">Visitas a cada repositorio en GitHub, partidas en GitHub Pages y de dónde llega la gente. Se actualiza solo cada mañana.</p>
+          <h2 data-t="dash.title">Visitas</h2>
+          <p class="lead" data-t="dash.lead">Quién pasa por cada repositorio en GitHub y cuántos juegan en GitHub Pages. Se actualiza solo cada mañana.</p>
         </div>
-        <label><span class="flabel" data-t="rec.filter">Proyecto</span><select id="filter"></select></label>
+        <label><span data-t="dash.filter" style="display:block;color:var(--muted);font-size:14px;margin-bottom:4px">Proyecto</span><select id="filter"></select></label>
       </div>
       <div id="dash"></div>
     </section>
 
-    <div class="over">
-      <div>
-        <h2 data-t="over.title">¿Hablamos?</h2>
-        <p data-t="over.lead">Si te apetece hablar de automatización, de cacharros o de juegos, escríbeme.</p>
+    <section id="contacto">
+      <div class="contact">
+        <div>
+          <h2 data-t="c.title">¿Hablamos?</h2>
+          <p class="lead" data-t="c.lead">De automatización, infraestructura, cacharros o juegos hechos en casa.</p>
+        </div>
+        <a class="cta" href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/" data-t="c.cta">Escríbeme en LinkedIn</a>
       </div>
-      <div class="row">
-        <a class="btn" href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/serbenda">GitHub</a>
-        <a class="btn ghost" href="https://x.com/serbenda">X</a>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <footer><span data-t="foot">Hecho a mano, sin cookies, en GitHub Pages. Los récords los apunta una GitHub Action cada mañana.</span> <span id="updated"></span></footer>
+  <footer><span data-t="foot">Página estática en GitHub Pages, sin cookies. Las visitas las recoge una GitHub Action de este repositorio.</span> <span id="updated"></span></footer>
 </div>
 
 <script>
 const T = {
   es: {
-    "nav.games": "Juegos", "nav.records": "Visitas", "nav.about": "Sobre mí",
-    "about.title": "Sobre mí",
-    "about.lead": "Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de miles de servidores, Big Data y, hoy, infraestructura como código.",
-    "hero.class": "Sergio Bendaña · Automation Platform Engineer",
-    "hero.tag": "Llevo 20 años automatizando infraestructura. En casa hago juegos de 8 bits con mis hijas.",
-    "hero.hi": "Hola, soy Bendi", "hero.games": "Ver juegos",
-    "games.title": "Juegos",
-    "games.lead": "Todos se juegan en el navegador, también en el móvil. Sin instalar nada y sin anuncios.",
-    "tools.title": "Otros proyectos",
+    "nav.about": "Sobre mí", "nav.arcade": "ARCADE", "nav.visits": "Visitas",
+    "hero.pitch": "Llevo 20 años automatizando infraestructura: de los servidores UNIX en producción a la infraestructura como código. En casa hago juegos de 8 bits con mis hijas.",
+    "hero.play": "▶ JUGAR", "hero.pipe": "De 2005 a hoy",
+    "st.1": "Soporte de hardware, software y redes", "st.2": "UNIX en producción 24x7", "st.3": "Granjas de 12.000 servidores y OpenStack",
+    "st.4": "Hoy", "st.4d": "Infraestructura como código",
+    "about.title": "Sobre mí", "exp.years": "años en sistemas y automatización",
+    "exp.lead": "Hoy automatizo la infraestructura de un gran banco con Terraform Enterprise, Ansible y Packer, sobre AWS, Azure y nube privada. Antes administré UNIX en producción, migré entornos a OpenStack y monté plataformas Big Data. Tengo un máster en Blockchain.",
+    "now": "hoy",
+    "a.title": "ZONA ARCADE", "a.coin": "INSERTA MONEDA", "a.select": "SELECCIONA JUEGO", "a.hs": "TABLA DE RÉCORDS",
+    "a.lead": "Juegos que hago en casa con mis hijas. Todos se juegan en el navegador, también en el móvil, sin instalar nada y sin anuncios.",
     "play": "JUGAR", "code": "CÓDIGO", "soon": "PRÓXIMAMENTE",
     "views": "vistas", "visits": "visitas", "plays": "partidas",
-    "p.class": "Rol", "p.classv": "Ingeniero de automatización de plataformas",
-    "p.level": "Experiencia", "p.levelv": "años en sistemas", "p.base": "Base", "p.world": "Ahora en",
-    "p.ult": "Especialidad", "p.ultv": "Infraestructura como código",
-    "inv.auto": "Automatización", "inv.cloud": "Nube y virtualización", "inv.sys": "Sistemas",
-    "inv.data": "Datos y monitorización", "inv.sc": "Contratos inteligentes",
-    "ach.title": "Logros", "worlds.title": "Trayectoria",
-    "rec.title": "Visitas", "rec.filter": "Proyecto", "all": "Todos los proyectos",
-    "rec.lead": "Visitas a cada repositorio en GitHub, partidas en GitHub Pages y de dónde llega la gente. Se actualiza solo cada mañana.",
+    "hs.rank": "POS", "hs.name": "JUEGO", "hs.score": "PUNTOS", "hs.empty": "SIN RÉCORDS TODAVÍA",
+    "tools.title": "Otros proyectos",
+    "dash.title": "Visitas", "dash.filter": "Proyecto", "all": "Todos los proyectos",
+    "dash.lead": "Quién pasa por cada repositorio en GitHub y cuántos juegan en GitHub Pages. Se actualiza solo cada mañana.",
     "k.repo": "vistas en GitHub", "k.pages": "visitas a los juegos", "k.plays": "partidas jugadas", "k.clones": "clonados",
     "l.repo": "Vistas en GitHub por día", "l.pages": "Visitas a los juegos por día",
-    "t.name": "Proyecto", "t.14": "Vistas 14 d", "t.total": "Vistas", "t.pages": "Visitas", "t.plays": "Partidas", "t.site": "Este perfil y su web",
+    "t.title": "Por proyecto", "t.name": "Proyecto", "t.14": "Vistas 14 días", "t.total": "Vistas totales", "t.pages": "Visitas", "t.plays": "Partidas", "t.trend": "Últimos 30 días",
+    "t.site": "Este perfil y su web",
     "r.title": "De dónde llegan", "r.none": "Todavía no hay referencias.",
     "note": "GitHub solo guarda 14 días de tráfico, así que el histórico empieza el día que se activó la recogida y crece a partir de ahí. Las visitas y partidas de los juegos las cuenta GoatCounter, sin cookies.",
     "since": "desde",
-    "empty.t": "Todavía no hay datos",
-    "empty.p": "La recogida diaria todavía no se ha ejecutado. Para ponerla en marcha:",
-    "empty.1": "Guardar un token con permiso de lectura de «Administration» como secret TRAFFIC_TOKEN.",
+    "empty.t": "Aún no hay datos de visitas", "empty.p": "La recogida diaria todavía no se ha ejecutado. Para ponerla en marcha:",
+    "empty.1": "Crear un token con permiso de lectura de «Administration» y guardarlo como secret TRAFFIC_TOKEN.",
     "empty.2": "Dar de alta el sitio en GoatCounter y activar los contadores públicos.",
     "empty.3": "Lanzar el workflow «Update profile» a mano desde la pestaña Actions.",
-    "over.title": "¿Hablamos?", "over.lead": "Si te apetece hablar de automatización, de cacharros o de juegos, escríbeme.",
-    "foot": "Hecha a mano, sin cookies, en GitHub Pages. Las visitas las recoge una GitHub Action cada mañana.",
-    "updated": "Actualizado:", "now": "hoy"
+    "c.title": "¿Hablamos?", "c.lead": "De automatización, infraestructura, cacharros o juegos hechos en casa.", "c.cta": "Escríbeme en LinkedIn",
+    "foot": "Página estática en GitHub Pages, sin cookies. Las visitas las recoge una GitHub Action de este repositorio.",
+    "updated": "Última actualización:"
   },
   en: {
-    "nav.games": "Games", "nav.records": "Visits", "nav.about": "About",
-    "about.title": "About me",
-    "about.lead": "I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, farms of thousands of servers, Big Data and, today, infrastructure as code.",
-    "hero.class": "Sergio Bendaña · Automation Platform Engineer",
-    "hero.tag": "20 years automating infrastructure. At home I make 8-bit games with my daughters.",
-    "hero.hi": "Hi, I'm Bendi", "hero.games": "See the games",
-    "games.title": "Games",
-    "games.lead": "They all run in the browser, phones included. Nothing to install and no ads.",
-    "tools.title": "Other projects",
+    "nav.about": "About", "nav.arcade": "ARCADE", "nav.visits": "Visits",
+    "hero.pitch": "20 years automating infrastructure: from production UNIX servers to infrastructure as code. At home I make 8-bit games with my daughters.",
+    "hero.play": "▶ PLAY", "hero.pipe": "From 2005 to today",
+    "st.1": "Hardware, software and network support", "st.2": "24x7 production UNIX", "st.3": "12,000-server farms and OpenStack",
+    "st.4": "Today", "st.4d": "Infrastructure as code",
+    "about.title": "About me", "exp.years": "years in systems and automation",
+    "exp.lead": "Today I automate a large bank's infrastructure with Terraform Enterprise, Ansible and Packer, on AWS, Azure and private cloud. Before that I ran production UNIX, migrated platforms to OpenStack and built Big Data platforms. I hold a Master's in Blockchain.",
+    "now": "now",
+    "a.title": "ARCADE ZONE", "a.coin": "INSERT COIN", "a.select": "SELECT GAME", "a.hs": "HIGH SCORES",
+    "a.lead": "Games I make at home with my daughters. They all run in the browser, phones included, nothing to install and no ads.",
     "play": "PLAY", "code": "CODE", "soon": "COMING SOON",
-    "views": "views", "visits": "visits", "plays": "games played",
-    "p.class": "Role", "p.classv": "Automation platform engineer",
-    "p.level": "Experience", "p.levelv": "years in systems", "p.base": "Base", "p.world": "Now at",
-    "p.ult": "Specialty", "p.ultv": "Infrastructure as code",
-    "inv.auto": "Automation", "inv.cloud": "Cloud & virtualisation", "inv.sys": "Systems",
-    "inv.data": "Data & monitoring", "inv.sc": "Smart contracts",
-    "ach.title": "Highlights", "worlds.title": "Career",
-    "rec.title": "Visits", "rec.filter": "Project", "all": "All projects",
-    "rec.lead": "Views of each repository on GitHub, games played on GitHub Pages and where people come from. Updated every morning.",
+    "views": "views", "visits": "visits", "plays": "played",
+    "hs.rank": "RANK", "hs.name": "GAME", "hs.score": "SCORE", "hs.empty": "NO HIGH SCORES YET",
+    "tools.title": "Other projects",
+    "dash.title": "Visits", "dash.filter": "Project", "all": "All projects",
+    "dash.lead": "Who stops by each repository on GitHub and how many play on GitHub Pages. Updated every morning.",
     "k.repo": "views on GitHub", "k.pages": "game visits", "k.plays": "games played", "k.clones": "clones",
     "l.repo": "GitHub views per day", "l.pages": "Game visits per day",
-    "t.name": "Project", "t.14": "Views 14 d", "t.total": "Views", "t.pages": "Visits", "t.plays": "Played", "t.site": "This profile and site",
+    "t.title": "By project", "t.name": "Project", "t.14": "Views, 14 days", "t.total": "Total views", "t.pages": "Visits", "t.plays": "Played", "t.trend": "Last 30 days",
+    "t.site": "This profile and site",
     "r.title": "Where they come from", "r.none": "No referrers yet.",
     "note": "GitHub only keeps 14 days of traffic, so the history starts the day collection was switched on and grows from there. Game visits and plays are counted by GoatCounter, without cookies.",
     "since": "since",
-    "empty.t": "No data yet",
-    "empty.p": "The daily collection hasn't run yet. To start it:",
-    "empty.1": "Save a token with read access to “Administration” as the TRAFFIC_TOKEN secret.",
+    "empty.t": "No visit data yet", "empty.p": "The daily collection hasn't run yet. To start it:",
+    "empty.1": "Create a token with read access to “Administration” and save it as the TRAFFIC_TOKEN secret.",
     "empty.2": "Register the site on GoatCounter and turn on public counters.",
     "empty.3": "Run the “Update profile” workflow by hand from the Actions tab.",
-    "over.title": "Let's talk", "over.lead": "If you fancy talking about automation, gadgets or games, drop me a line.",
-    "foot": "Handmade, cookie-free, on GitHub Pages. A GitHub Action collects the visits every morning.",
-    "updated": "Updated:", "now": "now"
+    "c.title": "Let's talk", "c.lead": "About automation, infrastructure, gadgets or home-made games.", "c.cta": "Message me on LinkedIn",
+    "foot": "Static page on GitHub Pages, cookie-free. Visits are collected by a GitHub Action in this repository.",
+    "updated": "Last updated:"
   }
 };
 
-/* Career, from the LinkedIn profile. Oldest first: it is a run through the worlds. */
-const WORLDS = [
-  { from: 2005, to: 2005, org: "Cadtech",
-    es: "Soporte de hardware y software, y mis primeros usuarios y redes.",
-    en: "Hardware and software support, and my first users and networks." },
-  { from: 2005, to: 2009, org: "Axpe Consulting",
-    es: "Técnico de sistemas en la red de transmisión de Telefónica y, después, administrador de sistemas en Yell Publicidad.",
-    en: "Systems technician on Telefónica's transmission network, then systems administrator at Yell Publicidad." },
-  { from: 2009, to: 2014, org: "Sopra",
-    es: "Administrador y consultor senior de sistemas UNIX: producción 24x7, migraciones y guardias para una docena de clientes.",
-    en: "Senior UNIX systems administrator and consultant: 24x7 production, migrations and on-call for a dozen clients." },
-  { from: 2014, to: 2015, org: "SIA Group",
-    es: "Administrador senior de sistemas Red Hat, Solaris y AIX, con gestión masiva mediante Ansible.",
-    en: "Senior Red Hat, Solaris and AIX administrator, managing fleets with Ansible." },
-  { from: 2015, to: 2016, org: "Logicalis",
-    es: "Big Data Engineer con Cloudera y Hortonworks, y líder técnico UNIX.",
-    en: "Big Data Engineer with Cloudera and Hortonworks, and UNIX technical lead." },
-  { from: 2016, to: 0, org: "Santander Global T&O",
-    es: "IT Expert en una granja de 12.000 servidores y, desde 2019, Automation Engineer: Terraform Enterprise, Ansible, Packer, AWS, Azure y nube privada.",
-    en: "IT Expert on a 12,000-server farm and, since 2019, Automation Engineer: Terraform Enterprise, Ansible, Packer, AWS, Azure and private cloud." }
-];
-const ACH = [
-  { c: "#ffec27", es: ["12.000 servidores", "Administración UNIX en producción en una granja de 12.000 servidores."],
+/* From the LinkedIn profile */
+const WINS = [
+  { es: ["12.000 servidores", "Administración UNIX en producción en una granja de 12.000 servidores."],
     en: ["12,000 servers", "Production UNIX administration on a 12,000-server farm."] },
-  { c: "#29adff", es: ["Adiós, VMware", "Migración de servidores de VMware a OpenStack."],
-    en: ["Bye, VMware", "Migrated servers from VMware to OpenStack."] },
-  { c: "#00e436", es: ["Terraform Enterprise", "Arquitectura y administración de la plataforma."],
-    en: ["Terraform Enterprise", "Architecture and administration of the platform."] },
-  { c: "#ff77a8", es: ["Big Data blindado", "Clusters Cloudera y Hortonworks con Kerberos, LDAP y Active Directory."],
-    en: ["Armoured Big Data", "Cloudera and Hortonworks clusters with Kerberos, LDAP and Active Directory."] },
-  { c: "#ffa300", es: ["Superviviente 24x7", "Años de guardias e incidencias críticas en producción."],
-    en: ["24x7 survivor", "Years of on-call and critical production incidents."] },
-  { c: "#83769c", es: ["Máster en Blockchain", "Universidad Europea, 2023."],
+  { es: ["Terraform Enterprise", "Arquitectura y administración de la plataforma, y aprovisionamiento en AWS y Azure."],
+    en: ["Terraform Enterprise", "Architecture and administration of the platform, and provisioning on AWS and Azure."] },
+  { es: ["De VMware a OpenStack", "Migración de servidores y despliegues sobre infraestructura IaaS."],
+    en: ["VMware to OpenStack", "Server migrations and deployments on IaaS infrastructure."] },
+  { es: ["Big Data seguro", "Clusters Cloudera y Hortonworks con Kerberos, LDAP y Active Directory."],
+    en: ["Secure Big Data", "Cloudera and Hortonworks clusters with Kerberos, LDAP and Active Directory."] },
+  { es: ["Capacidad a la vista", "Diseño de la planificación de capacidad con OpenTSDB y Grafana."],
+    en: ["Capacity in sight", "Capacity planning design with OpenTSDB and Grafana."] },
+  { es: ["Máster en Blockchain", "Universidad Europea, 2023."],
     en: ["Master's in Blockchain", "Universidad Europea, 2023."] }
+];
+const CAREER = [
+  { from: 2016, to: 0, org: "Santander Global T&O",
+    es: "IT Expert y, desde 2019, Automation Engineer: Terraform Enterprise, Ansible, Packer, AWS, Azure y nube privada.",
+    en: "IT Expert and, since 2019, Automation Engineer: Terraform Enterprise, Ansible, Packer, AWS, Azure and private cloud." },
+  { from: 2015, to: 2016, org: "Logicalis", es: "Big Data Engineer y líder técnico UNIX.", en: "Big Data Engineer and UNIX technical lead." },
+  { from: 2014, to: 2015, org: "SIA Group", es: "Administrador senior de sistemas Red Hat, Solaris y AIX.", en: "Senior Red Hat, Solaris and AIX administrator." },
+  { from: 2009, to: 2014, org: "Sopra", es: "Administrador y consultor senior de sistemas UNIX, 24x7 y multicliente.", en: "Senior UNIX administrator and consultant, 24x7 and multi-client." },
+  { from: 2005, to: 2009, org: "Axpe Consulting", es: "Técnico de sistemas y administrador de sistemas en Yell Publicidad.", en: "Systems technician and systems administrator at Yell Publicidad." },
+  { from: 2005, to: 2005, org: "Cadtech", es: "Soporte de hardware y software.", en: "Hardware and software support." }
 ];
 
 let lang = "es";
@@ -410,7 +454,7 @@ const pad = (n, w = 6) => String(Math.min(n, 10 ** w - 1)).padStart(w, "0");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 let DATA = { repos: {} }, PROJ = { games: [], tools: [] }, selected = "";
-const SHOW_FROM = 10;   // game cards hide counts below this; the high-score table shows everything
+const SHOW_FROM = 10;   // game cartridges hide counts below this; the tables show everything
 
 /* ---------- data helpers ---------- */
 const day = d => d.toISOString().slice(0, 10);
@@ -430,48 +474,57 @@ const scope = () => selected ? repos().filter(r => r.name === selected) : repos(
 const titleOf = name => name === (DATA.user || "serbenda") ? t("t.site")
   : ([...PROJ.games, ...PROJ.tools].find(p => p.repo === name) || {}).title || name;
 
-/* ---------- static bits ---------- */
-function renderPlayer() {
-  document.getElementById("level").textContent = new Date().getFullYear() - 2005;
-  document.getElementById("ach").innerHTML = ACH.map(a => `<li><i style="background:${a.c}"></i><b>${esc(a[lang][0])}</b><span>${esc(a[lang][1])}</span></li>`).join("");
-  document.getElementById("worlds").innerHTML = WORLDS.map((w, i) => `
-    <li class="${w.to === 0 ? "now" : ""}">
-      <div class="w">${w.from}${w.to !== w.from ? "–" + (w.to || t("now")) : ""}</div>
-      <div><b>${esc(w.org)}</b><span>${esc(w[lang])}</span></div>
-    </li>`).join("");
+/* ---------- about ---------- */
+function renderAbout() {
+  document.getElementById("wins").innerHTML = WINS.map(w => `<li><b>${esc(w[lang][0])}</b><span>${esc(w[lang][1])}</span></li>`).join("");
+  document.getElementById("career").innerHTML = CAREER.map(c => `
+    <li class="${c.to === 0 ? "now" : ""}"><span class="y">${c.from}${c.to !== c.from ? "–" + (c.to || t("now")) : ""}</span><b>${esc(c.org)}</b><span>${esc(c[lang])}</span></li>`).join("");
 }
 
-/* ---------- games ---------- */
-function renderGames() {
-  const byName = DATA.repos || {};
+/* ---------- arcade ---------- */
+function renderArcade() {
+  const by = DATA.repos || {};
   document.getElementById("games").innerHTML = PROJ.games.map(g => {
-    const r = byName[g.repo] || {};
+    const r = by[g.repo] || {};
     const live = r.pages_url || (r.pages ? `https://serbenda.github.io/${g.repo}/` : "");
-    const visits = lastHits(r), plays = lastPlays(r), views = sumViews(r);
+    const views = sumViews(r), visits = lastHits(r), plays = lastPlays(r);
     return `
-    <article class="px cart">
+    <article class="pxbox cart">
       <img class="shot${g.pixel ? " pixel" : ""}" src="${esc(g.img)}" alt="" loading="lazy" width="640" height="360">
       <div class="body">
         <h3>${esc(g.title)}</h3>
         <ul class="tags">${((lang === "en" && g.tags_en) || g.tags || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
         <p>${esc(g[lang])}</p>
-        <div class="score">
-          ${views >= SHOW_FROM ? `<span class="c-repo"><b>●</b> ${nf(views)} ${t("views")}</span>` : ""}
-          ${visits >= SHOW_FROM ? `<span class="c-pages"><b>●</b> ${nf(visits)} ${t("visits")}</span>` : ""}
-          ${plays >= SHOW_FROM ? `<span class="c-plays"><b>●</b> ${nf(plays)} ${t("plays")}</span>` : ""}
+        <div class="sc">
+          ${views >= SHOW_FROM ? `<span class="c-repo">■ ${nf(views)} ${t("views")}</span>` : ""}
+          ${visits >= SHOW_FROM ? `<span class="c-pages">■ ${nf(visits)} ${t("visits")}</span>` : ""}
+          ${plays >= SHOW_FROM ? `<span class="c-plays">■ ${nf(plays)} ${t("plays")}</span>` : ""}
         </div>
         <div class="act">
-          ${live ? `<a class="btn" href="${esc(live)}">▶ ${t("play")}</a>` : `<span class="btn ghost" aria-disabled="true">${t("soon")}</span>`}
-          <a class="btn ghost" href="https://github.com/serbenda/${esc(g.repo)}">${t("code")}</a>
+          ${live ? `<a class="pbtn" href="${esc(live)}">▶ ${t("play")}</a>` : `<span class="pbtn ghost">${t("soon")}</span>`}
+          <a class="pbtn ghost" href="https://github.com/serbenda/${esc(g.repo)}">${t("code")}</a>
         </div>
       </div>
     </article>`;
   }).join("");
+
+  /* high scores: games only, score = views + visits + plays */
+  const rows = PROJ.games.map(g => { const r = by[g.repo] || {}; return { title: g.title, score: sumViews(r) + lastHits(r) + lastPlays(r) }; })
+    .filter(x => x.score > 0).sort((a, b) => b.score - a.score);
+  const rank = i => lang === "es" ? `${i + 1}º` : `${i + 1}${["ST", "ND", "RD"][i] || "TH"}`;
+  document.getElementById("hs").innerHTML = rows.length
+    ? `<thead><tr><th>${t("hs.rank")}</th><th>${t("hs.name")}</th><th>${t("hs.score")}</th></tr></thead><tbody>${rows.map((x, i) =>
+        `<tr><td class="rk">${rank(i)}</td><td>${esc(x.title.toUpperCase())}</td><td>${pad(x.score)}</td></tr>`).join("")}</tbody>`
+    : `<tbody><tr><td style="text-align:left">${t("hs.empty")}</td></tr></tbody>`;
+  document.getElementById("hiscore").textContent = pad(rows.reduce((a, x) => a + x.score, 0));
+}
+
+function renderTools() {
   document.getElementById("tools").innerHTML = PROJ.tools.map(p =>
     `<li><a href="https://github.com/serbenda/${esc(p.repo)}">${esc(p.title)}</a><span>${esc(p[lang])}</span></li>`).join("");
 }
 
-/* ---------- chart ---------- */
+/* ---------- visits chart ---------- */
 function range(rs) {
   const span = days(60), first = span.findIndex(d => rs.some(r => (r.views || {})[d] || dailyHits(r)[d]));
   return first < 0 ? span.slice(-30) : span.slice(Math.min(first, span.length - 14));
@@ -480,50 +533,55 @@ function chart(rs) {
   const ds = range(rs), hb = rs.map(dailyHits);
   const repo = ds.map(d => rs.reduce((a, r) => a + ((r.views || {})[d]?.[0] || 0), 0));
   const pages = ds.map(d => hb.reduce((a, h) => a + (h[d] || 0), 0));
-  const W = 1000, H = 240, L = 44, R = 12, Tp = 30, B = 28;
+  const W = 1000, H = 260, L = 40, R = 10, Tp = 16, B = 28;
   const max = Math.max(4, ...repo, ...pages), step = (W - L - R) / Math.max(1, ds.length - 1);
-  const x = i => Math.round(L + i * step), y = v => Math.round(Tp + (H - Tp - B) * (1 - v / max));
-  /* stepped lines: hold each value until the next day, like an 8-bit level */
-  const steps = vs => vs.map((v, i) => i ? `H${x(i)}V${y(v)}` : `M${x(0)},${y(v)}`).join("");
-  const fmtD = d => new Date(d + "T12:00:00").toLocaleDateString(loc(), { day: "numeric", month: "short" });
+  const x = i => L + i * step, y = v => Tp + (H - Tp - B) * (1 - v / max);
+  const line = vs => vs.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  const area = vs => `${line(vs)}L${x(vs.length - 1)},${y(0)}L${x(0)},${y(0)}Z`;
   const lbl = [0, Math.floor(ds.length / 2), ds.length - 1];
+  const fmtD = d => new Date(d + "T12:00:00").toLocaleDateString(loc(), { day: "numeric", month: "short" });
   return `
-  <div class="px chart">
-    <div class="legend"><span><i class="sq" style="background:var(--blue)"></i>${t("l.repo")}</span><span><i class="sq" style="background:var(--green)"></i>${t("l.pages")}</span></div>
-    <svg viewBox="0 0 ${W} ${H}" shape-rendering="crispEdges" role="img" aria-label="${t("l.repo")}, ${t("l.pages")}">
-      ${[0, Math.round(max / 2), max].map(v => `<rect x="${L}" y="${y(v)}" width="${W - L - R}" height="2" fill="#1a1720"/><text class="axis" x="${L - 8}" y="${y(v) + 5}" text-anchor="end">${nf(v)}</text>`).join("")}
+  <div class="chart">
+    <div class="legend"><span><i class="dot" style="background:var(--repo)"></i>${t("l.repo")}</span><span><i class="dot" style="background:var(--pages)"></i>${t("l.pages")}</span></div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t("l.repo")}, ${t("l.pages")}">
+      ${[0, Math.round(max / 2), max].map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#242c48"/><text class="axis" x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${nf(v)}</text>`).join("")}
       ${lbl.map(i => `<text class="axis" x="${x(i)}" y="${H - 6}" text-anchor="${i === 0 ? "start" : i === ds.length - 1 ? "end" : "middle"}">${fmtD(ds[i])}</text>`).join("")}
-      <path d="${steps(pages)}" fill="none" stroke="#00e436" stroke-width="4"/>
-      <path d="${steps(repo)}" fill="none" stroke="#29adff" stroke-width="4"/>
-      <rect id="hx" y="${Tp}" width="2" height="${H - Tp - B}" fill="#ffec27" visibility="hidden"/>
-      <text id="ht" class="tip" y="20" visibility="hidden"></text>
+      <path d="${area(pages)}" fill="#36d399" fill-opacity=".12"/><path d="${line(pages)}" fill="none" stroke="#36d399" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="${area(repo)}" fill="#38bdf8" fill-opacity=".12"/><path d="${line(repo)}" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+      <line id="hx" y1="${Tp}" y2="${H - B}" stroke="#93a0b8" stroke-dasharray="3 3" visibility="hidden"/>
+      <text id="ht" class="tip" y="${Tp + 2}" visibility="hidden"></text>
       <rect id="hz" x="${L}" y="0" width="${W - L - R}" height="${H}" fill="transparent"/>
     </svg>
   </div>`;
 }
 function hookChart(rs) {
   const svg = document.querySelector(".chart svg"); if (!svg) return;
-  const ds = range(rs), hb = rs.map(dailyHits), W = 1000, L = 44, R = 12, step = (W - L - R) / Math.max(1, ds.length - 1);
+  const ds = range(rs), hb = rs.map(dailyHits), W = 1000, L = 40, R = 10, step = (W - L - R) / Math.max(1, ds.length - 1);
   const hx = svg.querySelector("#hx"), ht = svg.querySelector("#ht"), hz = svg.querySelector("#hz");
   hz.addEventListener("pointermove", e => {
     const p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY;
     const lx = p.matrixTransform(svg.getScreenCTM().inverse()).x;
-    const i = Math.max(0, Math.min(ds.length - 1, Math.round((lx - L) / step))), d = ds[i], xv = Math.round(L + i * step);
+    const i = Math.max(0, Math.min(ds.length - 1, Math.round((lx - L) / step))), d = ds[i], xv = L + i * step;
     const rv = rs.reduce((a, r) => a + ((r.views || {})[d]?.[0] || 0), 0), pv = hb.reduce((a, h) => a + (h[d] || 0), 0);
-    hx.setAttribute("x", xv - 1); hx.setAttribute("visibility", "visible");
+    hx.setAttribute("x1", xv); hx.setAttribute("x2", xv); hx.setAttribute("visibility", "visible");
     ht.textContent = `${new Date(d + "T12:00:00").toLocaleDateString(loc(), { day: "numeric", month: "short" })} · GitHub ${nf(rv)} · Pages ${nf(pv)}`;
     const right = xv > W * 0.6;
     ht.setAttribute("x", right ? xv - 8 : xv + 8); ht.setAttribute("text-anchor", right ? "end" : "start"); ht.setAttribute("visibility", "visible");
   });
   hz.addEventListener("pointerleave", () => { hx.setAttribute("visibility", "hidden"); ht.setAttribute("visibility", "hidden"); });
 }
+function spark(r) {
+  const vs = days(30).map(d => (r.views || {})[d]?.[0] || 0), max = Math.max(1, ...vs);
+  const pts = vs.map((v, i) => `${(i * 100 / 29).toFixed(1)},${(22 - 20 * v / max).toFixed(1)}`).join(" ");
+  return `<svg class="spark" width="72" height="22" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="#38bdf8" stroke-width="1.5"/></svg>`;
+}
 
-/* ---------- records ---------- */
-function renderRecords() {
+/* ---------- visits dashboard ---------- */
+function renderDash() {
   const el = document.getElementById("dash"), all = repos();
   const has = all.some(r => Object.keys(r.views || {}).length || Object.keys(r.pages_hits || {}).length);
   if (!has) {
-    el.innerHTML = `<div class="px empty"><h3>${t("empty.t")}</h3><p class="lead">${t("empty.p")}</p><ol><li>${t("empty.1")}</li><li>${t("empty.2")}</li><li>${t("empty.3")}</li></ol></div>`;
+    el.innerHTML = `<div class="empty"><h3>${t("empty.t")}</h3><p class="lead">${t("empty.p")}</p><ol><li>${t("empty.1")}</li><li>${t("empty.2")}</li><li>${t("empty.3")}</li></ol></div>`;
     return;
   }
   const rs = scope(), from14 = days(14)[0], first = all.flatMap(r => Object.keys(r.views || {})).sort()[0];
@@ -531,9 +589,7 @@ function renderRecords() {
   const refs = {};
   rs.forEach(r => (r.referrers || []).forEach(x => { refs[x.referrer] = (refs[x.referrer] || 0) + x.count; }));
   const refList = Object.entries(refs).sort((a, b) => b[1] - a[1]).slice(0, 8), refMax = refList[0]?.[1] || 1;
-  const rank = i => `${i + 1}`;
-  const kpi = (cls, n, label) => `<div class="px kpi"><strong class="${cls}">${nf(n)}</strong><span>${label}</span></div>`;
-
+  const kpi = (cls, n, label) => `<div class="kpi"><strong class="${cls}">${nf(n)}</strong><span>${label}</span></div>`;
   el.innerHTML = `
     <div class="kpis">
       ${kpi("c-repo", rs.reduce((a, r) => a + sumViews(r), 0), t("k.repo"))}
@@ -542,31 +598,29 @@ function renderRecords() {
       ${kpi("", rs.reduce((a, r) => a + sumClones(r), 0), t("k.clones"))}
     </div>
     ${chart(rs)}
-    <div class="px board">
+    <div class="box">
+      <h3>${t("t.title")}</h3>
       <table>
-        <thead><tr><th></th><th>${t("t.name")}</th><th>${t("t.14")}</th><th>${t("t.total")}</th><th>${t("t.pages")}</th><th>${t("t.plays")}</th></tr></thead>
-        <tbody>${rows.map((r, i) => `
+        <thead><tr><th>${t("t.name")}</th><th>${t("t.14")}</th><th>${t("t.total")}</th><th>${t("t.pages")}</th><th>${t("t.plays")}</th><th>${t("t.trend")}</th></tr></thead>
+        <tbody>${rows.map(r => `
           <tr data-name="${esc(r.name)}" class="${r.name === selected ? "on" : ""}" tabindex="0">
-            <td class="rk">${rank(i)}</td><td>${esc(titleOf(r.name))}</td>
-            <td>${nf(sumViews(r, from14))}</td><td class="c-repo">${nf(sumViews(r))}</td>
-            <td class="c-pages">${r.pages ? nf(lastHits(r)) : "–"}</td><td class="c-plays">${lastPlays(r) ? nf(lastPlays(r)) : "–"}</td>
+            <td>${esc(titleOf(r.name))}</td><td>${nf(sumViews(r, from14))}</td><td>${nf(sumViews(r))}</td>
+            <td>${r.pages ? nf(lastHits(r)) : "–"}</td><td>${lastPlays(r) ? nf(lastPlays(r)) : "–"}</td><td>${spark(r)}</td>
           </tr>`).join("")}</tbody>
       </table>
     </div>
-    <div class="px board">
-      <h3 style="color:var(--blue);margin-bottom:14px">${t("r.title")}</h3>
+    <div class="box">
+      <h3>${t("r.title")}</h3>
       ${refList.length ? `<ul class="refs">${refList.map(([k, v]) => `<li><span>${esc(k)}</span><span>${nf(v)}</span><span class="b"><i style="width:${(100 * v / refMax).toFixed(0)}%"></i></span></li>`).join("")}</ul>` : `<p class="lead">${t("r.none")}</p>`}
     </div>
     <p class="note">${t("note")}${first ? ` (${t("since")} ${first})` : ""}</p>`;
-
   hookChart(rs);
   el.querySelectorAll("tbody tr").forEach(tr => {
-    const pick = () => { selected = selected === tr.dataset.name ? "" : tr.dataset.name; document.getElementById("filter").value = selected; renderRecords(); };
+    const pick = () => { selected = selected === tr.dataset.name ? "" : tr.dataset.name; document.getElementById("filter").value = selected; renderDash(); };
     tr.addEventListener("click", pick);
     tr.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
   });
 }
-
 function renderFilter() {
   const f = document.getElementById("filter");
   f.innerHTML = `<option value="">${t("all")}</option>` + repos().map(r => r.name).sort().map(n => `<option value="${esc(n)}">${esc(titleOf(n))}</option>`).join("");
@@ -576,19 +630,18 @@ function renderFilter() {
 function render() {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-t]").forEach(n => { n.textContent = t(n.dataset.t); });
+  document.querySelectorAll("[data-t-aria]").forEach(n => n.setAttribute("aria-label", t(n.dataset.tAria)));
   document.getElementById("lang").textContent = lang === "es" ? "EN" : "ES";
-  const all = repos();
-  renderPlayer(); renderGames(); renderFilter(); renderRecords();
+  renderAbout(); renderArcade(); renderTools(); renderFilter(); renderDash();
   document.getElementById("updated").textContent = DATA.updated
     ? `${t("updated")} ${new Date(DATA.updated).toLocaleString(loc(), { dateStyle: "medium", timeStyle: "short" })}` : "";
 }
-
 document.getElementById("lang").addEventListener("click", () => {
   lang = lang === "es" ? "en" : "es";
   try { localStorage.setItem("lang", lang); } catch (e) {}
   render();
 });
-document.getElementById("filter").addEventListener("change", e => { selected = e.target.value; renderRecords(); });
+document.getElementById("filter").addEventListener("change", e => { selected = e.target.value; renderDash(); });
 
 const getJSON = url => fetch(url, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
 render();
