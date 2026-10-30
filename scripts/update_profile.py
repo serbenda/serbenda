@@ -3,6 +3,9 @@
 
 - Rewrites the block between <!-- ACTIVITY:START --> and <!-- ACTIVITY:END -->
   with the most recently pushed public repositories.
+- Rewrites the block between <!-- GAMES:START --> and <!-- GAMES:END --> with the
+  games table, built from the website's data/projects.json (repo serbenda.github.io),
+  so adding a game to the website also adds it to the README.
 - Regenerates assets/stats.svg (repos, stars, top languages).
 
 Standard library only. Uses GITHUB_TOKEN when available to avoid rate limits.
@@ -26,6 +29,10 @@ STATS_SVG = ROOT / "assets" / "stats.svg"
 MAX_ITEMS = 5
 # Practice / throwaway repos that should not show up on the profile
 EXCLUDE = {"testgit", "skills-introduction-to-github"}
+SITE = "https://bendi.dev"
+SITE_REPO = f"{USER}.github.io"
+PROJECTS_URL = f"https://raw.githubusercontent.com/{USER}/{SITE_REPO}/main/data/projects.json"
+IMG_BASE = f"https://raw.githubusercontent.com/{USER}/{SITE_REPO}/main/"
 
 LANG_COLORS = {
     "Python": "#3776ab", "JavaScript": "#f7df1e", "TypeScript": "#3178c6",
@@ -94,11 +101,37 @@ def activity_block(repos: list[dict], labels: dict, now: datetime) -> str:
     return "\n".join(rows) if rows else "-"
 
 
-def replace_block(text: str, block: str) -> str:
-    pattern = re.compile(r"(<!-- ACTIVITY:START -->\n).*?(\n<!-- ACTIVITY:END -->)", re.S)
+def replace_block(text: str, block: str, name: str = "ACTIVITY") -> str:
+    pattern = re.compile(rf"(<!-- {name}:START -->\n).*?(\n<!-- {name}:END -->)", re.S)
     if not pattern.search(text):
-        raise SystemExit("ACTIVITY markers not found")
+        raise SystemExit(f"{name} markers not found")
     return pattern.sub(lambda m: m.group(1) + block + m.group(2), text)
+
+
+def fetch_projects() -> dict:
+    """The website's project list, or empty when it cannot be read."""
+    try:
+        req = urllib.request.Request(PROJECTS_URL, headers={"User-Agent": f"{USER}-profile-updater"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return json.load(resp)
+    except Exception as err:
+        print(f"projects.json not available ({err}); games table left as it is")
+        return {}
+
+
+def games_block(projects: dict, pages: set[str], lang: str) -> str:
+    """Games table for the README: three per row, screenshot, title, blurb and links."""
+    play, code = ("▶ Jugar", "Código") if lang == "es" else ("▶ Play", "Code")
+    cells = []
+    for g in projects.get("games", []):
+        repo = g["repo"]
+        live = repo in pages
+        url = f"{SITE}/{repo}/" if live else f"https://github.com/{USER}/{repo}"
+        links = (f'<a href="{url}"><b>{play}</b></a> · ' if live else "") + f'<a href="https://github.com/{USER}/{repo}">{code}</a>'
+        cells.append(f'<td width="33%" valign="top">\n<a href="{url}"><img src="{IMG_BASE}{g["img"]}" alt="{escape(g["title"])}" width="100%"></a>\n\n'
+                     f'**{g["title"]}**<br>\n<sub>{g[lang]}</sub>\n\n{links}\n\n</td>')
+    rows = ["<tr>\n" + "\n".join(cells[i:i + 3]) + "\n</tr>" for i in range(0, len(cells), 3)]
+    return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
 def stats_svg(repos: list[dict]) -> str:
@@ -136,10 +169,17 @@ def main() -> int:
     now = datetime.now(timezone.utc)
     repos = visible(fetch_repos(USER), USER)
     repos.sort(key=lambda r: r["pushed_at"], reverse=True)
+    pages = {r["name"] for r in repos if r.get("has_pages")}
+    activity = [r for r in repos if r["name"] != SITE_REPO]
+    projects = fetch_projects()
     for path in READMES:
         if path.exists():
             text = path.read_text(encoding="utf-8")
-            path.write_text(replace_block(text, activity_block(repos, LABELS[path.name], now)), encoding="utf-8")
+            text = replace_block(text, activity_block(activity, LABELS[path.name], now))
+            if projects.get("games"):
+                lang = "es" if path.name.endswith(".es.md") else "en"
+                text = replace_block(text, games_block(projects, pages, lang), "GAMES")
+            path.write_text(text, encoding="utf-8")
     STATS_SVG.write_text(stats_svg(repos), encoding="utf-8")
     print(f"Updated with {len(repos)} public repos")
     return 0

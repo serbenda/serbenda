@@ -5,7 +5,7 @@ Two sources:
 
 1. GitHub traffic API (views and clones of github.com/<user>/<repo>).
    GitHub only keeps the last 14 days, so every run merges them into
-   docs/data/traffic.json and the history keeps growing day by day.
+   data/traffic.json and the history keeps growing day by day.
    Needs a personal access token in TRAFFIC_TOKEN: the default
    GITHUB_TOKEN of a workflow cannot read other repos' traffic.
 
@@ -16,7 +16,7 @@ Two sources:
    taken from the GOATCOUNTER_CODE variable (default: the GitHub user).
 
 Outputs:
-- docs/data/traffic.json   history used by the dashboard web page
+- data/traffic.json        history read by the website (bendi.dev, repo serbenda.github.io)
 - assets/traffic.svg       card for README.md
 - assets/traffic.es.svg    card for README.es.md
 
@@ -37,7 +37,7 @@ from pathlib import Path
 from update_profile import EXCLUDE, USER
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "docs" / "data" / "traffic.json"
+DATA = ROOT / "data" / "traffic.json"
 CARDS = {
     "en": ROOT / "assets" / "traffic.svg",
     "es": ROOT / "assets" / "traffic.es.svg",
@@ -184,15 +184,20 @@ TEXT = {
     "es": {"head": "Visitas", "repo": "vistas en GitHub", "pages": "visitas a los juegos", "since": "desde",
            "none": "Todavía no hay datos"},
 }
-PROJECTS = ROOT / "docs" / "data" / "projects.json"
+PROJECTS_URL = f"https://raw.githubusercontent.com/{USER}/{USER}.github.io/main/data/projects.json"
+
+
+def projects() -> dict:
+    """The website's project list (repo serbenda.github.io), or empty if unreachable."""
+    try:
+        return get_json(PROJECTS_URL)
+    except Exception:
+        return {}
 
 
 def titles() -> dict:
     """Display names from the website's project list, so the card matches it."""
-    try:
-        p = json.loads(PROJECTS.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return {}
+    p = projects()
     return {x["repo"]: x["title"] for x in p.get("games", []) + p.get("tools", [])}
 
 

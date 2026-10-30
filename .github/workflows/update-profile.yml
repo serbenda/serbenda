@@ -8,7 +8,7 @@ on:
     branches: [main]
     paths:
       - "scripts/**"
-      - "docs/index.html"
+      - "docs/**"
       - ".github/workflows/update-profile.yml"
 
 permissions:
@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add README.md README.es.md assets/ docs/data/
+          git add README.md README.es.md assets/ data/
           if git diff --cached --quiet; then
             echo "Nothing to update"
             exit 0
