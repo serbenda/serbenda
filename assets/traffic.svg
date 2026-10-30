@@ -7,11 +7,11 @@
 </style>
 <rect width="500" height="260" rx="14" fill="#0f1426" stroke="#ffffff" stroke-opacity="0.08"/>
 <text x="30" y="36" class="h">VISITS · AUTO-UPDATED</text>
-<text x="470" y="36" class="m" text-anchor="end"></text>
+<text x="470" y="36" class="m" text-anchor="end">since 2026-10-16</text>
 <rect x="30" y="58" width="4" height="40" rx="2" fill="#38bdf8"/>
-<text x="44" y="82" class="v">0</text><text x="44" y="102" class="m">repo views</text>
+<text x="44" y="82" class="v">541</text><text x="44" y="102" class="m">repo views</text>
 <rect x="260" y="58" width="4" height="40" rx="2" fill="#36d399"/>
 <text x="274" y="82" class="v">0</text><text x="274" y="102" class="m">Pages visits</text>
 <text x="30" y="134" class="h">MOST VISITED</text>
-<text x="30" y="160" class="m">Collecting the first data…</text>
+<text x="30" y="159" class="t">dungeons-and-deployme…</text><clipPath id="b0"><rect x="226" y="150" width="180" height="10" rx="5"/></clipPath><rect x="226" y="150" width="180" height="10" rx="5" fill="#1e293b"/><g clip-path="url(#b0)"><rect x="226" y="150" width="180.0" height="10" fill="#38bdf8"/><rect x="406.0" y="150" width="0.0" height="10" fill="#36d399"/></g><text x="470" y="159" class="t" text-anchor="end">273</text><text x="30" y="185" class="t">chapas</text><clipPath id="b1"><rect x="226" y="176" width="180" height="10" rx="5"/></clipPath><rect x="226" y="176" width="180" height="10" rx="5" fill="#1e293b"/><g clip-path="url(#b1)"><rect x="226" y="176" width="91.6" height="10" fill="#38bdf8"/><rect x="317.6" y="176" width="0.0" height="10" fill="#36d399"/></g><text x="470" y="185" class="t" text-anchor="end">139</text><text x="30" y="211" class="t">hemiciclo-fighters</text><clipPath id="b2"><rect x="226" y="202" width="180" height="10" rx="5"/></clipPath><rect x="226" y="202" width="180" height="10" rx="5" fill="#1e293b"/><g clip-path="url(#b2)"><rect x="226" y="202" width="26.4" height="10" fill="#38bdf8"/><rect x="252.4" y="202" width="0.0" height="10" fill="#36d399"/></g><text x="470" y="211" class="t" text-anchor="end">40</text><text x="30" y="237" class="t">story-reader</text><clipPath id="b3"><rect x="226" y="228" width="180" height="10" rx="5"/></clipPath><rect x="226" y="228" width="180" height="10" rx="5" fill="#1e293b"/><g clip-path="url(#b3)"><rect x="226" y="228" width="25.7" height="10" fill="#38bdf8"/><rect x="251.7" y="228" width="0.0" height="10" fill="#36d399"/></g><text x="470" y="237" class="t" text-anchor="end">39</text>
 </svg>
