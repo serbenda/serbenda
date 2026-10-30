@@ -6,7 +6,6 @@
 
 [![Mi web](https://img.shields.io/badge/Mi_web-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://bendi.dev/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/serbenda)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
 [![Patrocinar](https://img.shields.io/badge/Patrocinar-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/serbenda)
 
