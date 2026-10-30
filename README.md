@@ -21,7 +21,7 @@
 
 <p align="center">
 🤖 <b>Automation</b> · Infrastructure as code with <b>Terraform, Ansible and Packer</b> on AWS, Azure and private cloud<br>
-⛓️ <b>Blockchain</b> · <b>Master's in Blockchain</b>: smart contracts in <b>Solidity</b>, NFTs, IPFS and multichain dApps · <a href="#blockchain">FrameBlock ↓</a><br>
+⛓️ <b>Blockchain</b> · <b>Master's in Blockchain</b>: smart contracts in <b>Solidity</b>, NFTs, IPFS and multichain dApps · 🏆 <a href="#blockchain">FrameBlock, best project of the Master's ↓</a><br>
 🕹️ <b>Games</b> · Small 8-bit games in pure HTML + JS, made with my daughters · <a href="https://bendi.dev/#arcade">Play →</a>
 </p>
 
@@ -123,9 +123,17 @@ I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That
   <img src="https://img.shields.io/badge/MetaMask-E2761B?style=for-the-badge&logo=metamask&logoColor=white" alt="MetaMask">
 </p>
 
-### 🚀 FrameBlock · Master's final project
+### 🏆 FrameBlock · Winner, best project of the Master's
 
-**[FrameBlock](https://github.com/serbenda/frameblock)** is a framework to plug any application into **any blockchain**, whatever the vendor or technology, so the app doesn't have to deal with the complexity underneath. It was built as a two-person team and presented as the final project of the Master's.
+<p align="center">
+  <a href="https://www.linkedin.com/feed/update/urn:li:share:7033036387415113728/"><img src="https://img.shields.io/badge/%F0%9F%8F%86_Best_project-Master's_in_Blockchain_·_Universidad_Europea-ffec27?style=for-the-badge&labelColor=7e2553" alt="Best project, Master's in Blockchain, Universidad Europea"></a>
+</p>
+
+> **February 2023.** After 14 intense weeks, five final projects were defended before a jury of industry experts, with people from **Telefónica, Polygon and Bit2Me** and a CTO who was an alumnus of the first edition. After a tough deliberation, they picked **FrameBlock** as the winner. [See the announcement on LinkedIn →](https://www.linkedin.com/feed/update/urn:li:share:7033036387415113728/)
+
+**[FrameBlock](https://github.com/serbenda/frameblock)** is a framework to plug any application into **any blockchain**, whatever the vendor or technology, so the app doesn't have to deal with the complexity underneath. I built it together with [Roberto González Rey](https://www.linkedin.com/in/roberto-gonz%C3%A1lez-rey-018335118/) as our final project.
+
+**The problem it tackles:** blockchain is still hard to use and hard to trust for most people and companies. You have to pick a chain, learn its tools, manage wallets and pay in crypto. FrameBlock hides those choices behind one layer, so the same app can work on several chains and the user never has to know which one is underneath.
 
 To prove it works we built a real use case, **Simple AI Collection**: a dApp where you search AI-generated images, pick your favourites, store them on **IPFS** and mint them as your own **NFT collection (ERC-721)** on Ethereum, BNB Smart Chain or Polygon, paying the deployment fee by card.
 
@@ -154,6 +162,12 @@ flowchart TB
 | **Networks** | Ethereum, BNB Smart Chain and Polygon from the same app |
 | **Payments** | Stripe checkout for the deployment fee |
 
+**What makes it different:**
+- 🧩 **Vendor-agnostic**: one integration, several chains (Ethereum, BNB Smart Chain, Polygon), and room for more.
+- 🙋 **Usable by non-crypto people**: sign in with the wallet you already have, or pay the deployment by card.
+- 🔐 **Trust built in**: audited OpenZeppelin building blocks, an on-chain registry of who owns what, and files on IPFS that nobody can quietly change.
+- 🚀 **A working product, not slides**: a live MVP with a real use case, shown end to end in the demo.
+
 <p align="center">
   <a href="https://github.com/serbenda/frameblock"><b>📂 Code</b></a> ·
   <a href="https://github.com/serbenda/frameblock/blob/main/doc/FRAMEBLOCK.mp4"><b>🎬 Demo video</b></a> ·
@@ -165,7 +179,7 @@ flowchart TB
 
 ## 👾 About me
 
-I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain) on top of it.
+I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain), which won best project of the Master's.
 
 Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
 
