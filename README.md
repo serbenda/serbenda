@@ -2,7 +2,9 @@
 
 <a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Automation Platform Engineer" width="100%"></a>
 
-**20 years automating infrastructure. At home I make 8-bit games with my daughters.**
+<a href="https://bendi.dev/"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=29ADFF&center=true&vCenter=true&width=640&lines=Automation+Platform+Engineer;Infrastructure+as+Code+%E2%80%A2+Terraform+%E2%80%A2+Ansible;Blockchain+%26+Web3+%E2%80%A2+Solidity+%E2%80%A2+IPFS;8-bit+games+for+the+browser" alt="20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters."></a>
+
+**20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters.**
 
 [![Website](https://img.shields.io/badge/Website-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://bendi.dev/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
@@ -14,6 +16,37 @@
 **🇬🇧 English** · [🇪🇸 Español](README.es.md)
 
 </div>
+
+---
+
+<table>
+<tr>
+<td width="33%" align="center" valign="top">
+
+**🤖 Automation**
+
+Infrastructure as code with **Terraform, Ansible and Packer** on AWS, Azure and private cloud.<br>
+<sub>20 years in infrastructure</sub>
+
+</td>
+<td width="33%" align="center" valign="top">
+
+**⛓️ Blockchain**
+
+**Master's in Blockchain**. Smart contracts in **Solidity**, NFTs, IPFS and multichain dApps.<br>
+<sub><a href="#blockchain">See FrameBlock ↓</a></sub>
+
+</td>
+<td width="33%" align="center" valign="top">
+
+**🕹️ Games**
+
+Small 8-bit games in pure HTML + JS, made with my daughters and playable on any phone.<br>
+<sub><a href="https://bendi.dev/#arcade">Play them →</a></sub>
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -89,15 +122,71 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <br>
 
 - **[Bankinter VISA → CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)**: Turns Bankinter VISA PDF statements into a clean CSV.
-- **[FrameBlock](https://github.com/serbenda/frameblock)**: Framework for secure Web3 apps. Final project of my Master's in Blockchain.
 
 </details>
 
 ---
 
+<a id="blockchain"></a>
+
+## ⛓️ Blockchain
+
+I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That's where I moved from running infrastructure to building on decentralised infrastructure: smart contracts, tokens, decentralised storage and dApps that work across several chains.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity">
+  <img src="https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white" alt="Ethereum">
+  <img src="https://img.shields.io/badge/Polygon-7B3FE4?style=for-the-badge&logo=polygon&logoColor=white" alt="Polygon">
+  <img src="https://img.shields.io/badge/BNB_Chain-F0B90B?style=for-the-badge&logo=binance&logoColor=black" alt="BNB Chain">
+  <img src="https://img.shields.io/badge/IPFS-65C2CB?style=for-the-badge&logo=ipfs&logoColor=white" alt="IPFS">
+  <img src="https://img.shields.io/badge/OpenZeppelin-4E5EE4?style=for-the-badge&logo=openzeppelin&logoColor=white" alt="OpenZeppelin">
+  <img src="https://img.shields.io/badge/ethers.js-2535A0?style=for-the-badge&logo=ethereum&logoColor=white" alt="ethers.js">
+  <img src="https://img.shields.io/badge/MetaMask-E2761B?style=for-the-badge&logo=metamask&logoColor=white" alt="MetaMask">
+</p>
+
+### 🚀 FrameBlock · Master's final project
+
+**[FrameBlock](https://github.com/serbenda/frameblock)** is a framework to plug any application into **any blockchain**, whatever the vendor or technology, so the app doesn't have to deal with the complexity underneath. It was built as a two-person team and presented as the final project of the Master's.
+
+To prove it works we built a real use case, **Simple AI Collection**: a dApp where you search AI-generated images, pick your favourites, store them on **IPFS** and mint them as your own **NFT collection (ERC-721)** on Ethereum, BNB Smart Chain or Polygon, paying the deployment fee by card.
+
+```mermaid
+flowchart LR
+    U(["👤 User"]) --> D["⚛️ React dApp<br/><i>Web3 Onboard · ethers.js</i>"]
+    D -->|"search"| AI["🎨 AI image API"]
+    D -->|"pay deploy fee"| S["💳 Stripe"]
+    D -->|"store images + metadata"| I[("📦 IPFS")]
+    D -->|"deploy + mint ERC-721"| BC{{"⛓️ Ethereum · BNB Chain · Polygon"}}
+    BC -->|"registry of collections"| R["📜 MapStore contract"]
+
+    classDef app fill:#1d2b53,stroke:#29adff,color:#fff1e8
+    classDef chain fill:#7e2553,stroke:#ff77a8,color:#fff1e8
+    classDef ext fill:#ffec27,stroke:#ab5236,color:#000
+    class D app
+    class BC,R chain
+    class AI,S,I ext
+```
+
+| | |
+|---|---|
+| **Smart contracts** | ERC-721 collection with OpenZeppelin (`ERC721Enumerable`, `Ownable`) and an on-chain registry of every user's collections |
+| **Frontend** | React dApp with Web3 Onboard: MetaMask, Ledger, Trezor, WalletConnect and more |
+| **Storage** | IPFS node for the images and their metadata |
+| **Networks** | Ethereum, BNB Smart Chain and Polygon from the same app |
+| **Payments** | Stripe checkout for the deployment fee |
+
+<p align="center">
+  <a href="https://github.com/serbenda/frameblock"><b>📂 Code</b></a> ·
+  <a href="https://github.com/serbenda/frameblock/blob/main/doc/FRAMEBLOCK.mp4"><b>🎬 Demo video</b></a> ·
+  <a href="https://github.com/serbenda/frameblock/blob/main/doc/frameblock_technical_v.2.0.pptx"><b>🛠️ Technical deck</b></a> ·
+  <a href="https://github.com/serbenda/frameblock/blob/main/doc/frameblock_bussiness_v.3.0.pptx"><b>💼 Business deck</b></a>
+</p>
+
+---
+
 ## 👾 About me
 
-I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. I also hold a **Master's in Blockchain**.
+I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain) on top of it.
 
 Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
 
