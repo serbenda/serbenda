@@ -179,7 +179,7 @@ flowchart TB
 
 ## 👾 Sobre mí
 
-Soy **Sergio Bendaña**, *Bendi*. Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de **12.000 servidores**, migraciones de VMware a OpenStack, Big Data con Cloudera y Hortonworks y, hoy, **infraestructura como código** con Terraform Enterprise, Ansible y Packer sobre AWS, Azure, Google Cloud y nube privada. Y como me gusta saber cómo funciona la siguiente capa, hice un **Máster en Blockchain** y construí [FrameBlock](#blockchain), que ganó el premio al mejor proyecto del máster.
+Soy **Sergio Bendaña**, *Bendi*. Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de **12.000 servidores**, migraciones de VMware a OpenStack, Big Data con Cloudera y Hortonworks, después **infraestructura como código** con Terraform Enterprise, Ansible y Packer sobre AWS, Azure, Google Cloud y nube privada y, hoy, como **Cloud Engineer y SRE**, llevo la nube privada a los proyectos como código y trabajo en Google Cloud. Y como me gusta saber cómo funciona la siguiente capa, hice un **Máster en Blockchain** y construí [FrameBlock](#blockchain), que ganó el premio al mejor proyecto del máster.
 
 Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de crecer y cualquier cosa que se pueda automatizar.
 
