@@ -38,7 +38,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/dungeons-and-deployments/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/dungeons-and-deployments.webp" alt="Dungeons &amp; Deployments" width="100%"></a>
 
 **Dungeons & Deployments**<br>
-<sub>Fantasy beat 'em up: a dev team fights its way through the data-centre catacombs, the Mainframe caves and the cloud. Solo or co-op.</sub>
+<sub>Fantasy beat 'em up: a dev team fights its way through the data center catacombs, the Mainframe caves and the cloud. Solo or co-op.</sub>
 
 <a href="https://bendi.dev/dungeons-and-deployments/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/dungeons-and-deployments">Code</a>
 
@@ -110,7 +110,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 
 ## ⛓️ Blockchain
 
-I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That's where I moved from running infrastructure to building on decentralised infrastructure: smart contracts, tokens, decentralised storage and dApps that work across several chains.
+I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That's where I moved from running infrastructure to building on decentralized infrastructure: smart contracts, tokens, decentralised storage and dApps that work across several chains.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity">
@@ -135,7 +135,7 @@ I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That
 
 **The problem it tackles:** blockchain is still hard to use and hard to trust for most people and companies. You have to pick a chain, learn its tools, manage wallets and pay in crypto. FrameBlock hides those choices behind one layer, so the same app can work on several chains and the user never has to know which one is underneath.
 
-To prove it works we built a real use case, **Simple AI Collection**: a dApp where you search AI-generated images, pick your favourites, store them on **IPFS** and mint them as your own **NFT collection (ERC-721)** on Ethereum, BNB Smart Chain or Polygon, paying the deployment fee by card.
+To prove it works we built a real use case, **Simple AI Collection**: a dApp where you search AI-generated images, pick your favorites, store them on **IPFS** and mint them as your own **NFT collection (ERC-721)** on Ethereum, BNB Smart Chain or Polygon, paying the deployment fee by card.
 
 ```mermaid
 flowchart TB
