@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Cloud Engineer" width="100%"></a>
+<a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Chief Button Remover · Cloud Engineer" width="100%"></a>
 
 <a href="https://bendi.dev/"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=29ADFF&center=true&vCenter=true&width=480&lines=Automation+Platform+Engineer;Infrastructure+as+Code+%E2%80%A2+Terraform+%E2%80%A2+Ansible;Blockchain+%26+Web3+%E2%80%A2+Solidity+%E2%80%A2+IPFS;8-bit+games+for+the+browser" alt="20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters."></a>
 
