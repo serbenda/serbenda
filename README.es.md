@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Automation Platform Engineer" width="100%"></a>
+<a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Cloud Engineer" width="100%"></a>
 
 <a href="https://bendi.dev/"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=29ADFF&center=true&vCenter=true&width=480&lines=Automation+Platform+Engineer;Infraestructura+como+c%C3%B3digo+%E2%80%A2+Terraform+%E2%80%A2+Ansible;Blockchain+y+Web3+%E2%80%A2+Solidity+%E2%80%A2+IPFS;Juegos+de+8+bits+para+el+navegador" alt="20 años automatizando infraestructura · Máster en Blockchain · Juegos de 8 bits hechos en casa con mis hijas."></a>
 
