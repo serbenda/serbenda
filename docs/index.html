@@ -6,9 +6,22 @@
 <title>Bendi · Sergio Bendaña</title>
 <meta name="description" content="Automatización revisada y fiable, juegos hechos en casa y las visitas de cada proyecto.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230e1324'/%3E%3Crect x='3' y='7' width='4' height='4' fill='%2338bdf8'/%3E%3Crect x='9' y='5' width='4' height='6' fill='%2336d399'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://serbenda.github.io/serbenda/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bendi">
+<meta property="og:title" content="Bendi · Sergio Bendaña">
+<meta property="og:description" content="Automatización revisada y fiable, juegos hechos en casa y las visitas de cada proyecto.">
+<meta property="og:url" content="https://serbenda.github.io/serbenda/">
+<meta property="og:image" content="https://serbenda.github.io/serbenda/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bendi, Automation Platform Engineer">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@serbenda">
+<meta name="theme-color" content="#0e1324">
+<!-- Fonts are downloaded at deploy time (scripts/fetch_fonts.py) and served from this site -->
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root {
   --ink: #0e1324;
@@ -107,6 +120,7 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
 .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 .dot.r { background: var(--repo); }
 .dot.p { background: var(--pages); }
+.dot.g { background: var(--violet); }
 .proj .act { display: flex; gap: 16px; font-size: 15px; }
 
 /* ---------- dashboard ---------- */
@@ -129,7 +143,7 @@ select {
 .axis { fill: var(--muted); font: 12px "Atkinson Hyperlegible", sans-serif; }
 .tip { fill: var(--text); font: 700 13px "Atkinson Hyperlegible", sans-serif; }
 
-.split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; margin-top: 20px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin-top: 20px; }
 .box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; }
 .box h3 { margin-bottom: 12px; }
 table { width: 100%; border-collapse: collapse; font-size: 15px; }
@@ -140,7 +154,7 @@ tbody tr { cursor: pointer; }
 tbody tr:hover td { background: rgba(56, 189, 248, .06); }
 tbody tr.on td { background: rgba(167, 139, 250, .1); }
 td .spark { vertical-align: middle; }
-.refs { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+.refs { list-style: none; padding: 0; margin: 0; font-size: 15px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); column-gap: 32px; }
 .refs li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .refs .b { grid-column: 1 / -1; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .refs .b i { display: block; height: 100%; background: var(--violet); }
@@ -148,9 +162,33 @@ td .spark { vertical-align: middle; }
 .empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 28px; margin-top: 32px; }
 .empty ol { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
 
+
+/* ---------- experience ---------- */
+.exp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; margin-top: 36px; }
+.exp .me { display: flex; gap: 20px; align-items: center; }
+.exp .me img { width: 96px; height: 96px; border-radius: 50%; border: 2px solid var(--line); background: var(--panel); }
+.exp .years { font-family: "Bricolage Grotesque", sans-serif; font-size: 56px; font-weight: 800; font-variation-settings: "wdth" 75; line-height: 1; color: var(--violet); }
+.exp .side p { color: var(--muted); margin-top: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding: 0; list-style: none; }
+.chips li { border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 14px; color: var(--muted); }
+.wins { list-style: none; margin: 0; padding: 0; }
+.wins li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.wins li:first-child { padding-top: 0; }
+.wins b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 19px; margin-bottom: 2px; }
+.wins span { color: var(--muted); }
+
+/* ---------- contact ---------- */
+.contact { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.contact .cta {
+  background: var(--repo); color: var(--ink); text-decoration: none; font-weight: 700;
+  border-radius: 8px; padding: 12px 20px; font-size: 17px;
+}
+.contact .cta:hover { background: var(--text); color: var(--ink); }
+
 footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 15px; }
 
 @media (max-width: 760px) {
+  .exp { grid-template-columns: 1fr; gap: 32px; }
   .kpis { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; }
   .track { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
@@ -164,6 +202,7 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--m
   <header class="bar">
     <nav aria-label="Secciones">
       <a href="#proyectos" data-t="nav.projects">Proyectos</a>
+      <a href="#trayectoria" data-t="nav.exp">Trayectoria</a>
       <a href="#visitas" data-t="nav.visits">Visitas</a>
       <a href="https://github.com/serbenda">GitHub</a>
     </nav>
@@ -198,6 +237,31 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--m
       <div class="grid" id="projects"></div>
     </section>
 
+    <section id="trayectoria">
+      <h2 data-t="exp.title">Trayectoria</h2>
+      <div class="exp">
+        <div class="side">
+          <div class="me">
+            <img src="https://github.com/serbenda.png?size=192" alt="" width="96" height="96" loading="lazy" onerror="this.remove()">
+            <div><div class="years">15+</div><span data-t="exp.years">años entre infraestructura, sistemas y desarrollo</span></div>
+          </div>
+          <p data-t="exp.lead">Hoy reviso los jobs de Rundeck que entregan los equipos, junto con su código en GitHub, y decido qué pasa a producción. Antes monté infraestructura como código, migré entornos y desarrollé aplicaciones full-stack. Tengo un máster en Blockchain.</p>
+          <ul class="chips" aria-label="Stack">
+            <li>Rundeck</li><li>Python</li><li>Shell</li><li>GitHub Actions</li><li>Terraform</li><li>Ansible</li>
+            <li>OpenStack</li><li>Kubernetes</li><li>Cloudera</li><li>Node.js</li><li>React</li><li>Solidity</li>
+          </ul>
+        </div>
+        <ul class="wins">
+          <li><b data-t="w.1">Filtro de calidad antes de producción</b><span data-t="w.1d">Reviso y promociono la automatización en Rundeck, con GitHub Projects como única fuente de verdad.</span></li>
+          <li><b data-t="w.2">Infraestructura como código</b><span data-t="w.2d">Automaticé el aprovisionamiento con Terraform Enterprise y bajé mucho los tiempos de despliegue.</span></li>
+          <li><b data-t="w.3">De VMware a OpenStack</b><span data-t="w.3d">Migré cargas de trabajo, con mejor uso de recursos y menos coste.</span></li>
+          <li><b data-t="w.4">CI/CD seguro</b><span data-t="w.4d">Pipelines que hicieron más rápidos a los equipos sin saltarse controles.</span></li>
+          <li><b data-t="w.5">Herramientas que quitan trabajo</b><span data-t="w.5d">Utilidades en Python y Shell que eliminaron horas de tareas manuales.</span></li>
+          <li><b data-t="w.6">Big Data</b><span data-t="w.6d">Plataformas con Cloudera para analítica en tiempo real.</span></li>
+        </ul>
+      </div>
+    </section>
+
     <section id="visitas">
       <div class="head">
         <div>
@@ -211,6 +275,16 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--m
       </div>
       <div id="dash"></div>
     </section>
+
+    <section id="contacto">
+      <div class="contact">
+        <div>
+          <h2 data-t="c.title">¿Hablamos?</h2>
+          <p class="lead" data-t="c.lead">De automatización, ingeniería de plataformas, despliegues seguros o de juegos hechos en casa.</p>
+        </div>
+        <a class="cta" href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/" data-t="c.cta">Escríbeme en LinkedIn</a>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -221,6 +295,15 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--m
 <script>
 const T = {
   es: {
+    "exp.title": "Trayectoria", "nav.exp": "Trayectoria", "exp.years": "años entre infraestructura, sistemas y desarrollo",
+    "exp.lead": "Hoy reviso los jobs de Rundeck que entregan los equipos, junto con su código en GitHub, y decido qué pasa a producción. Antes monté infraestructura como código, migré entornos y desarrollé aplicaciones full-stack. Tengo un máster en Blockchain.",
+    "w.1": "Filtro de calidad antes de producción", "w.1d": "Reviso y promociono la automatización en Rundeck, con GitHub Projects como única fuente de verdad.",
+    "w.2": "Infraestructura como código", "w.2d": "Automaticé el aprovisionamiento con Terraform Enterprise y bajé mucho los tiempos de despliegue.",
+    "w.3": "De VMware a OpenStack", "w.3d": "Migré cargas de trabajo, con mejor uso de recursos y menos coste.",
+    "w.4": "CI/CD seguro", "w.4d": "Pipelines que hicieron más rápidos a los equipos sin saltarse controles.",
+    "w.5": "Herramientas que quitan trabajo", "w.5d": "Utilidades en Python y Shell que eliminaron horas de tareas manuales.",
+    "w.6": "Big Data", "w.6d": "Plataformas con Cloudera para analítica en tiempo real.",
+    "c.title": "¿Hablamos?", "c.lead": "De automatización, ingeniería de plataformas, despliegues seguros o de juegos hechos en casa.", "c.cta": "Escríbeme en LinkedIn",
     "nav.projects": "Proyectos", "nav.visits": "Visitas",
     "hero.pitch": "Convierto operaciones manuales en automatización revisada y fiable, y soy el último control antes de producción. En casa hago juegos pequeños con mis hijas.",
     "hero.pipe": "Cómo llega un job a producción",
@@ -236,7 +319,7 @@ const T = {
     "views": "vistas", "visits": "visitas",
     "k.repo": "vistas en GitHub", "k.uniq": "visitantes en GitHub (suma diaria)", "k.pages": "visitas en Pages", "k.clones": "clonados",
     "l.repo": "Vistas en GitHub por día", "l.pages": "Visitas en Pages por día",
-    "t.title": "Por proyecto", "t.name": "Proyecto", "t.14": "Vistas 14 días", "t.total": "Vistas totales", "t.pages": "Visitas Pages", "t.trend": "Últimos 30 días",
+    "t.title": "Por proyecto", "t.name": "Proyecto", "t.14": "Vistas 14 días", "t.total": "Vistas totales", "t.pages": "Visitas Pages", "t.plays": "Partidas", "plays": "partidas", "t.trend": "Últimos 30 días",
     "r.title": "De dónde llegan", "r.none": "Todavía no hay referencias.",
     "note": "GitHub solo guarda 14 días de tráfico, así que el histórico empieza el día que se activó la recogida y crece a partir de ahí. Las visitas a Pages las cuenta GoatCounter sin cookies.",
     "empty.t": "Aún no hay datos de visitas",
@@ -247,6 +330,15 @@ const T = {
     "since": "desde"
   },
   en: {
+    "exp.title": "Experience", "nav.exp": "Experience", "exp.years": "years across infrastructure, systems and development",
+    "exp.lead": "Today I review the Rundeck jobs teams deliver, together with their code in GitHub, and decide what goes to production. Before that I built infrastructure as code, migrated platforms and shipped full-stack apps. I hold a Master's in Blockchain.",
+    "w.1": "Quality gate before production", "w.1d": "I review and promote Rundeck automation, with GitHub Projects as the single source of truth.",
+    "w.2": "Infrastructure as code", "w.2d": "Automated provisioning with Terraform Enterprise and cut deployment times significantly.",
+    "w.3": "VMware to OpenStack", "w.3d": "Migrated workloads with better resource usage and lower cost.",
+    "w.4": "Secure CI/CD", "w.4d": "Pipelines that made teams faster without cutting corners.",
+    "w.5": "Tools that remove toil", "w.5d": "Python and Shell utilities that removed hours of repetitive manual work.",
+    "w.6": "Big Data", "w.6d": "Cloudera platforms for real-time analytics.",
+    "c.title": "Let's talk", "c.lead": "About automation, platform engineering, safe releases or home-made games.", "c.cta": "Message me on LinkedIn",
     "nav.projects": "Projects", "nav.visits": "Visits",
     "hero.pitch": "I turn manual operations into reviewed, reliable automation, and I'm the last check before production. At home I build small games with my daughters.",
     "hero.pipe": "How a job reaches production",
@@ -262,7 +354,7 @@ const T = {
     "views": "views", "visits": "visits",
     "k.repo": "views on GitHub", "k.uniq": "GitHub visitors (daily sum)", "k.pages": "visits on Pages", "k.clones": "clones",
     "l.repo": "GitHub views per day", "l.pages": "Pages visits per day",
-    "t.title": "By project", "t.name": "Project", "t.14": "Views, 14 days", "t.total": "Total views", "t.pages": "Pages visits", "t.trend": "Last 30 days",
+    "t.title": "By project", "t.name": "Project", "t.14": "Views, 14 days", "t.total": "Total views", "t.pages": "Pages visits", "t.plays": "Games played", "plays": "games played", "t.trend": "Last 30 days",
     "r.title": "Where they come from", "r.none": "No referrers yet.",
     "note": "GitHub only keeps 14 days of traffic, so the history starts the day collection was switched on and grows from there. Pages visits are counted by GoatCounter, without cookies.",
     "empty.t": "No visit data yet",
@@ -294,6 +386,10 @@ function days(n) {
 const sumViews = (r, from = "") => Object.entries(r.views || {}).filter(([d]) => d >= from).reduce((a, [, v]) => a + v[0], 0);
 const sumUniq = r => Object.values(r.views || {}).reduce((a, v) => a + v[1], 0);
 const sumClones = r => Object.values(r.clones || {}).reduce((a, v) => a + v[0], 0);
+function lastPlays(r) {
+  const k = Object.keys(r.plays || {}).sort();
+  return k.length ? r.plays[k[k.length - 1]] : 0;
+}
 function lastHits(r) {
   const k = Object.keys(r.pages_hits || {}).sort();
   return k.length ? r.pages_hits[k[k.length - 1]] : 0;
@@ -328,6 +424,7 @@ function renderProjects() {
         ${r.language ? `<span>${esc(r.language)}</span>` : ""}
         <span><i class="dot r"></i>${nf(sumViews(r))} ${t("views")}</span>
         ${r.pages ? `<span><i class="dot p"></i>${nf(lastHits(r))} ${t("visits")}</span>` : ""}
+        ${lastPlays(r) ? `<span><i class="dot g"></i>${nf(lastPlays(r))} ${t("plays")}</span>` : ""}
       </div>
     </article>`).join("");
 }
@@ -424,11 +521,11 @@ function renderDash() {
       <div class="box">
         <h3>${t("t.title")}</h3>
         <table>
-          <thead><tr><th>${t("t.name")}</th><th>${t("t.14")}</th><th>${t("t.total")}</th><th>${t("t.pages")}</th><th>${t("t.trend")}</th></tr></thead>
+          <thead><tr><th>${t("t.name")}</th><th>${t("t.14")}</th><th>${t("t.total")}</th><th>${t("t.pages")}</th><th>${t("t.plays")}</th><th>${t("t.trend")}</th></tr></thead>
           <tbody>${rows.map(r => `
             <tr data-name="${esc(r.name)}" class="${r.name === selected ? "on" : ""}" tabindex="0">
               <td>${esc(r.name)}</td><td>${nf(sumViews(r, from14))}</td><td>${nf(sumViews(r))}</td>
-              <td>${r.pages ? nf(lastHits(r)) : "–"}</td><td>${spark(r)}</td>
+              <td>${r.pages ? nf(lastHits(r)) : "–"}</td><td>${lastPlays(r) ? nf(lastPlays(r)) : "–"}</td><td>${spark(r)}</td>
             </tr>`).join("")}</tbody>
         </table>
       </div>

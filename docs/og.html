@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Bendi · share image</title>
+<!-- Template for og.png, the image shown when the website is shared.
+     The deploy job screenshots it at 1200x630 with the site's own fonts. -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0e1324; }
+  body {
+    color: #e6ebf5; font-family: "Atkinson Hyperlegible", Inter, system-ui, sans-serif;
+    padding: 72px 80px; box-sizing: border-box; position: relative;
+    background:
+      radial-gradient(600px 400px at 100% 0%, rgba(167, 139, 250, .22), transparent 70%),
+      #0e1324;
+  }
+  h1 {
+    margin: 0; font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif;
+    font-size: 220px; line-height: .9; font-weight: 800; letter-spacing: -0.02em;
+    font-variation-settings: "wdth" 75;
+  }
+  .who { font-size: 40px; margin-top: 18px; }
+  .what { font-size: 28px; color: #93a0b8; margin-top: 10px; }
+  .track { position: absolute; left: 80px; right: 80px; bottom: 96px; height: 24px; }
+  .track::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 3px;
+    background: linear-gradient(90deg, #242c48, #a78bfa 45%, #36d399);
+  }
+  .dot { position: absolute; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: #0e1324; border: 3px solid #93a0b8; box-sizing: border-box; }
+  .dot.end { background: #36d399; border-color: #36d399; box-shadow: 0 0 0 8px rgba(54, 211, 153, .18); }
+  .url { position: absolute; left: 80px; bottom: 40px; font-size: 24px; color: #38bdf8; }
+</style>
+</head>
+<body>
+  <h1>Bendi</h1>
+  <div class="who">Sergio Bendaña · Automation Platform Engineer</div>
+  <div class="what">Automatización revisada y fiable · juegos hechos en casa</div>
+  <div class="track" aria-hidden="true">
+    <span class="dot" style="left:0"></span>
+    <span class="dot" style="left:33%"></span>
+    <span class="dot" style="left:66%"></span>
+    <span class="dot end" style="right:0"></span>
+  </div>
+  <div class="url">serbenda.github.io/serbenda</div>
+</body>
+</html>

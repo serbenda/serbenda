@@ -11,7 +11,8 @@ Two sources:
 
 2. GoatCounter (visits to <user>.github.io/<repo>/). GitHub Pages has no
    analytics of its own, so each site loads the GoatCounter script and this
-   collector reads the public counters (no token needed). The site code is
+   collector reads the public counters (no token needed). Games also send a
+   "partida/<repo>" event when a match starts, stored as "plays". The site code is
    taken from the GOATCOUNTER_CODE variable (default: the GitHub user).
 
 Outputs:
@@ -149,6 +150,10 @@ def collect(data: dict, now: datetime) -> dict:
             hits = goat_count(entry["pages_path"])
             if hits is not None:
                 entry["pages_hits"][today] = hits
+            # Games send a "partida/<repo>" event each time a match starts
+            plays = goat_count(f"partida/{name}")
+            if plays:
+                entry.setdefault("plays", {})[today] = plays
 
     total = goat_count("TOTAL")
     if total is not None:
