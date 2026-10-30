@@ -4,45 +4,38 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <title>Bendi · share image</title>
-<!-- Template for og.png, the image shown when the website is shared.
-     The deploy job screenshots it at 1200x630 with the site's own fonts. -->
+<!-- Template for og.png (1200x630), the image shown when the website is shared. -->
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
-  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0e1324; }
-  body {
-    color: #e6ebf5; font-family: "Atkinson Hyperlegible", Inter, system-ui, sans-serif;
-    padding: 72px 80px; box-sizing: border-box; position: relative;
-    background:
-      radial-gradient(600px 400px at 100% 0%, rgba(167, 139, 250, .22), transparent 70%),
-      #0e1324;
-  }
-  h1 {
-    margin: 0; font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif;
-    font-size: 220px; line-height: .9; font-weight: 800; letter-spacing: -0.02em;
-    font-variation-settings: "wdth" 75;
-  }
-  .who { font-size: 40px; margin-top: 18px; }
-  .what { font-size: 28px; color: #93a0b8; margin-top: 10px; }
-  .track { position: absolute; left: 80px; right: 80px; bottom: 96px; height: 24px; }
-  .track::before {
-    content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 3px;
-    background: linear-gradient(90deg, #242c48, #a78bfa 45%, #36d399);
-  }
-  .dot { position: absolute; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: #0e1324; border: 3px solid #93a0b8; box-sizing: border-box; }
-  .dot.end { background: #36d399; border-color: #36d399; box-shadow: 0 0 0 8px rgba(54, 211, 153, .18); }
-  .url { position: absolute; left: 80px; bottom: 40px; font-size: 24px; color: #38bdf8; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #1d2b53; }
+  body { color: #fff1e8; font-family: "IBM Plex Sans", sans-serif; position: relative; }
+  .hud { position: absolute; top: 36px; left: 64px; right: 64px; display: flex; justify-content: space-between;
+    font: 20px/1.6 "Press Start 2P", monospace; }
+  .hud span { color: #ff004d; display: block; }
+  .hud .r { text-align: right; }
+  .me { position: absolute; left: 64px; top: 170px; width: 288px; height: 288px; image-rendering: pixelated; }
+  h1 { position: absolute; left: 400px; top: 170px; margin: 0; font: 400 136px/1 "Press Start 2P", monospace;
+    text-shadow: 8px 8px 0 #7e2553, 16px 16px 0 #000; }
+  .cls { position: absolute; left: 404px; top: 350px; font: 600 22px "JetBrains Mono", monospace; color: #29adff; }
+  .tag { position: absolute; left: 404px; top: 400px; font: 400 32px "IBM Plex Sans", sans-serif; color: #c2c3c7; }
+  .start { position: absolute; left: 404px; top: 480px; font: 24px "Press Start 2P", monospace; color: #ffec27; }
+  .url { position: absolute; right: 64px; bottom: 36px; font: 500 24px "JetBrains Mono", monospace; color: #c2c3c7; }
+  .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 16px; background: #000; box-shadow: 0 -8px 0 #5f574f; }
+  .star { position: absolute; background: #fff1e8; }
 </style>
 </head>
 <body>
-  <h1>Bendi</h1>
-  <div class="who">Sergio Bendaña · Automation Platform Engineer</div>
-  <div class="what">Automatización revisada y fiable · juegos hechos en casa</div>
-  <div class="track" aria-hidden="true">
-    <span class="dot" style="left:0"></span>
-    <span class="dot" style="left:33%"></span>
-    <span class="dot" style="left:66%"></span>
-    <span class="dot end" style="right:0"></span>
-  </div>
+  <div class="hud"><div><span>1UP</span>BENDI</div><div class="r"><span>NIVEL</span>21</div></div>
+  <i class="star" style="left:560px;top:120px;width:6px;height:6px"></i>
+  <i class="star" style="left:980px;top:150px;width:4px;height:4px;background:#ffec27"></i>
+  <i class="star" style="left:1110px;top:300px;width:6px;height:6px;background:#29adff"></i>
+  <i class="star" style="left:300px;top:110px;width:4px;height:4px"></i>
+  <img class="me" src="img/bendi.svg" alt="">
+  <h1>BENDI</h1>
+  <div class="cls">Automation Platform Engineer</div>
+  <div class="tag">20 años domando servidores · juegos de 8 bits</div>
+  <div class="start">PULSA START ▶</div>
   <div class="url">serbenda.github.io/serbenda</div>
+  <div class="ground"></div>
 </body>
 </html>

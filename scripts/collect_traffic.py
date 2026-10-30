@@ -179,65 +179,61 @@ def totals(entry: dict) -> tuple[int, int]:
 # ----------------------------------------------------------------------- card
 
 TEXT = {
-    "en": {"head": "VISITS · AUTO-UPDATED", "repo": "repo views", "pages": "Pages visits",
-           "top": "Most visited", "since": "since", "none": "Collecting the first data…"},
-    "es": {"head": "VISITAS · SE ACTUALIZA SOLO", "repo": "vistas a repos", "pages": "visitas a Pages",
-           "top": "Lo más visto", "since": "desde", "none": "Recogiendo los primeros datos…"},
+    "en": {"head": "VISITS", "repo": "GITHUB", "pages": "PAGES", "since": "SINCE",
+           "none": "INSERT COIN · NO DATA YET", "rank": ["1ST", "2ND", "3RD", "4TH", "5TH"]},
+    "es": {"head": "VISITAS", "repo": "GITHUB", "pages": "PAGES", "since": "DESDE",
+           "none": "INSERTA MONEDA · SIN DATOS", "rank": ["1º", "2º", "3º", "4º", "5º"]},
 }
+PROJECTS = ROOT / "docs" / "data" / "projects.json"
 
 
-def fmt(n: int, lang: str) -> str:
-    return f"{n:,}".replace(",", "." if lang == "es" else ",")
+def titles() -> dict:
+    """Display names from the website's project list, so the card matches it."""
+    try:
+        p = json.loads(PROJECTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {x["repo"]: x["title"] for x in p.get("games", []) + p.get("tools", [])}
 
 
 def card(data: dict, lang: str) -> str:
-    t = TEXT[lang]
+    """8-bit high-score card: GitHub views and Pages visits, top five projects."""
+    import pixel as P
+    t, names = TEXT[lang], titles()
     rows = []
     for name, e in data["repos"].items():
         v, p = totals(e)
         if v + p:
-            rows.append((name, v, p))
+            rows.append((names.get(name, name), v, p))
     rows.sort(key=lambda r: r[1] + r[2], reverse=True)
     repo_total = sum(r[1] for r in rows)
     pages_total = sum(r[2] for r in rows)
     days = sorted(d for e in data["repos"].values() for d in e.get("views", {}))
-    since = f'{t["since"]} {days[0]}' if days else ""
 
-    bars = []
+    body = [f'<text x="28" y="40" class="p" fill="{P.YELLOW}">{P.px(t["head"])}</text>']
+    if days:
+        body.append(f'<text x="472" y="40" class="s" fill="{P.GRAY}" text-anchor="end">'
+                    f'{t["since"]} {days[0][8:10]}/{days[0][5:7]}/{days[0][:4]}</text>')
+    body.append(f'<text x="28" y="86" class="b" fill="{P.BLUE}">{min(repo_total, 999999):06d}</text>'
+                f'<text x="28" y="108" class="s" fill="{P.GRAY}">{t["repo"]}</text>'
+                f'<text x="260" y="86" class="b" fill="{P.GREEN}">{min(pages_total, 999999):06d}</text>'
+                f'<text x="260" y="108" class="s" fill="{P.GRAY}">{t["pages"]}</text>')
     peak = max((r[1] + r[2] for r in rows), default=1) or 1
-    for i, (name, v, p) in enumerate(rows[:4]):
-        y = 150 + i * 26
-        wv, wp = 180 * v / peak, 180 * p / peak
-        label = escape(name if len(name) <= 22 else name[:21] + "…")
-        bars.append(
-            f'<text x="30" y="{y + 9}" class="t">{label}</text>'
-            f'<clipPath id="b{i}"><rect x="226" y="{y}" width="180" height="10" rx="5"/></clipPath>'
-            f'<rect x="226" y="{y}" width="180" height="10" rx="5" fill="#1e293b"/>'
-            f'<g clip-path="url(#b{i})">'
-            f'<rect x="226" y="{y}" width="{wv:.1f}" height="10" fill="#38bdf8"/>'
-            f'<rect x="{226 + wv:.1f}" y="{y}" width="{wp:.1f}" height="10" fill="#36d399"/></g>'
-            f'<text x="470" y="{y + 9}" class="t" text-anchor="end">{fmt(v + p, lang)}</text>')
-    if not bars:
-        bars.append(f'<text x="30" y="160" class="m">{t["none"]}</text>')
-
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="500" height="260" viewBox="0 0 500 260" role="img" aria-label="{escape(t["head"])}">
-<style>
-.t{{font:500 13px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#e2e8f0}}
-.m{{font:400 12px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#94a3b8}}
-.v{{font:800 30px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#f8fafc}}
-.h{{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#38bdf8;letter-spacing:2px}}
-</style>
-<rect width="500" height="260" rx="14" fill="#0f1426" stroke="#ffffff" stroke-opacity="0.08"/>
-<text x="30" y="36" class="h">{escape(t["head"])}</text>
-<text x="470" y="36" class="m" text-anchor="end">{escape(since)}</text>
-<rect x="30" y="58" width="4" height="40" rx="2" fill="#38bdf8"/>
-<text x="44" y="82" class="v">{fmt(repo_total, lang)}</text><text x="44" y="102" class="m">{t["repo"]}</text>
-<rect x="260" y="58" width="4" height="40" rx="2" fill="#36d399"/>
-<text x="274" y="82" class="v">{fmt(pages_total, lang)}</text><text x="274" y="102" class="m">{t["pages"]}</text>
-<text x="30" y="134" class="h">{escape(t["top"].upper())}</text>
-{"".join(bars)}
-</svg>
-'''
+    for i, (name, v, p) in enumerate(rows[:5]):
+        y = 140 + i * 24
+        wv = round(132 * v / peak / 4) * 4
+        wp = round(132 * p / peak / 4) * 4
+        label = name if len(name) <= 20 else name[:19] + "."
+        body.append(
+            f'<text x="28" y="{y + 9}" class="s" fill="{P.YELLOW}">{P.px(t["rank"][i])}</text>'
+            f'<text x="70" y="{y + 9}" class="s" fill="{P.CREAM}">{P.px(label)}</text>'
+            f'<rect x="268" y="{y}" width="132" height="10" fill="#1a1720"/>'
+            f'<rect x="268" y="{y}" width="{wv}" height="10" fill="{P.BLUE}"/>'
+            f'<rect x="{268 + wv}" y="{y}" width="{wp}" height="10" fill="{P.GREEN}"/>'
+            f'<text x="472" y="{y + 9}" class="s" fill="{P.CREAM}" text-anchor="end">{v + p}</text>')
+    if not rows:
+        body.append(f'<text x="28" y="170" class="s" fill="{P.PINK}">{P.px(t["none"])}</text>')
+    return P.svg(500, 268, t["head"], "".join(body))
 
 
 def main() -> int:

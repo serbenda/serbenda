@@ -102,45 +102,34 @@ def replace_block(text: str, block: str) -> str:
 
 
 def stats_svg(repos: list[dict]) -> str:
+    """8-bit card: public repos, stars, languages and a stepped language bar."""
+    import pixel as P
     total_stars = sum(r.get("stargazers_count", 0) for r in repos)
     langs = Counter(r["language"] for r in repos if r.get("language"))
     top = langs.most_common(5)
     total = sum(n for _, n in top) or 1
 
-    # Stacked language bar
-    x, bar = 0.0, []
-    for lang, n in top:
-        w = 440 * n / total
-        bar.append(f'<rect x="{30 + x:.1f}" y="128" width="{w:.1f}" height="10" '
-                   f'fill="{LANG_COLORS.get(lang, "#94a3b8")}"/>')
-        x += w
-    legend = []
+    def kpi(x: int, value: int, label: str, color: str) -> str:
+        return (f'<text x="{x}" y="86" class="b" fill="{color}">{value:03d}</text>'
+                f'<text x="{x}" y="108" class="s" fill="{P.GRAY}">{P.px(label)}</text>')
+
+    # Language bar in 4px steps, each language with its own palette colour
+    x, bar, legend = 28.0, [], []
     for i, (lang, n) in enumerate(top):
-        lx, ly = 30 + (i % 3) * 150, 166 + (i // 3) * 24
-        legend.append(
-            f'<circle cx="{lx + 5}" cy="{ly - 4}" r="5" fill="{LANG_COLORS.get(lang, "#94a3b8")}"/>'
-            f'<text x="{lx + 16}" y="{ly}" class="t">{escape(lang)} <tspan class="m">{round(100 * n / total)}%</tspan></text>')
+        w = round(444 * n / total / 4) * 4 if i < len(top) - 1 else 472 - x
+        bar.append(f'<rect x="{x:.0f}" y="132" width="{max(w, 4):.0f}" height="12" fill="{P.SERIES[i % 6]}"/>')
+        x += w
+        lx, ly = 28 + (i % 3) * 152, 172 + (i // 3) * 22
+        legend.append(f'<rect x="{lx}" y="{ly - 8}" width="8" height="8" fill="{P.SERIES[i % 6]}"/>'
+                      f'<text x="{lx + 14}" y="{ly}" class="s" fill="{P.CREAM}">{P.px(lang)} '
+                      f'{round(100 * n / total)}%</text>')
 
-    def kpi(xpos: int, value: int, label: str) -> str:
-        return (f'<text x="{xpos}" y="78" class="v">{value}</text>'
-                f'<text x="{xpos}" y="100" class="m">{label}</text>')
-
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="500" height="220" viewBox="0 0 500 220" role="img" aria-label="GitHub stats">
-<style>
-.t{{font:500 13px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#e2e8f0}}
-.m{{font:400 12px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#94a3b8}}
-.v{{font:800 30px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#f8fafc}}
-.h{{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#38bdf8;letter-spacing:2px}}
-</style>
-<rect width="500" height="220" rx="14" fill="#0f1426" stroke="#ffffff" stroke-opacity="0.08"/>
-<text x="30" y="36" class="h">PUBLIC WORK · AUTO-UPDATED</text>
-{kpi(30, len(repos), "public repos")}{kpi(190, total_stars, "stars")}{kpi(330, len(langs), "languages")}
-<rect x="30" y="128" width="440" height="10" rx="5" fill="#1e293b"/>
-<clipPath id="bar"><rect x="30" y="128" width="440" height="10" rx="5"/></clipPath>
-<g clip-path="url(#bar)">{"".join(bar)}</g>
-{"".join(legend)}
-</svg>
-'''
+    body = (f'<text x="28" y="40" class="p" fill="{P.YELLOW}">GITHUB STATS</text>'
+            f'<text x="472" y="40" class="s" fill="{P.RED}" text-anchor="end">1UP</text>'
+            + kpi(28, len(repos), "REPOS", P.BLUE) + kpi(188, total_stars, "STARS", P.YELLOW)
+            + kpi(340, len(langs), "LANGS", P.GREEN)
+            + f'<rect x="28" y="132" width="444" height="12" fill="#1a1720"/>' + "".join(bar) + "".join(legend))
+    return P.svg(500, 220, "GitHub stats", body)
 
 
 def main() -> int:

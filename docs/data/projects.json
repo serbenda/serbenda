@@ -1,0 +1,124 @@
+{
+ "_comment": "Lo que muestra la web de cada proyecto. El orden es el de la web. Los repos que no estén aquí no salen en la web (sí en la tabla de récords).",
+ "games": [
+  {
+   "repo": "dungeons-and-deployments",
+   "title": "Dungeons & Deployments",
+   "img": "img/games/dungeons-and-deployments.webp",
+   "pixel": true,
+   "tags": [
+    "Beat 'em up",
+    "1-2 jugadores",
+    "Pixel art"
+   ],
+   "es": "Beat 'em up de fantasía: un equipo de desarrollo se abre camino por las catacumbas del CPD, las cuevas del Mainframe y la nube. Solo o en cooperativo.",
+   "en": "Fantasy beat 'em up: a dev team fights its way through the data-centre catacombs, the Mainframe caves and the cloud. Solo or co-op.",
+   "tags_en": [
+    "Beat 'em up",
+    "1-2 players",
+    "Pixel art"
+   ]
+  },
+  {
+   "repo": "chapas",
+   "title": "La Vuelta de Chapas",
+   "img": "img/games/chapas.webp",
+   "tags": [
+    "Por turnos",
+    "Móvil y tablet",
+    "Años 80"
+   ],
+   "es": "El juego de chapas de toda la vida: la vuelta ciclista y el fútbol de chapas, por turnos, contra amigos o contra la máquina.",
+   "en": "The classic bottle-cap game: a cycling tour and bottle-cap football, turn by turn, against friends or the machine.",
+   "tags_en": [
+    "Turn-based",
+    "Phone & tablet",
+    "80s"
+   ]
+  },
+  {
+   "repo": "school-rush",
+   "title": "School Rush",
+   "img": "img/games/school-rush.webp",
+   "tags": [
+    "Carreras",
+    "Para peques",
+    "Canvas"
+   ],
+   "es": "Despierta, desayuna, asea, viste y esquiva el tráfico: lleva a los peques al cole antes de que suene la campana de las 9:00.",
+   "en": "Wake up, breakfast, wash, get dressed and dodge the traffic: get the kids to school before the 9:00 bell.",
+   "tags_en": [
+    "Racing",
+    "For kids",
+    "Canvas"
+   ]
+  },
+  {
+   "repo": "hemiciclo-fighters",
+   "title": "Hemiciclo Fighters",
+   "img": "img/games/hemiciclo-fighters.webp",
+   "pixel": true,
+   "tags": [
+    "Lucha 2D",
+    "Recreativa 90s",
+    "1-2 jugadores"
+   ],
+   "es": "Juego de lucha al estilo de las recreativas de los 90, con políticos ficticios, combos, especiales y un jefe final que nunca se presenta a las elecciones.",
+   "en": "90s arcade-style fighting game with fictional politicians, combos, specials and a final boss who never runs for election.",
+   "tags_en": [
+    "2D fighting",
+    "90s arcade",
+    "1-2 players"
+   ]
+  },
+  {
+   "repo": "story-reader",
+   "title": "La biblioteca mágica",
+   "img": "img/games/story-reader.webp",
+   "tags": [
+    "Lectura",
+    "Reconocimiento de voz",
+    "Para peques"
+   ],
+   "es": "Cuentos interactivos para aprender a leer jugando, pensados para la dislexia: pistas, cuatro niveles y lectura en voz alta.",
+   "en": "Interactive stories to learn to read by playing, designed with dyslexia in mind: hints, four levels and reading aloud.",
+   "tags_en": [
+    "Reading",
+    "Speech recognition",
+    "For kids"
+   ]
+  },
+  {
+   "repo": "deploy-quest",
+   "title": "Deploy Quest",
+   "img": "img/games/deploy-quest.webp",
+   "pixel": true,
+   "tags": [
+    "Aventura",
+    "Vista cenital",
+    "Un solo HTML"
+   ],
+   "es": "Aventura de 8 bits: un dev con su teclado y su Escudo de IaC recorre las Catacumbas de Sistemas en busca del Grimorio de la Definition of Done.",
+   "en": "8-bit adventure: a dev with a keyboard and an IaC Shield crawls the Systems Catacombs looking for the Grimoire of the Definition of Done.",
+   "tags_en": [
+    "Adventure",
+    "Top-down",
+    "Single HTML"
+   ]
+  }
+ ],
+ "tools": [
+  {
+   "repo": "bankinter-visa-pdf-to-csv",
+   "title": "Bankinter VISA → CSV",
+   "es": "Saca los movimientos de los extractos PDF de la VISA de Bankinter a un CSV limpio.",
+   "en": "Turns Bankinter VISA PDF statements into a clean CSV."
+  },
+  {
+   "repo": "frameblock",
+   "title": "FrameBlock",
+   "es": "Framework para aplicaciones Web3 seguras. Proyecto final del máster en Blockchain.",
+   "en": "Framework for secure Web3 apps. Final project of my Master's in Blockchain."
+  }
+ ]
+}

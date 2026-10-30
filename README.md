@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Bendi · Automation Platform Engineer" width="100%">
+<a href="https://serbenda.github.io/serbenda/"><img src="assets/header.png" alt="Bendi · Player 1 · Automation Platform Engineer" width="100%"></a>
 
-**I turn manual operations into reviewed, reliable automation, and I'm the last check before it hits production.**
+**20 years taming servers. These days I make 8-bit games with my daughters.**
 
+[![Website](https://img.shields.io/badge/Website-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://serbenda.github.io/serbenda/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/serbenda)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
-[![Website](https://img.shields.io/badge/Website-0f1426?style=for-the-badge&logo=githubpages&logoColor=38bdf8)](https://serbenda.github.io/serbenda/)
 
-![Profile views](https://komarev.com/ghpvc/?username=serbenda&label=Profile%20views&color=38bdf8&style=flat-square)
+![Profile views](https://komarev.com/ghpvc/?username=serbenda&label=Profile%20views&color=29adff&style=flat-square)
 
 **🇬🇧 English** · [🇪🇸 Español](README.es.md)
 
@@ -17,111 +17,106 @@
 
 ---
 
-## 🧭 About me
+## 🕹️ Games
 
-I'm **Sergio Bendaña**, *Bendi* at work, an engineer with **15+ years** across infrastructure automation, systems engineering and software development.
-
-My day-to-day sits right between *"it works on my machine"* and *"it runs every night in production"*:
-
-- ⚙️ **Rundeck automation**: I review the jobs technical teams deliver (Shell Script and Python plugins) together with the code behind them in GitHub.
-- 🛡️ **Release gatekeeping**: nothing reaches production until it is correct, safe, idempotent and easy to roll back.
-- 🗂️ **GitHub as the source of truth**: every request is tracked in GitHub Projects from delivery to production, and the boring parts run on GitHub Actions.
-
-Before that I built infrastructure as code with Terraform and Ansible, migrated VMware estates to OpenStack, ran Big Data platforms on Cloudera and shipped full-stack apps with Node.js and React. I also hold a **Master's in Blockchain**.
-
----
-
-## 🔁 How I ship automation
-
-```mermaid
-flowchart LR
-    A[👥 Team delivers job<br/>+ code in GitHub] --> B{🔍 Review}
-    B -->|changes requested| A
-    B -->|approved| D[🗂️ GitHub Projects<br/>status: ready]
-    D --> E[🚀 Promote to<br/>production]
-    E --> F[📈 Monitor<br/>& feedback]
-    F -.-> A
-
-    classDef step fill:#0f1426,stroke:#38bdf8,color:#e2e8f0
-    classDef gate fill:#1a1033,stroke:#a78bfa,color:#f8fafc
-    classDef prod fill:#062a1e,stroke:#36d399,color:#f8fafc
-    class A,D,F step
-    class B gate
-    class E prod
-```
-
-<details>
-<summary><b>📋 What I check before anything goes to production</b></summary>
-<br>
-
-| Area | What I look for |
-|---|---|
-| **Correctness** | Does the job do exactly what the request says, with sensible defaults and validated options? |
-| **Safety** | No secrets in plain text, least privilege, no destructive command without a guard. |
-| **Idempotency** | Running it twice must not break anything. |
-| **Failure handling** | Timeouts, retries, clear exit codes and an error message a human can act on. |
-| **Rollback** | If it goes wrong at 3 a.m., how do we undo it? |
-| **Code quality** | Readable Shell and Python, `set -euo pipefail`, linting, no copy-paste drift between environments. |
-| **Traceability** | Linked to its card in GitHub Projects, versioned, and reviewable later. |
-
-</details>
-
----
-
-## 🛠️ Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=bash,py,js,nodejs,react,html,css,solidity&perline=8" alt="Languages"><br><br>
-  <img src="https://skillicons.dev/icons?i=ansible,terraform,jenkins,githubactions,docker,kubernetes,linux,git&perline=8" alt="Automation and platforms"><br><br>
-  <img src="https://skillicons.dev/icons?i=aws,azure,github,vscode&perline=8" alt="Cloud and tools">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Rundeck-F73F39?style=flat-square" alt="Rundeck">
-  <img src="https://img.shields.io/badge/OpenStack-ED1944?style=flat-square&logo=openstack&logoColor=white" alt="OpenStack">
-  <img src="https://img.shields.io/badge/Packer-02A8EF?style=flat-square&logo=packer&logoColor=white" alt="Packer">
-  <img src="https://img.shields.io/badge/Cloudera-F96702?style=flat-square&logo=cloudera&logoColor=white" alt="Cloudera">
-  <img src="https://img.shields.io/badge/GitHub_Projects-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Projects">
-</p>
-
----
-
-## 🚀 Featured projects
+They all run in the browser, phones included. Nothing to install and no ads.
 
 <table>
 <tr>
 <td width="33%" valign="top">
+<a href="https://serbenda.github.io/dungeons-and-deployments/"><img src="docs/img/games/dungeons-and-deployments.webp" alt="Dungeons & Deployments" width="100%"></a>
 
-### 🏃 [School Rush](https://github.com/serbenda/school-rush)
-A cartoon race to get the kids to school before the 9:00 bell. Built to play with my daughters.
+**Dungeons & Deployments**<br>
+<sub>Fantasy beat 'em up: a dev team fights its way through the data-centre catacombs, the Mainframe caves and the cloud. Solo or co-op.</sub>
 
-`HTML5 Canvas` `Vanilla JS` `0 deps` `GitHub Pages`
-
-**[▶ Play it](https://serbenda.github.io/school-rush/)**
-
-</td>
-<td width="33%" valign="top">
-
-### 🛡️ [FrameBlock](https://github.com/serbenda/frameblock)
-Framework for building secure, scalable Web3 applications. Final project of my Master's in Blockchain.
-
-`JavaScript` `Blockchain` `Web3`
+<a href="https://serbenda.github.io/dungeons-and-deployments/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/dungeons-and-deployments">Code</a>
 
 </td>
 <td width="33%" valign="top">
+<a href="https://serbenda.github.io/chapas/"><img src="docs/img/games/chapas.webp" alt="La Vuelta de Chapas" width="100%"></a>
 
-### 🏦 [Bankinter VISA → CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)
-Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready for Excel or Power BI.
+**La Vuelta de Chapas**<br>
+<sub>The classic bottle-cap game: a cycling tour and bottle-cap football, turn by turn, against friends or the machine.</sub>
 
-`Python` `PDF parsing` `CLI`
+<a href="https://serbenda.github.io/chapas/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/chapas">Code</a>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://serbenda.github.io/school-rush/"><img src="docs/img/games/school-rush.webp" alt="School Rush" width="100%"></a>
+
+**School Rush**<br>
+<sub>Wake up, breakfast, wash, get dressed and dodge the traffic: get the kids to school before the 9:00 bell.</sub>
+
+<a href="https://serbenda.github.io/school-rush/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/school-rush">Code</a>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://serbenda.github.io/hemiciclo-fighters/"><img src="docs/img/games/hemiciclo-fighters.webp" alt="Hemiciclo Fighters" width="100%"></a>
+
+**Hemiciclo Fighters**<br>
+<sub>90s arcade-style fighting game with fictional politicians, combos, specials and a final boss who never runs for election.</sub>
+
+<a href="https://serbenda.github.io/hemiciclo-fighters/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/hemiciclo-fighters">Code</a>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://serbenda.github.io/story-reader/"><img src="docs/img/games/story-reader.webp" alt="La biblioteca mágica" width="100%"></a>
+
+**La biblioteca mágica**<br>
+<sub>Interactive stories to learn to read by playing, designed with dyslexia in mind: hints, four levels and reading aloud.</sub>
+
+<a href="https://serbenda.github.io/story-reader/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/story-reader">Code</a>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/serbenda/deploy-quest"><img src="docs/img/games/deploy-quest.webp" alt="Deploy Quest" width="100%"></a>
+
+**Deploy Quest**<br>
+<sub>8-bit adventure: a dev with a keyboard and an IaC Shield crawls the Systems Catacombs looking for the Grimoire of the Definition of Done.</sub>
+
+<a href="https://github.com/serbenda/deploy-quest">Code</a>
 
 </td>
 </tr>
 </table>
 
+<details>
+<summary><b>🧰 Other projects</b></summary>
+<br>
+
+- **[Bankinter VISA → CSV](https://github.com/serbenda/bankinter-visa-pdf-to-csv)**: Turns Bankinter VISA PDF statements into a clean CSV.
+- **[FrameBlock](https://github.com/serbenda/frameblock)**: Framework for secure Web3 apps. Final project of my Master's in Blockchain.
+
+</details>
+
 ---
 
-## ⚡ Latest activity
+## 👾 About me
+
+I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure and private cloud. I also hold a **Master's in Blockchain**.
+
+Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,bash,py,githubactions,git&perline=8" alt="Automation and systems"><br><br>
+  <img src="https://skillicons.dev/icons?i=aws,azure,kubernetes,js,nodejs,html,css,solidity&perline=8" alt="Cloud and development">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Packer-02A8EF?style=flat-square&logo=packer&logoColor=white" alt="Packer">
+  <img src="https://img.shields.io/badge/OpenStack-ED1944?style=flat-square&logo=openstack&logoColor=white" alt="OpenStack">
+  <img src="https://img.shields.io/badge/VMware-607078?style=flat-square&logo=vmware&logoColor=white" alt="VMware">
+  <img src="https://img.shields.io/badge/Cloudera-F96702?style=flat-square&logo=cloudera&logoColor=white" alt="Cloudera">
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana">
+</p>
+
+<p align="center"><sub>My full career and achievements, on <a href="https://serbenda.github.io/serbenda/#player1">my website</a>.</sub></p>
+
+---
+
+## ⚡ Recent activity
 
 <table>
 <tr>
@@ -135,7 +130,7 @@ Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready f
 - **[deploy-quest](https://github.com/serbenda/deploy-quest)** · `HTML` — Aventura de 8 bits con vista cenital: un dev con su teclado y su Escudo de IaC recorre las Catacumbas de Sistemas, consigue la Terminal SSH y la primera página del Grimorio de la Definition of Done. HTML5 + canvas, sin dependencias. <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
-<sub>🤖 Refreshed every day by a GitHub Action in this repo, because I automate everything.</sub>
+<sub>🤖 Refreshed every morning by a GitHub Action in this repo.</sub>
 
 </td>
 <td width="45%" valign="top" align="center">
@@ -151,28 +146,15 @@ Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready f
 ## 📈 Visits
 
 <p align="center">
-  <a href="https://serbenda.github.io/serbenda/#visitas"><img src="assets/traffic.svg" alt="Views of my repositories and visits to my GitHub Pages games" width="500"></a>
+  <a href="https://serbenda.github.io/serbenda/#records"><img src="assets/traffic.svg" alt="Views of my repositories and visits to my games" width="500"></a>
 </p>
 
-<p align="center"><sub>Repo views come from the GitHub traffic API and Pages visits from GoatCounter. Full dashboard, per project and per day, on <a href="https://serbenda.github.io/serbenda/#visitas">my website</a>.</sub></p>
-
----
-
-## 🏆 Highlights
-
-- 🛡️ Act as the **review and promotion gate for Rundeck automation**, with GitHub Projects as the single source of truth from delivery to production.
-- ⏱️ Automated infrastructure provisioning with **Terraform Enterprise**, cutting deployment times significantly.
-- ☁️ Migrated **VMware workloads to OpenStack**, improving resource usage and reducing costs.
-- 🔐 Designed secure **CI/CD pipelines** that made teams faster without cutting corners.
-- 🧰 Built **Python** and **Shell** tooling that removed hours of repetitive manual work.
-- 📊 Delivered **Big Data** platforms on Cloudera for real-time analytics.
+<p align="center"><sub>GitHub views and game visits, counted without cookies. The full table, per project and per day, on <a href="https://serbenda.github.io/serbenda/#records">my website</a>.</sub></p>
 
 ---
 
 <div align="center">
 
-**Currently:** making automation reviews faster and more consistent · building small games with my kids · tinkering with a homelab
-
-<sub>Open to talking about automation, platform engineering and safe releases. Find me on <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>.</sub>
+**Let's talk.** If you fancy talking about automation, gadgets or games, find me on <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>.
 
 </div>

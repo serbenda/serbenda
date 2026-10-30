@@ -68,16 +68,6 @@ jobs:
         with:
           ref: main   # includes the data committed by the previous job
 
-      - name: Serve the fonts from the site itself
-        run: python3 scripts/fetch_fonts.py
-
-      - name: Render the share image with those fonts
-        continue-on-error: true   # docs/og.png in the repo is the fallback
-        run: |
-          google-chrome --headless=new --disable-gpu --hide-scrollbars \
-            --window-size=1200,630 --virtual-time-budget=3000 \
-            --screenshot="$PWD/docs/og.png" "file://$PWD/docs/og.html"
-
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
