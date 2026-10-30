@@ -49,12 +49,17 @@ MAX_REFERRERS = 10
 # ---------------------------------------------------------------- HTTP helpers
 
 def get_json(url: str, token: str | None = None):
+    """GET a JSON document. HTTP errors carry the URL so failures say what was asked."""
     headers = {"Accept": "application/vnd.github+json", "User-Agent": f"{USER}-traffic"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return json.load(resp)
+    except urllib.error.HTTPError as err:
+        err.msg = f"{err.msg} for {url.split('?')[0]}"
+        raise
 
 
 def gh(path: str, token: str | None):
@@ -65,11 +70,7 @@ def list_repos(token: str | None) -> list[dict]:
     """Public, non-fork, non-archived repos owned by USER."""
     repos, page = [], 1
     while True:
-        if token:
-            path = f"/user/repos?affiliation=owner&visibility=public&per_page=100&page={page}"
-        else:
-            path = f"/users/{USER}/repos?type=owner&per_page=100&page={page}"
-        batch = gh(path, token)
+        batch = gh(f"/users/{USER}/repos?type=owner&per_page=100&page={page}", token)
         repos.extend(batch)
         if len(batch) < 100:
             break
@@ -115,8 +116,8 @@ def merge_days(store: dict, items: list[dict]) -> None:
 
 
 def collect(data: dict, now: datetime) -> dict:
-    token = os.environ.get("TRAFFIC_TOKEN") or None
-    list_token = token or os.environ.get("GITHUB_TOKEN") or None
+    token = os.environ.get("TRAFFIC_TOKEN") or None          # only for the traffic endpoints
+    list_token = os.environ.get("GITHUB_TOKEN") or None      # public repo list
     today = now.strftime("%Y-%m-%d")
 
     if not token:
@@ -144,7 +145,8 @@ def collect(data: dict, now: datetime) -> dict:
                 merge_days(entry["clones"], gh(f"{base}/clones", token).get("clones", []))
                 entry["referrers"] = gh(f"{base}/popular/referrers", token)[:MAX_REFERRERS]
             except urllib.error.HTTPError as err:
-                print(f"  {name}: traffic API answered {err.code}, check the token permissions")
+                print(f"::warning title=collect_traffic::{name}: the traffic API answered {err.code}. "
+                      "The TRAFFIC_TOKEN needs read access to Administration on this repo.")
 
         if entry["pages"]:
             hits = goat_count(entry["pages_path"])
