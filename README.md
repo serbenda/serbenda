@@ -169,6 +169,26 @@ Extracts transactions from Bankinter VISA PDF statements into clean CSV, ready f
 
 ---
 
+<details>
+<summary><b>🔧 Maintenance: renewing the visits token</b></summary>
+<br>
+
+Repository views are read by the [Update profile](.github/workflows/update-profile.yml) workflow with a token stored in the `TRAFFIC_TOKEN` secret. GitHub emails a reminder a few days before it expires.
+
+**To renew it:**
+
+1. Open [Personal access tokens](https://github.com/settings/personal-access-tokens), select **visitas-perfil** and click **Regenerate token**. Pick the expiration and copy the new token, which is shown only once.
+2. In [the repository secrets](https://github.com/serbenda/serbenda/settings/secrets/actions), click the pencil next to `TRAFFIC_TOKEN`, paste the new token and save. Don't paste it anywhere else.
+3. In [Actions → Update profile](https://github.com/serbenda/serbenda/actions/workflows/update-profile.yml), click **Run workflow** and check it finishes green.
+
+**Creating it from scratch:** a *fine-grained* token with access to **All repositories** and a single permission, **Administration: Read-only**. GitHub adds *Metadata: Read-only* on its own. Don't use a *classic* token.
+
+**If it expires**, the website keeps working and the stored history is kept. Only repository views stop being collected, and GitHub keeps just the last 14 days. Game visits don't depend on the token: GoatCounter counts them.
+
+</details>
+
+---
+
 <div align="center">
 
 **Currently:** making automation reviews faster and more consistent · building small games with my kids · tinkering with a homelab
