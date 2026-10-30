@@ -102,7 +102,7 @@ I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since
 Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,bash,py,githubactions,git&perline=8" alt="Automation and systems"><br><br>
+  <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,debian,bash,py,githubactions,git&perline=9" alt="Automation and systems"><br><br>
   <img src="https://skillicons.dev/icons?i=aws,azure,kubernetes,js,nodejs,html,css,solidity&perline=8" alt="Cloud and development">
 </p>
 
