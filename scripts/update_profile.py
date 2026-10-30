@@ -120,7 +120,7 @@ def fetch_projects() -> dict:
 
 
 def games_block(projects: dict, pages: set[str], lang: str) -> str:
-    """Games table for the README: three per row, screenshot, title, blurb and links."""
+    """Games table for the README: two per row (readable on phones), screenshot, title, blurb and links."""
     play, code = ("▶ Jugar", "Código") if lang == "es" else ("▶ Play", "Code")
     cells = []
     for g in projects.get("games", []):
@@ -128,9 +128,9 @@ def games_block(projects: dict, pages: set[str], lang: str) -> str:
         live = repo in pages
         url = f"{SITE}/{repo}/" if live else f"https://github.com/{USER}/{repo}"
         links = (f'<a href="{url}"><b>{play}</b></a> · ' if live else "") + f'<a href="https://github.com/{USER}/{repo}">{code}</a>'
-        cells.append(f'<td width="33%" valign="top">\n<a href="{url}"><img src="{IMG_BASE}{g["img"]}" alt="{escape(g["title"])}" width="100%"></a>\n\n'
+        cells.append(f'<td width="50%" valign="top">\n<a href="{url}"><img src="{IMG_BASE}{g["img"]}" alt="{escape(g["title"])}" width="100%"></a>\n\n'
                      f'**{g["title"]}**<br>\n<sub>{g[lang]}</sub>\n\n{links}\n\n</td>')
-    rows = ["<tr>\n" + "\n".join(cells[i:i + 3]) + "\n</tr>" for i in range(0, len(cells), 3)]
+    rows = ["<tr>\n" + "\n".join(cells[i:i + 2]) + "\n</tr>" for i in range(0, len(cells), 2)]
     return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 

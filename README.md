@@ -2,7 +2,7 @@
 
 <a href="https://bendi.dev/"><img src="assets/header.png" alt="Sergio Bendaña · Automation Platform Engineer" width="100%"></a>
 
-<a href="https://bendi.dev/"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=29ADFF&center=true&vCenter=true&width=640&lines=Automation+Platform+Engineer;Infrastructure+as+Code+%E2%80%A2+Terraform+%E2%80%A2+Ansible;Blockchain+%26+Web3+%E2%80%A2+Solidity+%E2%80%A2+IPFS;8-bit+games+for+the+browser" alt="20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters."></a>
+<a href="https://bendi.dev/"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=29ADFF&center=true&vCenter=true&width=480&lines=Automation+Platform+Engineer;Infrastructure+as+Code+%E2%80%A2+Terraform+%E2%80%A2+Ansible;Blockchain+%26+Web3+%E2%80%A2+Solidity+%E2%80%A2+IPFS;8-bit+games+for+the+browser" alt="20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters."></a>
 
 **20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters.**
 
@@ -19,34 +19,11 @@
 
 ---
 
-<table>
-<tr>
-<td width="33%" align="center" valign="top">
-
-**🤖 Automation**
-
-Infrastructure as code with **Terraform, Ansible and Packer** on AWS, Azure and private cloud.<br>
-<sub>20 years in infrastructure</sub>
-
-</td>
-<td width="33%" align="center" valign="top">
-
-**⛓️ Blockchain**
-
-**Master's in Blockchain**. Smart contracts in **Solidity**, NFTs, IPFS and multichain dApps.<br>
-<sub><a href="#blockchain">See FrameBlock ↓</a></sub>
-
-</td>
-<td width="33%" align="center" valign="top">
-
-**🕹️ Games**
-
-Small 8-bit games in pure HTML + JS, made with my daughters and playable on any phone.<br>
-<sub><a href="https://bendi.dev/#arcade">Play them →</a></sub>
-
-</td>
-</tr>
-</table>
+<p align="center">
+🤖 <b>Automation</b> · Infrastructure as code with <b>Terraform, Ansible and Packer</b> on AWS, Azure and private cloud<br>
+⛓️ <b>Blockchain</b> · <b>Master's in Blockchain</b>: smart contracts in <b>Solidity</b>, NFTs, IPFS and multichain dApps · <a href="#blockchain">FrameBlock ↓</a><br>
+🕹️ <b>Games</b> · Small 8-bit games in pure HTML + JS, made with my daughters · <a href="https://bendi.dev/#arcade">Play →</a>
+</p>
 
 ---
 
@@ -57,7 +34,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <!-- GAMES:START -->
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <a href="https://bendi.dev/dungeons-and-deployments/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/dungeons-and-deployments.webp" alt="Dungeons &amp; Deployments" width="100%"></a>
 
 **Dungeons & Deployments**<br>
@@ -66,7 +43,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/dungeons-and-deployments/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/dungeons-and-deployments">Code</a>
 
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <a href="https://bendi.dev/chapas/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/chapas.webp" alt="La Vuelta de Chapas" width="100%"></a>
 
 **La Vuelta de Chapas**<br>
@@ -75,7 +52,9 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/chapas/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/chapas">Code</a>
 
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://bendi.dev/school-rush/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/school-rush.webp" alt="School Rush" width="100%"></a>
 
 **School Rush**<br>
@@ -84,9 +63,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/school-rush/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/school-rush">Code</a>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <a href="https://bendi.dev/hemiciclo-fighters/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/hemiciclo-fighters.webp" alt="Hemiciclo Fighters" width="100%"></a>
 
 **Hemiciclo Fighters**<br>
@@ -95,7 +72,9 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/hemiciclo-fighters/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/hemiciclo-fighters">Code</a>
 
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://bendi.dev/story-reader/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/story-reader.webp" alt="La biblioteca mágica" width="100%"></a>
 
 **La biblioteca mágica**<br>
@@ -104,7 +83,7 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/story-reader/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/story-reader">Code</a>
 
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <a href="https://github.com/serbenda/deploy-quest"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/deploy-quest.webp" alt="Deploy Quest" width="100%"></a>
 
 **Deploy Quest**<br>
@@ -151,7 +130,7 @@ I hold a **Master's in Blockchain** from Universidad Europea (2022–2023). That
 To prove it works we built a real use case, **Simple AI Collection**: a dApp where you search AI-generated images, pick your favourites, store them on **IPFS** and mint them as your own **NFT collection (ERC-721)** on Ethereum, BNB Smart Chain or Polygon, paying the deployment fee by card.
 
 ```mermaid
-flowchart LR
+flowchart TB
     U(["👤 User"]) --> D["⚛️ React dApp<br/><i>Web3 Onboard · ethers.js</i>"]
     D -->|"search"| AI["🎨 AI image API"]
     D -->|"pay deploy fee"| S["💳 Stripe"]
@@ -209,10 +188,6 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 
 ## ⚡ Recent activity
 
-<table>
-<tr>
-<td width="55%" valign="top">
-
 <!-- ACTIVITY:START -->
 - **[dungeons-and-deployments](https://github.com/serbenda/dungeons-and-deployments)** · `JavaScript` · ⭐ 1 · [▶ demo](https://serbenda.github.io/dungeons-and-deployments/) — Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil. <sub>(updated today)</sub>
 - **[story-reader](https://github.com/serbenda/story-reader)** · `JavaScript` — Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz. <sub>(updated today)</sub>
@@ -221,16 +196,11 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 - **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` · ⭐ 1 — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
-<sub>🤖 Refreshed every morning by a GitHub Action in this repo.</sub>
+<p align="center">
+  <img src="assets/stats.svg" alt="Public GitHub stats" width="480">
+</p>
 
-</td>
-<td width="45%" valign="top" align="center">
-
-<img src="assets/stats.svg" alt="Public GitHub stats" width="100%">
-
-</td>
-</tr>
-</table>
+<p align="center"><sub>🤖 Refreshed every morning by a GitHub Action in this repo.</sub></p>
 
 ---
 
