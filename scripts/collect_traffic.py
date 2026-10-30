@@ -93,7 +93,7 @@ def goat_count(path: str) -> int | None:
         data = get_json(url)
     except urllib.error.HTTPError as err:
         return 0 if err.code == 404 else None   # 404 = no visits yet
-    except (urllib.error.URLError, TimeoutError, ValueError):
+    except Exception:   # site not created yet, network hiccup, unexpected answer
         return None
     digits = "".join(ch for ch in str(data.get("count", "")) if ch.isdigit())
     return int(digits) if digits else 0
@@ -239,6 +239,18 @@ def card(data: dict, lang: str) -> str:
 
 
 def main() -> int:
+    try:
+        return run()
+    except Exception as err:
+        # Shown as an annotation on the workflow run, so the cause is visible without opening logs
+        import traceback
+        where = traceback.extract_tb(err.__traceback__)[-1]
+        print(f"::error title=collect_traffic::{type(err).__name__}: {err} "
+              f"(line {where.lineno}, {where.name})")
+        raise
+
+
+def run() -> int:
     now = datetime.now(timezone.utc)
     data = collect(load(), now)
     DATA.parent.mkdir(parents=True, exist_ok=True)
