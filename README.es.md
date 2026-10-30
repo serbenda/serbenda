@@ -102,7 +102,7 @@ Soy **Sergio Bendaña**, *Bendi*. Empecé en 2005 dando soporte y desde entonces
 Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de crecer y cualquier cosa que se pueda automatizar.
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,debian,bash,py,githubactions,git&perline=9" alt="Automatización y sistemas"><br><br>
+  <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,bash,py,githubactions,git&perline=8" alt="Automatización y sistemas"><br><br>
   <img src="https://skillicons.dev/icons?i=aws,azure,kubernetes,js,nodejs,html,css,solidity&perline=8" alt="Nube y desarrollo">
 </p>
 
