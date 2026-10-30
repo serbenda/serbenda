@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-🤖 <b>Automatización</b> · Infraestructura como código con <b>Terraform, Ansible y Packer</b> sobre AWS, Azure y nube privada<br>
+🤖 <b>Automatización</b> · Infraestructura como código con <b>Terraform, Ansible y Packer</b> sobre AWS, Azure, Google Cloud y nube privada<br>
 ⛓️ <b>Blockchain</b> · <b>Máster en Blockchain</b>: smart contracts en <b>Solidity</b>, NFTs, IPFS y dApps multicadena · 🏆 <a href="#blockchain">FrameBlock, mejor proyecto del máster ↓</a><br>
 🕹️ <b>Juegos</b> · Juegos pequeños de 8 bits en HTML + JS puro, hechos con mis hijas · <a href="https://bendi.dev/#arcade">Jugar →</a>
 </p>
@@ -179,13 +179,13 @@ flowchart TB
 
 ## 👾 Sobre mí
 
-Soy **Sergio Bendaña**, *Bendi*. Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de **12.000 servidores**, migraciones de VMware a OpenStack, Big Data con Cloudera y Hortonworks y, hoy, **infraestructura como código** con Terraform Enterprise, Ansible y Packer sobre AWS, Azure y nube privada. Y como me gusta saber cómo funciona la siguiente capa, hice un **Máster en Blockchain** y construí [FrameBlock](#blockchain), que ganó el premio al mejor proyecto del máster.
+Soy **Sergio Bendaña**, *Bendi*. Empecé en 2005 dando soporte y desde entonces he pasado por casi todos los niveles de la infraestructura: UNIX en producción 24x7, granjas de **12.000 servidores**, migraciones de VMware a OpenStack, Big Data con Cloudera y Hortonworks y, hoy, **infraestructura como código** con Terraform Enterprise, Ansible y Packer sobre AWS, Azure, Google Cloud y nube privada. Y como me gusta saber cómo funciona la siguiente capa, hice un **Máster en Blockchain** y construí [FrameBlock](#blockchain), que ganó el premio al mejor proyecto del máster.
 
 Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de crecer y cualquier cosa que se pueda automatizar.
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=terraform,ansible,docker,linux,bash,py,githubactions,git&perline=8" alt="Automatización y sistemas"><br><br>
-  <img src="https://skillicons.dev/icons?i=aws,azure,kubernetes,js,nodejs,html,css,solidity&perline=8" alt="Nube y desarrollo">
+  <img src="https://skillicons.dev/icons?i=aws,azure,gcp,kubernetes,js,nodejs,html,css,solidity&perline=9" alt="Nube y desarrollo">
 </p>
 
 <p align="center">
