@@ -7,7 +7,7 @@
 **20 years automating infrastructure · Master's in Blockchain · 8-bit games made at home with my daughters.**
 
 [![Website](https://img.shields.io/badge/Website-1d2b53?style=for-the-badge&logo=githubpages&logoColor=ffec27)](https://bendi.dev/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/serbenda/)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/serbenda)
 
@@ -179,7 +179,7 @@ flowchart TB
 
 ## 👾 About me
 
-I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks and, today, **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure, Google Cloud and private cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain), which won best project of the Master's.
+I'm **Sergio Bendaña**, *Bendi*. I started in 2005 doing support and have since cleared most levels of infrastructure: 24x7 production UNIX, **12,000-server** farms, VMware-to-OpenStack migrations, Big Data with Cloudera and Hortonworks, then **infrastructure as code** with Terraform Enterprise, Ansible and Packer on AWS, Azure, Google Cloud and private cloud and, today, as a **Cloud Engineer and SRE**, I bring the private cloud to projects as code and work on Google Cloud. And because I like knowing how the next layer works, I did a **Master's in Blockchain** and built [FrameBlock](#blockchain), which won best project of the Master's.
 
 Off the clock: small games with my daughters, a homelab that keeps growing and anything that can be automated.
 
@@ -230,7 +230,7 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 
 <div align="center">
 
-**Let's talk.** If you fancy talking about automation, gadgets or games, find me on <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>.
+**Let's talk.** If you fancy talking about automation, gadgets or games, find me on <a href="https://www.linkedin.com/in/serbenda/">LinkedIn</a>.
 
 <sub>Enjoying the games? You can support them on <a href="https://github.com/sponsors/serbenda">GitHub Sponsors</a> ❤</sub>
 
