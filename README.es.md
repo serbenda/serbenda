@@ -7,6 +7,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/serbenda)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
+[![Mi web](https://img.shields.io/badge/Mi_web-0f1426?style=for-the-badge&logo=githubpages&logoColor=38bdf8)](https://serbenda.github.io/serbenda/)
+
+![Visitas al perfil](https://komarev.com/ghpvc/?username=serbenda&label=Visitas%20al%20perfil&color=38bdf8&style=flat-square)
 
 [🇬🇧 English](README.md) · **🇪🇸 Español**
 
@@ -142,6 +145,16 @@ Extrae los movimientos de los extractos PDF de la VISA de Bankinter a CSV limpio
 </td>
 </tr>
 </table>
+
+---
+
+## 📈 Visitas
+
+<p align="center">
+  <a href="https://serbenda.github.io/serbenda/#visitas"><img src="assets/traffic.es.svg" alt="Vistas de mis repositorios y visitas a mis juegos en GitHub Pages" width="500"></a>
+</p>
+
+<p align="center"><sub>Las vistas a los repos salen de la API de tráfico de GitHub y las visitas a Pages de GoatCounter. El dashboard completo, por proyecto y por día, está en <a href="https://serbenda.github.io/serbenda/#visitas">mi web</a>.</sub></p>
 
 ---
 

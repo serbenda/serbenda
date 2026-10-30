@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="260" viewBox="0 0 500 260" role="img" aria-label="VISITS · AUTO-UPDATED">
+<style>
+.t{font:500 13px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#e2e8f0}
+.m{font:400 12px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#94a3b8}
+.v{font:800 30px -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;fill:#f8fafc}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#38bdf8;letter-spacing:2px}
+</style>
+<rect width="500" height="260" rx="14" fill="#0f1426" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="30" y="36" class="h">VISITS · AUTO-UPDATED</text>
+<text x="470" y="36" class="m" text-anchor="end"></text>
+<rect x="30" y="58" width="4" height="40" rx="2" fill="#38bdf8"/>
+<text x="44" y="82" class="v">0</text><text x="44" y="102" class="m">repo views</text>
+<rect x="260" y="58" width="4" height="40" rx="2" fill="#36d399"/>
+<text x="274" y="82" class="v">0</text><text x="274" y="102" class="m">Pages visits</text>
+<text x="30" y="134" class="h">MOST VISITED</text>
+<text x="30" y="160" class="m">Collecting the first data…</text>
+</svg>

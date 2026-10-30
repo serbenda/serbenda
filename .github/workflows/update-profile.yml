@@ -7,7 +7,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/update_profile.py"
+      - "scripts/**"
+      - "docs/index.html"
       - ".github/workflows/update-profile.yml"
 
 permissions:
@@ -15,7 +16,7 @@ permissions:
 
 concurrency:
   group: update-profile
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -32,14 +33,46 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/update_profile.py
 
+      - name: Collect visits (repos + GitHub Pages)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Personal access token that can read traffic of all your repos.
+          # Without it only the GitHub Pages counters are collected.
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+        run: python scripts/collect_traffic.py
+
       - name: Commit changes
         run: |
-          if git diff --quiet; then
+          git add README.md README.es.md assets/ docs/data/
+          if git diff --cached --quiet; then
             echo "Nothing to update"
             exit 0
           fi
           git config user.name "serbenda"
           git config user.email "serbenda@gmail.com"
-          git add README.md README.es.md assets/stats.svg
-          git commit -m "Update profile activity"
+          git commit -m "Update profile activity and visits"
           git push
+
+  pages:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # includes the data committed by the previous job
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
