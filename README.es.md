@@ -8,6 +8,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/serbenda)
 [![Farcaster](https://img.shields.io/badge/Farcaster-855DCD?style=for-the-badge&logo=farcaster&logoColor=white)](https://warpcast.com/serbenda)
+[![Patrocinar](https://img.shields.io/badge/Patrocinar-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/serbenda)
 
 ![Visitas al perfil](https://komarev.com/ghpvc/?username=serbenda&label=Visitas%20al%20perfil&color=29adff&style=flat-square)
 
@@ -158,5 +159,7 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 <div align="center">
 
 **¿Hablamos?** Si te apetece hablar de automatización, de cacharros o de juegos, escríbeme en <a href="https://www.linkedin.com/in/sergio-santiago-benda%C3%B1a-quesada/">LinkedIn</a>.
+
+<sub>¿Te gustan los juegos? Puedes apoyarlos en <a href="https://github.com/sponsors/serbenda">GitHub Sponsors</a> ❤</sub>
 
 </div>
