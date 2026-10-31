@@ -216,24 +216,28 @@
     "/bolsillo/",
     "/bolsillo/ahorro/",
     "/bolsillo/alquiler/",
+    "/bolsillo/calefaccion/",
     "/bolsillo/compra/",
     "/bolsillo/en/",
     "/bolsillo/en/ahorro/",
     "/bolsillo/en/alquiler/",
+    "/bolsillo/en/calefaccion/",
     "/bolsillo/en/compra/",
     "/bolsillo/en/fuentes/",
     "/bolsillo/en/gasolina/",
     "/bolsillo/en/hipoteca/",
     "/bolsillo/en/ipc/",
     "/bolsillo/en/luz/",
+    "/bolsillo/en/quien/",
     "/bolsillo/fuentes/",
     "/bolsillo/gasolina/",
     "/bolsillo/hipoteca/",
     "/bolsillo/ipc/",
-    "/bolsillo/luz/"
+    "/bolsillo/luz/",
+    "/bolsillo/quien/"
    ],
    "pages_url": "https://bolsillo.bendi.dev/",
-   "pushed_at": "2026-10-31T17:01:47Z",
+   "pushed_at": "2026-10-31T19:27:47Z",
    "referrers": [
     {
      "count": 4,
@@ -376,6 +380,9 @@
     "/chapas/"
    ],
    "pages_url": "https://serbenda.github.io/chapas/",
+   "plays": {
+    "2026-10-31": 1
+   },
    "pushed_at": "2026-10-30T12:53:31Z",
    "referrers": [
     {
@@ -678,6 +685,9 @@
     "/dungeons-and-deployments/"
    ],
    "pages_url": "https://serbenda.github.io/dungeons-and-deployments/",
+   "plays": {
+    "2026-10-31": 1
+   },
    "pushed_at": "2026-10-30T14:03:11Z",
    "referrers": [
     {
@@ -975,6 +985,9 @@
     "/hemiciclo-fighters/"
    ],
    "pages_url": "https://serbenda.github.io/hemiciclo-fighters/",
+   "plays": {
+    "2026-10-31": 1
+   },
    "pushed_at": "2026-10-30T12:52:52Z",
    "referrers": [
     {
@@ -1128,7 +1141,7 @@
     "/hucha/quien-gasta/"
    ],
    "pages_url": "https://hucha.bendi.dev/",
-   "pushed_at": "2026-10-31T17:06:15Z",
+   "pushed_at": "2026-10-31T18:30:39Z",
    "referrers": [],
    "stars": 0,
    "url": "https://github.com/serbenda/hucha",
@@ -1265,6 +1278,9 @@
     "/school-rush/"
    ],
    "pages_url": "https://serbenda.github.io/school-rush/",
+   "plays": {
+    "2026-10-31": 1
+   },
    "pushed_at": "2026-10-30T12:52:34Z",
    "referrers": [
     {
@@ -1412,7 +1428,7 @@
     "/serbenda/"
    ],
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-31T17:17:17Z",
+   "pushed_at": "2026-10-31T18:47:27Z",
    "referrers": [
     {
      "count": 23,
@@ -1555,7 +1571,7 @@
     "/"
    ],
    "pages_url": "https://serbenda.github.io/",
-   "pushed_at": "2026-10-31T07:32:00Z",
+   "pushed_at": "2026-10-31T19:21:06Z",
    "referrers": [
     {
      "count": 12,
@@ -1698,6 +1714,9 @@
     "/story-reader/"
    ],
    "pages_url": "https://serbenda.github.io/story-reader/",
+   "plays": {
+    "2026-10-31": 1
+   },
    "pushed_at": "2026-10-30T14:01:43Z",
    "referrers": [
     {
@@ -1775,6 +1794,6 @@
  "site": {
   "2026-10-31": 3
  },
- "updated": "2026-10-31T17:17:24+00:00",
+ "updated": "2026-10-31T19:34:57+00:00",
  "user": "serbenda"
 }
