@@ -207,6 +207,7 @@ flowchart LR
 | `GITHUB_TOKEN` | Read public repos and push the commit | Automatic |
 | `TRAFFIC_TOKEN` (secret) | Read views of every repo | Optional: without it only GoatCounter visits are collected |
 | `GOATCOUNTER_CODE` (variable) | GoatCounter site code | Optional: defaults to the GitHub user |
+| `GOATCOUNTER_TOKEN` (secret) | Read-only GoatCounter API key | Optional: without it there are no devices, countries or referrers per project |
 
 > ✏️ Everything in the README **outside** the `GAMES` and `ACTIVITY` markers (header, badges, *About me*, footer) is written by hand. The workflow never touches it.
 
@@ -381,6 +382,12 @@ Visits and matches are counted by [serbenda.goatcounter.com](https://serbenda.go
 - **Single-page games** are counted on one path, `/<repo>/`.
 - **Multi-page sites on their own subdomain** (bolsillo.bendi.dev, hucha.bendi.dev) prefix every path with `/<repo>` so they don't mix with bendi.dev. The collector reads the `sitemap.xml` of the repo and adds up the visits of every page in it, so a new section only needs to be in the sitemap to be counted.
 - If the counters ever come back empty, check `https://serbenda.goatcounter.com/counter/TOTAL.json`: *"no site at this domain"* means the account is gone.
+
+**Devices, countries and referrers (optional).** With a GoatCounter API key the dashboard also shows phone vs computer, countries and where visitors come from, for the whole site and for each project, over the last 30 days:
+
+1. In GoatCounter, open your user menu (top right) → **API** → **New API key**, tick only **Read statistics**, and copy the key.
+2. In [this repo's secrets](https://github.com/serbenda/serbenda/settings/secrets/actions), create `GOATCOUNTER_TOKEN` with that key.
+3. Run **Update profile** by hand and check it ends green. If the key is wrong, the run still succeeds and leaves a warning; the rest of the data is unaffected.
 
 ---
 

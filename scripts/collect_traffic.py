@@ -13,7 +13,9 @@ Two sources:
    analytics of its own, so each site loads the GoatCounter script and this
    collector reads the public counters (no token needed). Games also send a
    "partida/<repo>" event when a match starts, stored as "plays". The site code is
-   taken from the GOATCOUNTER_CODE variable (default: the GitHub user).
+   taken from the GOATCOUNTER_CODE variable (default: the GitHub user). With a read-only
+   API key in the GOATCOUNTER_TOKEN secret it also stores phone vs computer, countries and
+   referrers for the last 30 days, for the whole site and each project.
 
 Outputs:
 - data/traffic.json        history read by the website (bendi.dev, repo serbenda.github.io)
@@ -26,12 +28,13 @@ from __future__ import annotations
 
 import json
 import re
+import time
 import os
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import escape
 from pathlib import Path
 
@@ -127,6 +130,75 @@ def goat_count(path: str) -> int | None:
     return int(digits) if digits else 0
 
 
+# ----------------------------------------------------- GoatCounter API (optional)
+# With a read-only API key in GOATCOUNTER_TOKEN, the collector also stores, for the last
+# GC_DAYS days: phone vs computer, countries and where visitors come from, for the whole
+# site and for each project. Without the key this part is skipped.
+GC_DAYS = 30
+PHONE_SIZES = {"phones", "tablets and large phones"}
+
+
+def gc_api(page: str, token: str, start: str, end: str, paths: list[str] | None = None, limit: int = 10) -> list[dict]:
+    """[{name, count}] for a GoatCounter stats page (sizes, locations, toprefs…), or [] on error."""
+    query = {"start": start, "end": end, "limit": str(limit)}
+    if paths:
+        query.update(path_by_name="true", include_paths=",".join(paths))
+    url = f"https://{GOAT}.goatcounter.com/api/v0/stats/{page}?{urllib.parse.urlencode(query)}"
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}",
+                                               "Content-Type": "application/json",
+                                               "User-Agent": f"{USER}-traffic"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            stats = json.load(resp).get("stats") or []
+    except Exception as err:
+        print(f"::warning title=collect_traffic::GoatCounter API {page}: {err}")
+        return []
+    finally:
+        time.sleep(0.4)   # well under the API rate limit
+    return [{"name": x.get("name") or "(unknown)", "count": int(x.get("count") or 0)} for x in stats if x.get("count")]
+
+
+def devices(sizes: list[dict]) -> dict:
+    """Screen sizes grouped into phone (and tablet) vs computer."""
+    out = {"phone": 0, "computer": 0}
+    for x in sizes:
+        name = x["name"].lower()
+        if name in PHONE_SIZES:
+            out["phone"] += x["count"]
+        elif "computer" in name:
+            out["computer"] += x["count"]
+    return out
+
+
+def collect_gc(data: dict, now: datetime) -> None:
+    token = os.environ.get("GOATCOUNTER_TOKEN") or None
+    if not token:
+        print("GOATCOUNTER_TOKEN not set: skipping devices, countries and referrers.")
+        return
+    end = now.replace(minute=0, second=0, microsecond=0)
+    start = end - timedelta(days=GC_DAYS)
+    span = [start.strftime("%Y-%m-%dT%H:%M:%SZ"), end.strftime("%Y-%m-%dT%H:%M:%SZ")]
+    site = {
+        "days": GC_DAYS, "start": span[0][:10], "end": span[1][:10],
+        "devices": devices(gc_api("sizes", token, *span)),
+        "countries": gc_api("locations", token, *span, limit=12),
+        "referrers": gc_api("toprefs", token, *span, limit=12),
+    }
+    if not any(site["devices"].values()) and not site["countries"]:
+        print("::warning title=collect_traffic::The GoatCounter API returned nothing: check GOATCOUNTER_TOKEN.")
+        return
+    data["gc"] = site
+    for name, entry in data["repos"].items():
+        if not entry.get("pages"):
+            continue
+        # GoatCounter stores paths without the trailing slash
+        names = [p.rstrip("/") or "/" for p in entry.get("pages_paths") or [entry.get("pages_path", f"/{name}/")]]
+        entry["gc"] = {
+            "devices": devices(gc_api("sizes", token, *span, paths=names)),
+            "referrers": gc_api("toprefs", token, *span, paths=names, limit=5),
+        }
+
+
 # ------------------------------------------------------------------- merging
 
 def load() -> dict:
@@ -189,6 +261,8 @@ def collect(data: dict, now: datetime) -> dict:
             plays = goat_count(f"partida/{name}")
             if plays:
                 entry.setdefault("plays", {})[today] = plays
+
+    collect_gc(data, now)
 
     total = goat_count("TOTAL")
     if total is not None:

@@ -40,6 +40,8 @@ jobs:
           # Without it only the GitHub Pages counters are collected.
           TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          # Optional read-only GoatCounter API key: phone vs computer, countries and referrers
+          GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
         run: python scripts/collect_traffic.py
 
       - name: Commit changes
