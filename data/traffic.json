@@ -58,6 +58,10 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     0,
+     0
     ]
    },
    "description": "A Python tool designed to extract transaction data from Bankinter VISA card statements in PDF format and convert it into a structured CSV file for easy analysis.",
@@ -66,6 +70,11 @@
    "pages_hits": {},
    "pushed_at": "2024-12-06T21:32:41Z",
    "referrers": [
+    {
+     "count": 1,
+     "referrer": "bendi.dev",
+     "uniques": 1
+    },
     {
      "count": 1,
      "referrer": "github.com",
@@ -130,6 +139,144 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     1,
+     1
+    ]
+   }
+  },
+  "bolsillo": {
+   "clones": {
+    "2026-10-17": [
+     0,
+     0
+    ],
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     86,
+     29
+    ]
+   },
+   "description": "Precio de la luz hora a hora, gasolineras más baratas y simulador de hipoteca con datos públicos de España.",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {},
+   "pages_path": "/bolsillo/",
+   "pages_url": "https://serbenda.github.io/bolsillo/",
+   "pushed_at": "2026-10-31T07:56:58Z",
+   "referrers": [
+    {
+     "count": 4,
+     "referrer": "github.com",
+     "uniques": 1
+    }
+   ],
+   "stars": 0,
+   "url": "https://github.com/serbenda/bolsillo",
+   "views": {
+    "2026-10-17": [
+     0,
+     0
+    ],
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     75,
+     1
     ]
    }
   },
@@ -190,6 +337,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     83,
+     71
     ]
    },
    "description": "Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas.",
@@ -213,6 +364,11 @@
     {
      "count": 1,
      "referrer": "DuckDuckGo",
+     "uniques": 1
+    },
+    {
+     "count": 1,
+     "referrer": "bendi.dev",
      "uniques": 1
     }
    ],
@@ -274,6 +430,10 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     9,
+     2
     ]
    }
   },
@@ -334,6 +494,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     11,
+     6
     ]
    },
    "description": "Aventura de 8 bits con vista cenital: un dev con su teclado y su Escudo de IaC recorre las Catacumbas de Sistemas, consigue la Terminal SSH y la primera página del Grimorio de la Definition of Done. HTML5 + canvas, sin dependencias.",
@@ -406,6 +570,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     2,
+     1
     ]
    }
   },
@@ -466,6 +634,10 @@
     "2026-10-29": [
      216,
      78
+    ],
+    "2026-10-30": [
+     88,
+     27
     ]
    },
    "description": "Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil.",
@@ -477,7 +649,7 @@
    "pushed_at": "2026-10-30T14:03:11Z",
    "referrers": [
     {
-     "count": 21,
+     "count": 25,
      "referrer": "github.com",
      "uniques": 4
     },
@@ -545,6 +717,10 @@
     "2026-10-29": [
      17,
      4
+    ],
+    "2026-10-30": [
+     11,
+     2
     ]
    }
   },
@@ -605,6 +781,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     2,
+     1
     ]
    },
    "description": "This repository is for academic purposes and belongs to Roberto Gonzalez Rey and Sergio Santiago Bendaña Quesada. It is part of a final project for the Master of Blockchain program at the European University of Madrid (UEM). The code contained in this repository is not intended for commercial use and is solely for educational and research purposes.",
@@ -612,7 +792,18 @@
    "pages": false,
    "pages_hits": {},
    "pushed_at": "2023-02-25T10:20:20Z",
-   "referrers": [],
+   "referrers": [
+    {
+     "count": 8,
+     "referrer": "bendi.dev",
+     "uniques": 2
+    },
+    {
+     "count": 1,
+     "referrer": "linkedin.com",
+     "uniques": 1
+    }
+   ],
    "stars": 2,
    "url": "https://github.com/serbenda/frameblock",
    "views": {
@@ -671,6 +862,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     12,
+     2
     ]
    }
   },
@@ -731,6 +926,10 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     12,
+     5
     ]
    },
    "description": "Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias.",
@@ -810,6 +1009,10 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     3,
+     1
     ]
    }
   },
@@ -870,6 +1073,10 @@
     "2026-10-29": [
      0,
      0
+    ],
+    "2026-10-30": [
+     18,
+     8
     ]
    },
    "description": "Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰",
@@ -944,6 +1151,10 @@
     "2026-10-29": [
      1,
      1
+    ],
+    "2026-10-30": [
+     3,
+     1
     ]
    }
   },
@@ -1004,6 +1215,10 @@
     "2026-10-29": [
      19,
      7
+    ],
+    "2026-10-30": [
+     167,
+     38
     ]
    },
    "description": "Config files for my GitHub profile.",
@@ -1012,10 +1227,10 @@
    "pages_hits": {},
    "pages_path": "/serbenda/",
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-30T16:47:02Z",
+   "pushed_at": "2026-10-30T17:31:06Z",
    "referrers": [
     {
-     "count": 9,
+     "count": 23,
      "referrer": "github.com",
      "uniques": 5
     }
@@ -1078,6 +1293,10 @@
     "2026-10-29": [
      3,
      3
+    ],
+    "2026-10-30": [
+     70,
+     1
     ]
    }
   },
@@ -1136,8 +1355,8 @@
      0
     ],
     "2026-10-30": [
-     0,
-     0
+     176,
+     48
     ]
    },
    "description": "Bendi’s personal site: about me, an arcade zone with my games and their visits · bendi.dev",
@@ -1146,8 +1365,14 @@
    "pages_hits": {},
    "pages_path": "/",
    "pages_url": "https://serbenda.github.io/",
-   "pushed_at": "2026-10-30T16:47:07Z",
-   "referrers": [],
+   "pushed_at": "2026-10-31T07:32:00Z",
+   "referrers": [
+    {
+     "count": 12,
+     "referrer": "github.com",
+     "uniques": 1
+    }
+   ],
    "stars": 0,
    "url": "https://github.com/serbenda/serbenda.github.io",
    "views": {
@@ -1204,8 +1429,8 @@
      0
     ],
     "2026-10-30": [
-     0,
-     0
+     61,
+     1
     ]
    }
   },
@@ -1266,6 +1491,10 @@
     "2026-10-29": [
      41,
      18
+    ],
+    "2026-10-30": [
+     88,
+     26
     ]
    },
    "description": "Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz.",
@@ -1277,7 +1506,7 @@
    "pushed_at": "2026-10-30T14:01:43Z",
    "referrers": [
     {
-     "count": 6,
+     "count": 13,
      "referrer": "github.com",
      "uniques": 1
     }
@@ -1340,11 +1569,15 @@
     "2026-10-29": [
      39,
      1
+    ],
+    "2026-10-30": [
+     46,
+     1
     ]
    }
   }
  },
  "site": {},
- "updated": "2026-10-30T16:47:10+00:00",
+ "updated": "2026-10-31T10:56:49+00:00",
  "user": "serbenda"
 }

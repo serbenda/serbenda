@@ -203,11 +203,11 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 ## ⚡ Recent activity
 
 <!-- ACTIVITY:START -->
+- **[bolsillo](https://github.com/serbenda/bolsillo)** · `JavaScript` — Precio de la luz hora a hora, gasolineras más baratas y simulador de hipoteca con datos públicos de España. <sub>(updated today)</sub>
 - **[dungeons-and-deployments](https://github.com/serbenda/dungeons-and-deployments)** · `JavaScript` · ⭐ 1 · [▶ demo](https://serbenda.github.io/dungeons-and-deployments/) — Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil. <sub>(updated today)</sub>
 - **[story-reader](https://github.com/serbenda/story-reader)** · `JavaScript` — Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz. <sub>(updated today)</sub>
 - **[chapas](https://github.com/serbenda/chapas)** · `JavaScript` · ⭐ 1 — Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas. <sub>(updated today)</sub>
 - **[hemiciclo-fighters](https://github.com/serbenda/hemiciclo-fighters)** · `HTML` — Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias. <sub>(updated today)</sub>
-- **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` · ⭐ 1 — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
