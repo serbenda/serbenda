@@ -209,10 +209,30 @@
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
-    "2026-10-31": 0
+    "2026-10-31": 2
    },
    "pages_path": "/bolsillo/",
-   "pages_url": "https://serbenda.github.io/bolsillo/",
+   "pages_paths": [
+    "/bolsillo/",
+    "/bolsillo/ahorro/",
+    "/bolsillo/alquiler/",
+    "/bolsillo/compra/",
+    "/bolsillo/en/",
+    "/bolsillo/en/ahorro/",
+    "/bolsillo/en/alquiler/",
+    "/bolsillo/en/compra/",
+    "/bolsillo/en/fuentes/",
+    "/bolsillo/en/gasolina/",
+    "/bolsillo/en/hipoteca/",
+    "/bolsillo/en/ipc/",
+    "/bolsillo/en/luz/",
+    "/bolsillo/fuentes/",
+    "/bolsillo/gasolina/",
+    "/bolsillo/hipoteca/",
+    "/bolsillo/ipc/",
+    "/bolsillo/luz/"
+   ],
+   "pages_url": "https://bolsillo.bendi.dev/",
    "pushed_at": "2026-10-31T17:01:47Z",
    "referrers": [
     {
@@ -352,6 +372,9 @@
     "2026-10-31": 1
    },
    "pages_path": "/chapas/",
+   "pages_paths": [
+    "/chapas/"
+   ],
    "pages_url": "https://serbenda.github.io/chapas/",
    "pushed_at": "2026-10-30T12:53:31Z",
    "referrers": [
@@ -651,6 +674,9 @@
     "2026-10-31": 0
    },
    "pages_path": "/dungeons-and-deployments/",
+   "pages_paths": [
+    "/dungeons-and-deployments/"
+   ],
    "pages_url": "https://serbenda.github.io/dungeons-and-deployments/",
    "pushed_at": "2026-10-30T14:03:11Z",
    "referrers": [
@@ -945,6 +971,9 @@
     "2026-10-31": 0
    },
    "pages_path": "/hemiciclo-fighters/",
+   "pages_paths": [
+    "/hemiciclo-fighters/"
+   ],
    "pages_url": "https://serbenda.github.io/hemiciclo-fighters/",
    "pushed_at": "2026-10-30T12:52:52Z",
    "referrers": [
@@ -1090,7 +1119,15 @@
     "2026-10-31": 0
    },
    "pages_path": "/hucha/",
-   "pages_url": "https://serbenda.github.io/hucha/",
+   "pages_paths": [
+    "/hucha/",
+    "/hucha/a-donde-va/",
+    "/hucha/fuentes/",
+    "/hucha/lupa/",
+    "/hucha/presupuesto/",
+    "/hucha/quien-gasta/"
+   ],
+   "pages_url": "https://hucha.bendi.dev/",
    "pushed_at": "2026-10-31T17:06:15Z",
    "referrers": [],
    "stars": 0,
@@ -1224,6 +1261,9 @@
     "2026-10-31": 0
    },
    "pages_path": "/school-rush/",
+   "pages_paths": [
+    "/school-rush/"
+   ],
    "pages_url": "https://serbenda.github.io/school-rush/",
    "pushed_at": "2026-10-30T12:52:34Z",
    "referrers": [
@@ -1368,8 +1408,11 @@
     "2026-10-31": 0
    },
    "pages_path": "/serbenda/",
+   "pages_paths": [
+    "/serbenda/"
+   ],
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-31T10:57:05Z",
+   "pushed_at": "2026-10-31T17:17:17Z",
    "referrers": [
     {
      "count": 23,
@@ -1508,6 +1551,9 @@
     "2026-10-31": 2
    },
    "pages_path": "/",
+   "pages_paths": [
+    "/"
+   ],
    "pages_url": "https://serbenda.github.io/",
    "pushed_at": "2026-10-31T07:32:00Z",
    "referrers": [
@@ -1648,6 +1694,9 @@
     "2026-10-31": 0
    },
    "pages_path": "/story-reader/",
+   "pages_paths": [
+    "/story-reader/"
+   ],
    "pages_url": "https://serbenda.github.io/story-reader/",
    "pushed_at": "2026-10-30T14:01:43Z",
    "referrers": [
@@ -1726,6 +1775,6 @@
  "site": {
   "2026-10-31": 3
  },
- "updated": "2026-10-31T17:13:26+00:00",
+ "updated": "2026-10-31T17:17:24+00:00",
  "user": "serbenda"
 }
