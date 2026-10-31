@@ -25,6 +25,7 @@ Standard library only.
 from __future__ import annotations
 
 import json
+import re
 import os
 import sys
 import urllib.error
@@ -85,6 +86,32 @@ def pages_path(name: str) -> str:
     return "/" if name.lower() == f"{USER}.github.io".lower() else f"/{name}/"
 
 
+def site_pages(name: str, branch: str) -> list[str]:
+    """Every page of a project's site, from the sitemap.xml in its repo (full URLs).
+
+    Multi-page sites (bolsillo, hucha…) count each page separately in GoatCounter, so the
+    project's visits are the sum of all of them. Single-page games have no sitemap: [].
+    """
+    url = f"https://raw.githubusercontent.com/{USER}/{name}/{branch}/sitemap.xml"
+    req = urllib.request.Request(url, headers={"User-Agent": f"{USER}-traffic"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            xml = resp.read().decode("utf-8", "replace")
+    except Exception:   # no sitemap, or GitHub hiccup: fall back to the home page
+        return []
+    return re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
+
+
+def goat_path(name: str, url: str) -> str:
+    """The path a page of `name` is counted under in GoatCounter.
+
+    Sites on their own subdomain (bolsillo.bendi.dev) prefix their paths with /<name>,
+    so they don't mix with bendi.dev; pages under bendi.dev/<name>/ already have it.
+    """
+    path = urllib.parse.urlparse(url).path or "/"
+    return path if path.startswith(f"/{name}/") or path == f"/{name}" else f"/{name}{path}"
+
+
 def goat_count(path: str) -> int | None:
     """Total visits GoatCounter has for a path, or None if unknown."""
     if not GOAT:
@@ -137,6 +164,11 @@ def collect(data: dict, now: datetime) -> dict:
         if entry["pages"]:
             entry["pages_url"] = f"https://{USER}.github.io{pages_path(name)}"
             entry["pages_path"] = pages_path(name)
+            # The user site's sitemap is bendi.dev itself: only its home page belongs to it
+            urls = [] if pages_path(name) == "/" else site_pages(name, r.get("default_branch") or "main")
+            if urls:
+                entry["pages_url"] = urls[0]
+            entry["pages_paths"] = sorted({goat_path(name, u) for u in urls}) or [entry["pages_path"]]
 
         if token:
             base = f"/repos/{USER}/{name}/traffic"
@@ -149,9 +181,10 @@ def collect(data: dict, now: datetime) -> dict:
                       "The TRAFFIC_TOKEN needs read access to Administration on this repo.")
 
         if entry["pages"]:
-            hits = goat_count(entry["pages_path"])
-            if hits is not None:
-                entry["pages_hits"][today] = hits
+            counts = [goat_count(p) for p in entry["pages_paths"]]
+            known = [c for c in counts if c is not None]
+            if known:
+                entry["pages_hits"][today] = sum(known)
             # Games send a "partida/<repo>" event each time a match starts
             plays = goat_count(f"partida/{name}")
             if plays:

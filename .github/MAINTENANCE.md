@@ -378,6 +378,10 @@ The views of each repository are read with a token stored in the `TRAFFIC_TOKEN`
 
 Visits and matches are counted by [serbenda.goatcounter.com](https://serbenda.goatcounter.com). For the website to show them, **Allow adding visitor counts on your website** must be ticked in its *Settings*. If the account code ever changes, save it as the `GOATCOUNTER_CODE` variable of this repo and change it in the website's `index.html` and in every game's too.
 
+- **Single-page games** are counted on one path, `/<repo>/`.
+- **Multi-page sites on their own subdomain** (bolsillo.bendi.dev, hucha.bendi.dev) prefix every path with `/<repo>` so they don't mix with bendi.dev. The collector reads the `sitemap.xml` of the repo and adds up the visits of every page in it, so a new section only needs to be in the sitemap to be counted.
+- If the counters ever come back empty, check `https://serbenda.goatcounter.com/counter/TOTAL.json`: *"no site at this domain"* means the account is gone.
+
 ---
 
 ## 💖 GitHub Sponsors
