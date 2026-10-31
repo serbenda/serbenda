@@ -1,4 +1,69 @@
 {
+ "gc": {
+  "countries": [
+   {
+    "count": 63,
+    "name": "Spain"
+   }
+  ],
+  "days": 30,
+  "devices": {
+   "computer": 0,
+   "phone": 0
+  },
+  "end": "2026-10-31",
+  "referrers": [
+   {
+    "count": 30,
+    "name": "(unknown)"
+   },
+   {
+    "count": 6,
+    "name": "bolsillo.bendi.dev"
+   },
+   {
+    "count": 3,
+    "name": "hucha.bendi.dev/lupa"
+   },
+   {
+    "count": 3,
+    "name": "bolsillo.bendi.dev/compra"
+   },
+   {
+    "count": 3,
+    "name": "hucha.bendi.dev"
+   },
+   {
+    "count": 2,
+    "name": "bolsillo.bendi.dev/gasolina"
+   },
+   {
+    "count": 2,
+    "name": "bolsillo.bendi.dev/luz"
+   },
+   {
+    "count": 2,
+    "name": "bolsillo.bendi.dev/alquiler"
+   },
+   {
+    "count": 2,
+    "name": "bolsillo.bendi.dev/hipoteca"
+   },
+   {
+    "count": 2,
+    "name": "bolsillo.bendi.dev/ahorro"
+   },
+   {
+    "count": 1,
+    "name": "hucha.bendi.dev/fuentes"
+   },
+   {
+    "count": 1,
+    "name": "hucha.bendi.dev/a-donde-va"
+   }
+  ],
+  "start": "2026-10-01"
+ },
  "goatcounter": "serbenda",
  "repos": {
   "bankinter-visa-pdf-to-csv": {
@@ -206,6 +271,34 @@
     ]
    },
    "description": "Precio de la luz hora a hora, gasolineras más baratas y simulador de hipoteca con datos públicos de España.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 7,
+      "name": "(unknown)"
+     },
+     {
+      "count": 6,
+      "name": "bolsillo.bendi.dev"
+     },
+     {
+      "count": 3,
+      "name": "bolsillo.bendi.dev/compra"
+     },
+     {
+      "count": 2,
+      "name": "bolsillo.bendi.dev/gasolina"
+     },
+     {
+      "count": 2,
+      "name": "bolsillo.bendi.dev/luz"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -370,6 +463,18 @@
     ]
    },
    "description": "Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 1,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -675,6 +780,18 @@
     ]
    },
    "description": "Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 1,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -975,6 +1092,18 @@
     ]
    },
    "description": "Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 1,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "HTML",
    "pages": true,
    "pages_hits": {
@@ -1126,6 +1255,34 @@
     ]
    },
    "description": "Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 6,
+      "name": "(unknown)"
+     },
+     {
+      "count": 3,
+      "name": "hucha.bendi.dev/lupa"
+     },
+     {
+      "count": 3,
+      "name": "hucha.bendi.dev"
+     },
+     {
+      "count": 1,
+      "name": "hucha.bendi.dev/fuentes"
+     },
+     {
+      "count": 1,
+      "name": "hucha.bendi.dev/a-donde-va"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -1268,6 +1425,18 @@
     ]
    },
    "description": "Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 2,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -1418,6 +1587,13 @@
     ]
    },
    "description": "Config files for my GitHub profile.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": []
+   },
    "language": "Python",
    "pages": true,
    "pages_hits": {
@@ -1428,7 +1604,7 @@
     "/serbenda/"
    ],
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-31T19:35:27Z",
+   "pushed_at": "2026-10-31T19:40:29Z",
    "referrers": [
     {
      "count": 23,
@@ -1561,6 +1737,18 @@
     ]
    },
    "description": "Bendi’s personal site: about me, an arcade zone with my games and their visits · bendi.dev",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 5,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "HTML",
    "pages": true,
    "pages_hits": {
@@ -1704,6 +1892,18 @@
     ]
    },
    "description": "Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz.",
+   "gc": {
+    "devices": {
+     "computer": 0,
+     "phone": 0
+    },
+    "referrers": [
+     {
+      "count": 1,
+      "name": "(unknown)"
+     }
+    ]
+   },
    "language": "JavaScript",
    "pages": true,
    "pages_hits": {
@@ -1794,6 +1994,6 @@
  "site": {
   "2026-10-31": 3
  },
- "updated": "2026-10-31T19:38:15+00:00",
+ "updated": "2026-10-31T19:40:36+00:00",
  "user": "serbenda"
 }
