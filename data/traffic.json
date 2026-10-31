@@ -208,10 +208,12 @@
    "description": "Precio de la luz hora a hora, gasolineras más baratas y simulador de hipoteca con datos públicos de España.",
    "language": "JavaScript",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/bolsillo/",
    "pages_url": "https://serbenda.github.io/bolsillo/",
-   "pushed_at": "2026-10-31T07:56:58Z",
+   "pushed_at": "2026-10-31T17:01:47Z",
    "referrers": [
     {
      "count": 4,
@@ -346,7 +348,9 @@
    "description": "Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas.",
    "language": "JavaScript",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 1
+   },
    "pages_path": "/chapas/",
    "pages_url": "https://serbenda.github.io/chapas/",
    "pushed_at": "2026-10-30T12:53:31Z",
@@ -643,7 +647,9 @@
    "description": "Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil.",
    "language": "JavaScript",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/dungeons-and-deployments/",
    "pages_url": "https://serbenda.github.io/dungeons-and-deployments/",
    "pushed_at": "2026-10-30T14:03:11Z",
@@ -935,7 +941,9 @@
    "description": "Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias.",
    "language": "HTML",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/hemiciclo-fighters/",
    "pages_url": "https://serbenda.github.io/hemiciclo-fighters/",
    "pushed_at": "2026-10-30T12:52:52Z",
@@ -1016,6 +1024,136 @@
     ]
    }
   },
+  "hucha": {
+   "clones": {
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     0,
+     0
+    ],
+    "2026-10-31": [
+     0,
+     0
+    ]
+   },
+   "description": "Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente.",
+   "language": "JavaScript",
+   "pages": true,
+   "pages_hits": {
+    "2026-10-31": 0
+   },
+   "pages_path": "/hucha/",
+   "pages_url": "https://serbenda.github.io/hucha/",
+   "pushed_at": "2026-10-31T17:06:15Z",
+   "referrers": [],
+   "stars": 0,
+   "url": "https://github.com/serbenda/hucha",
+   "views": {
+    "2026-10-18": [
+     0,
+     0
+    ],
+    "2026-10-19": [
+     0,
+     0
+    ],
+    "2026-10-20": [
+     0,
+     0
+    ],
+    "2026-10-21": [
+     0,
+     0
+    ],
+    "2026-10-22": [
+     0,
+     0
+    ],
+    "2026-10-23": [
+     0,
+     0
+    ],
+    "2026-10-24": [
+     0,
+     0
+    ],
+    "2026-10-25": [
+     0,
+     0
+    ],
+    "2026-10-26": [
+     0,
+     0
+    ],
+    "2026-10-27": [
+     0,
+     0
+    ],
+    "2026-10-28": [
+     0,
+     0
+    ],
+    "2026-10-29": [
+     0,
+     0
+    ],
+    "2026-10-30": [
+     0,
+     0
+    ],
+    "2026-10-31": [
+     0,
+     0
+    ]
+   }
+  },
   "school-rush": {
    "clones": {
     "2026-10-16": [
@@ -1082,7 +1220,9 @@
    "description": "Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰",
    "language": "JavaScript",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/school-rush/",
    "pages_url": "https://serbenda.github.io/school-rush/",
    "pushed_at": "2026-10-30T12:52:34Z",
@@ -1224,10 +1364,12 @@
    "description": "Config files for my GitHub profile.",
    "language": "Python",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/serbenda/",
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-10-30T17:31:06Z",
+   "pushed_at": "2026-10-31T10:57:05Z",
    "referrers": [
     {
      "count": 23,
@@ -1362,7 +1504,9 @@
    "description": "Bendi’s personal site: about me, an arcade zone with my games and their visits · bendi.dev",
    "language": "HTML",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 2
+   },
    "pages_path": "/",
    "pages_url": "https://serbenda.github.io/",
    "pushed_at": "2026-10-31T07:32:00Z",
@@ -1500,7 +1644,9 @@
    "description": "Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz.",
    "language": "JavaScript",
    "pages": true,
-   "pages_hits": {},
+   "pages_hits": {
+    "2026-10-31": 0
+   },
    "pages_path": "/story-reader/",
    "pages_url": "https://serbenda.github.io/story-reader/",
    "pushed_at": "2026-10-30T14:01:43Z",
@@ -1577,7 +1723,9 @@
    }
   }
  },
- "site": {},
- "updated": "2026-10-31T10:56:49+00:00",
+ "site": {
+  "2026-10-31": 3
+ },
+ "updated": "2026-10-31T17:13:26+00:00",
  "user": "serbenda"
 }
