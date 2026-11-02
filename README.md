@@ -203,11 +203,11 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 ## ⚡ Recent activity
 
 <!-- ACTIVITY:START -->
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated today)</sub>
-- **[marquesina](https://github.com/serbenda/marquesina)** · `JavaScript` — Mapa en tiempo real de los autobuses de EMT Madrid que llegan a tus paradas: dónde están, cuánto les falta y si te da tiempo a salir. <sub>(updated today)</sub>
-- **[bolsillo](https://github.com/serbenda/bolsillo)** · `JavaScript` — Precio de la luz hora a hora, gasolineras más baratas y simulador de hipoteca con datos públicos de España. <sub>(updated today)</sub>
-- **[dungeons-and-deployments](https://github.com/serbenda/dungeons-and-deployments)** · `JavaScript` · ⭐ 1 · [▶ demo](https://serbenda.github.io/dungeons-and-deployments/) — Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil. <sub>(updated 1 day ago)</sub>
-- **[story-reader](https://github.com/serbenda/story-reader)** · `JavaScript` — Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz. <sub>(updated 1 day ago)</sub>
+- **[stand-up](https://github.com/serbenda/stand-up)** · `JavaScript` — Inglés de A1 a C1 para todos: día a día, entrevistas, reuniones, temas técnicos y expresiones reales. Lectura fácil, audio en cada frase y a tu ritmo, también pensado para personas con dislexia. <sub>(updated today)</sub>
+- **[despensa](https://github.com/serbenda/despensa)** · `JavaScript` — Guía práctica de alimentación para toda la familia: perder peso sin dietas milagro, comer bien de pequeños y rendir entrenando. Basada en fuentes públicas. <sub>(updated today)</sub>
+- **[uptime](https://github.com/serbenda/uptime)** · `Python` — Estado en tiempo real de los servicios informáticos que usamos a diario: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare y más. Incidencias, mantenimientos y caídas en un solo panel. <sub>(updated today)</sub>
+- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(updated today)</sub>
+- **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
