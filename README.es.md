@@ -204,10 +204,10 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(actualizado hoy)</sub>
+- **[ayudas](https://github.com/serbenda/ayudas)** · `JavaScript` — Sin descripción todavía. <sub>(actualizado hoy)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(actualizado hoy)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(actualizado hace 1 día)</sub>
-- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(actualizado hace 1 día)</sub>
-- **[stand-up](https://github.com/serbenda/stand-up)** · `JavaScript` — Inglés de A1 a C1 para todos: día a día, entrevistas, reuniones, temas técnicos y expresiones reales. Lectura fácil, audio en cada frase y a tu ritmo, también pensado para personas con dislexia. <sub>(actualizado hace 2 días)</sub>
+- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(actualizado hace 2 días)</sub>
+- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(actualizado hace 2 días)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
