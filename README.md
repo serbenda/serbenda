@@ -204,10 +204,10 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(updated today)</sub>
-- **[ayudas](https://github.com/serbenda/ayudas)** · `JavaScript` — No description yet. <sub>(updated today)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 2 days ago)</sub>
-- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(updated 2 days ago)</sub>
+- **[ayudas](https://github.com/serbenda/ayudas)** · `JavaScript` · [▶ demo](https://ayudas.bendi.dev/) — Find out which public benefits you may be entitled to in Spain. A few questions, step-by-step guidance, no sign-up and nothing leaves your browser. <sub>(updated today)</sub>
+- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 3 days ago)</sub>
+- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(updated 3 days ago)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
