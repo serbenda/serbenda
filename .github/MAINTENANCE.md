@@ -106,7 +106,7 @@ The three key ideas:
 | Repo | What it is | Published at | Branches | Automation |
 |---|---|---|---|---|
 | [**serbenda**](https://github.com/serbenda/serbenda) | Profile README (EN + ES), visit history, handbook | [github.com/serbenda](https://github.com/serbenda) | `main` · `development` | **Update profile**, daily |
-| [**serbenda.github.io**](https://github.com/serbenda/serbenda.github.io) | Website: about me, arcade zone, visits, contact | [bendi.dev](https://bendi.dev) | `main` · `development` | None (Pages publishes `main`) |
+| [**serbenda.github.io**](https://github.com/serbenda/serbenda.github.io) | Website: home, work, apps, arcade and visits dashboard | [bendi.dev](https://bendi.dev) | `main` · `development` | None (Pages publishes `main`) |
 | [**dungeons-and-deployments**](https://github.com/serbenda/dungeons-and-deployments) | Fantasy beat 'em up, solo or co-op | [bendi.dev/dungeons-and-deployments](https://bendi.dev/dungeons-and-deployments/) | per repo | GitHub Pages |
 | [**chapas**](https://github.com/serbenda/chapas) | La Vuelta de Chapas: bottle-cap cycling and football | [bendi.dev/chapas](https://bendi.dev/chapas/) | per repo | GitHub Pages |
 | [**school-rush**](https://github.com/serbenda/school-rush) | Get the kids to school before the bell | [bendi.dev/school-rush](https://bendi.dev/school-rush/) | `main` · `development` | GitHub Pages |
@@ -138,7 +138,7 @@ sequenceDiagram
     P->>G: starts a match
     G->>GC: event partida/chapas
     Note over A: next morning, 05:17 UTC
-    A->>GC: read counters per game
+    A->>GC: read every path's visitors per day (API)
     A->>A: read repo views from the GitHub API
     A->>T: merge into the history and commit
     A->>R: redraw visits card (assets/traffic.svg)
@@ -151,10 +151,10 @@ Two sources, two kinds of number:
 
 | Source | Counts | Kept by GitHub | Needs |
 |---|---|---|---|
-| **GoatCounter** | Visits to bendi.dev and each game, plus matches started | Forever | Nothing (public counters) |
+| **GoatCounter** | Visits to bendi.dev and each project, plus matches started | Forever | The `GOATCOUNTER_TOKEN` key for the exact daily history (without it, today's public counters only) |
 | **GitHub traffic API** | Views of each repo on github.com | **Only 14 days** | The `TRAFFIC_TOKEN` secret |
 
-Because GitHub forgets repo views after 14 days, `traffic.json` is the only long-term record. Don't delete or rewrite it by hand.
+Because GitHub forgets repo views after 14 days, `traffic.json` is the only long-term record of them. Don't delete or rewrite it by hand. The GoatCounter part (`pages_hits`, `plays`, `site`) is rebuilt from GoatCounter on every run, so it can't drift.
 
 ---
 
@@ -377,13 +377,15 @@ The views of each repository are read with a token stored in the `TRAFFIC_TOKEN`
 
 ## 📈 GoatCounter
 
-Visits and matches are counted by [serbenda.goatcounter.com](https://serbenda.goatcounter.com). For the website to show them, **Allow adding visitor counts on your website** must be ticked in its *Settings*. If the account code ever changes, save it as the `GOATCOUNTER_CODE` variable of this repo and change it in the website's `index.html` and in every game's too.
+Visits and matches are counted by [serbenda.goatcounter.com](https://serbenda.goatcounter.com). For the website to show them, **Allow adding visitor counts on your website** must be ticked in its *Settings*. If the account code ever changes, save it as the `GOATCOUNTER_CODE` variable of this repo and change it in the website's pages and in every project's too.
 
 - **Single-page games** are counted on one path, `/<repo>/`.
-- **Multi-page sites on their own subdomain** (bolsillo.bendi.dev, hucha.bendi.dev) prefix every path with `/<repo>` so they don't mix with bendi.dev. The collector reads the `sitemap.xml` of the repo and adds up the visits of every page in it, so a new section only needs to be in the sitemap to be counted.
+- **Sites on their own subdomain** (bolsillo, hucha, ayudas, radio, atalaya, uptime, alvaros…) prefix every path with `/<repo>` so they don't mix with bendi.dev: `window.goatcounter = { path: p => '/<repo>' + p }` before the script.
+- **How the collector counts:** with the API key it reads every path GoatCounter has, with its visitors per day, and gives each one to its project: `/<repo>/…` is that repo, everything else is bendi.dev. So any new page is counted on its own, and the site total is the sum of the projects. Without the key it falls back to the public counters of the pages listed in each repo's `sitemap.xml` (cached by GoatCounter for 4–8 hours).
+- Visits with no referrer (typed address, bookmarks, WhatsApp and other apps) show as *Direct* on the website. To know where a shared link was opened, add `?ref=whatsapp`, `?ref=cv`… to it: GoatCounter uses it as the referrer.
 - If the counters ever come back empty, check `https://serbenda.goatcounter.com/counter/TOTAL.json`: *"no site at this domain"* means the account is gone.
 
-**Devices, countries and referrers (optional).** With a GoatCounter API key the dashboard also shows phone vs computer, countries and where visitors come from, for the whole site and for each project, over the last 30 days:
+**API key (recommended).** With a GoatCounter API key the visits are exact (see above) and the dashboard also shows phone vs computer, countries and where visitors come from, for the whole site and for each project, over the last 30 days:
 
 1. In GoatCounter, open your user menu (top right) → **API** → **New API key**, tick only **Read statistics**, and copy the key.
 2. In [this repo's secrets](https://github.com/serbenda/serbenda/settings/secrets/actions), create `GOATCOUNTER_TOKEN` with that key.

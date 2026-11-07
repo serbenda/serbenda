@@ -22,7 +22,7 @@
 <p align="center">
 🤖 <b>Automation</b> · Infrastructure as code with <b>Terraform, Ansible and Packer</b> on AWS, Azure, Google Cloud and private cloud<br>
 ⛓️ <b>Blockchain</b> · <b>Master's in Blockchain</b>: smart contracts in <b>Solidity</b>, NFTs, IPFS and multichain dApps · 🏆 <a href="#blockchain">FrameBlock, best project of the Master's ↓</a><br>
-🕹️ <b>Games</b> · Small 8-bit games in pure HTML + JS, made with my daughters · <a href="https://bendi.dev/#arcade">Play →</a>
+🕹️ <b>Games</b> · Small 8-bit games in pure HTML + JS, made with my daughters · <a href="https://bendi.dev/arcade/">Play →</a>
 </p>
 
 ---
@@ -207,7 +207,7 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
   <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana">
 </p>
 
-<p align="center"><sub>My full career and achievements, on <a href="https://bendi.dev/#sobre-mi">my website</a>.</sub></p>
+<p align="center"><sub>My full career and achievements, on <a href="https://bendi.dev/trabajo/">my website</a>.</sub></p>
 
 ---
 
@@ -232,10 +232,10 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 ## 📈 Visits
 
 <p align="center">
-  <a href="https://bendi.dev/#visitas"><img src="assets/traffic.svg" alt="Views of my repositories and visits to my games" width="500"></a>
+  <a href="https://bendi.dev/visitas/"><img src="assets/traffic.svg" alt="Views of my repositories and visits to my games" width="500"></a>
 </p>
 
-<p align="center"><sub>GitHub views and game visits, counted without cookies. The full table, per project and per day, on <a href="https://bendi.dev/#visitas">my website</a>.</sub></p>
+<p align="center"><sub>GitHub views and game visits, counted without cookies. The full table, per project and per day, on <a href="https://bendi.dev/visitas/">my website</a>.</sub></p>
 
 ---
 
