@@ -135,39 +135,96 @@ def goat_count(path: str) -> int | None:
 # GC_DAYS days: phone vs computer, countries and where visitors come from, for the whole
 # site and for each project. Without the key this part is skipped.
 GC_DAYS = 30
-PHONE_SIZES = {"phones", "tablets and large phones"}
+# The sizes page answers with ids and no names: phone (up to 600px), tablet (up to 1000px),
+# desktop, desktophd and unknown
+PHONE_SIZES = {"phone", "tablet"}
+COMPUTER_SIZES = {"desktop", "desktophd"}
 
 
-def gc_api(page: str, token: str, start: str, end: str, paths: list[str] | None = None, limit: int = 10) -> list[dict]:
-    """[{name, count}] for a GoatCounter stats page (sizes, locations, toprefs…), or [] on error."""
-    query = {"start": start, "end": end, "limit": str(limit)}
-    if paths:
-        query.update(path_by_name="true", include_paths=",".join(paths))
+def gc_get(page: str, token: str, query: dict) -> dict | None:
+    """One call to the GoatCounter API (api/v0/stats/<page>), or None on error."""
     url = f"https://{GOAT}.goatcounter.com/api/v0/stats/{page}?{urllib.parse.urlencode(query)}"
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}",
                                                "Content-Type": "application/json",
                                                "User-Agent": f"{USER}-traffic"})
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
-            stats = json.load(resp).get("stats") or []
+            return json.load(resp)
     except Exception as err:
         print(f"::warning title=collect_traffic::GoatCounter API {page}: {err}")
-        return []
+        return None
     finally:
         time.sleep(0.4)   # well under the API rate limit
-    return [{"name": x.get("name") or "(unknown)", "count": int(x.get("count") or 0)} for x in stats if x.get("count")]
+
+
+def gc_api(page: str, token: str, start: str, end: str, paths: list[str] | None = None, limit: int = 10) -> list[dict]:
+    """[{id, name, count}] for a GoatCounter stats page (sizes, locations, toprefs…), or [] on error."""
+    query = {"start": start, "end": end, "limit": str(limit)}
+    if paths:
+        query.update(path_by_name="true", include_paths=",".join(paths))
+    stats = (gc_get(page, token, query) or {}).get("stats") or []
+    # No name means no referrer (direct visits) or no screen size: kept as "(unknown)", the id stays
+    return [{"id": x.get("id") or "", "name": x.get("name") or "(unknown)", "count": int(x.get("count") or 0)}
+            for x in stats if x.get("count")]
 
 
 def devices(sizes: list[dict]) -> dict:
     """Screen sizes grouped into phone (and tablet) vs computer."""
     out = {"phone": 0, "computer": 0}
     for x in sizes:
-        name = x["name"].lower()
-        if name in PHONE_SIZES:
+        if x["id"] in PHONE_SIZES:
             out["phone"] += x["count"]
-        elif "computer" in name:
+        elif x["id"] in COMPUTER_SIZES:
             out["computer"] += x["count"]
     return out
+
+
+def strip_ids(stats: list[dict]) -> list[dict]:
+    """Only name and count are stored for countries and referrers."""
+    return [{"name": x["name"], "count": x["count"]} for x in stats]
+
+
+# Visits per project, exact: every path GoatCounter has, each one given to its project. This is
+# better than adding up the public counters, which are cached for hours, only know the pages
+# listed in each sitemap and depend on the trailing slash.
+GC_SINCE = "2026-01-01T00:00:00Z"   # before the GoatCounter site existed, so: every visit
+
+
+def gc_paths(token: str, end: str) -> list[dict] | None:
+    """[{path, event, count}] for every path since GC_SINCE (visitors), or None on error."""
+    out, seen = [], []
+    while True:
+        query = {"start": GC_SINCE, "end": end, "limit": "100"}
+        if seen:
+            query["exclude_paths"] = ",".join(seen)
+        body = gc_get("hits", token, query)
+        if body is None:
+            return None
+        hits = body.get("hits") or []
+        out += [{"path": h.get("path") or "", "event": bool(h.get("event")), "count": int(h.get("count") or 0)} for h in hits]
+        seen += [str(h["path_id"]) for h in hits if "path_id" in h]
+        if not body.get("more") or not hits or len(seen) > 5000:
+            return out
+
+
+def owner(path: str, sites: set[str]) -> str:
+    """The repo a GoatCounter path belongs to: /<repo>/… is that repo, the rest is bendi.dev."""
+    first = path.strip("/").split("/")[0]
+    return first if first in sites else f"{USER}.github.io"
+
+
+def by_project(paths: list[dict], sites: set[str]) -> tuple[dict, dict]:
+    """Visitors per repo and plays per repo (events partida/<repo>)."""
+    visits, plays = {}, {}
+    for h in paths:
+        if h["event"]:
+            if h["path"].startswith("partida/"):
+                repo = h["path"].split("/", 1)[1]
+                plays[repo] = plays.get(repo, 0) + h["count"]
+        else:
+            repo = owner(h["path"], sites)
+            visits[repo] = visits.get(repo, 0) + h["count"]
+    return visits, plays
 
 
 def collect_gc(data: dict, now: datetime) -> None:
@@ -181,8 +238,8 @@ def collect_gc(data: dict, now: datetime) -> None:
     site = {
         "days": GC_DAYS, "start": span[0][:10], "end": span[1][:10],
         "devices": devices(gc_api("sizes", token, *span)),
-        "countries": gc_api("locations", token, *span, limit=12),
-        "referrers": gc_api("toprefs", token, *span, limit=12),
+        "countries": strip_ids(gc_api("locations", token, *span, limit=12)),
+        "referrers": strip_ids(gc_api("toprefs", token, *span, limit=20)),
     }
     if not any(site["devices"].values()) and not site["countries"]:
         print("::warning title=collect_traffic::The GoatCounter API returned nothing: check GOATCOUNTER_TOKEN.")
@@ -195,7 +252,7 @@ def collect_gc(data: dict, now: datetime) -> None:
         names = [p.rstrip("/") or "/" for p in entry.get("pages_paths") or [entry.get("pages_path", f"/{name}/")]]
         entry["gc"] = {
             "devices": devices(gc_api("sizes", token, *span, paths=names)),
-            "referrers": gc_api("toprefs", token, *span, paths=names, limit=5),
+            "referrers": strip_ids(gc_api("toprefs", token, *span, paths=names, limit=10)),
         }
 
 
@@ -222,7 +279,15 @@ def collect(data: dict, now: datetime) -> dict:
     if not token:
         print("TRAFFIC_TOKEN not set: skipping repo views/clones, only Pages counters.")
 
-    for r in list_repos(list_token):
+    repos = list_repos(list_token)
+    sites = {r["name"] for r in repos if r.get("has_pages") and pages_path(r["name"]) != "/"}
+    gc_token = os.environ.get("GOATCOUNTER_TOKEN") or None
+    api = gc_paths(gc_token, now.replace(minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")) if gc_token else None
+    api_visits, api_plays = by_project(api, sites) if api else ({}, {})
+    if api:
+        print(f"GoatCounter API: {len(api)} paths, {sum(api_visits.values())} visitors, {sum(api_plays.values())} plays")
+
+    for r in repos:
         name = r["name"]
         entry = data["repos"].setdefault(name, {"views": {}, "clones": {}, "pages_hits": {}})
         entry.update({
@@ -236,8 +301,9 @@ def collect(data: dict, now: datetime) -> dict:
         if entry["pages"]:
             entry["pages_url"] = f"https://{USER}.github.io{pages_path(name)}"
             entry["pages_path"] = pages_path(name)
-            # The user site's sitemap is bendi.dev itself: only its home page belongs to it
-            urls = [] if pages_path(name) == "/" else site_pages(name, r.get("default_branch") or "main")
+            urls = site_pages(name, r.get("default_branch") or "main")
+            if pages_path(name) == "/":   # bendi.dev's sitemap also lists the games: keep its own pages
+                urls = [u for u in urls if owner(urllib.parse.urlparse(u).path, sites) == name]
             if urls:
                 entry["pages_url"] = urls[0]
             entry["pages_paths"] = sorted({goat_path(name, u) for u in urls}) or [entry["pages_path"]]
@@ -252,7 +318,11 @@ def collect(data: dict, now: datetime) -> dict:
                 print(f"::warning title=collect_traffic::{name}: the traffic API answered {err.code}. "
                       "The TRAFFIC_TOKEN needs read access to Administration on this repo.")
 
-        if entry["pages"]:
+        if entry["pages"] and api:
+            entry["pages_hits"][today] = api_visits.get(name, 0)
+            if api_plays.get(name):
+                entry.setdefault("plays", {})[today] = api_plays[name]
+        elif entry["pages"]:
             counts = [goat_count(p) for p in entry["pages_paths"]]
             known = [c for c in counts if c is not None]
             if known:
@@ -264,7 +334,8 @@ def collect(data: dict, now: datetime) -> dict:
 
     collect_gc(data, now)
 
-    total = goat_count("TOTAL")
+    # The site total is the sum of the projects, so the numbers on the website add up
+    total = sum(api_visits.values()) if api else goat_count("TOTAL")
     if total is not None:
         data["site"][today] = total
 

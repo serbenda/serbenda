@@ -207,7 +207,7 @@ flowchart LR
 | `GITHUB_TOKEN` | Read public repos and push the commit | Automatic |
 | `TRAFFIC_TOKEN` (secret) | Read views of every repo | Optional: without it only GoatCounter visits are collected |
 | `GOATCOUNTER_CODE` (variable) | GoatCounter site code | Optional: defaults to the GitHub user |
-| `GOATCOUNTER_TOKEN` (secret) | Read-only GoatCounter API key | Optional: without it there are no devices, countries or referrers per project |
+| `GOATCOUNTER_TOKEN` (secret) | Read-only GoatCounter API key | Optional, but recommended: with it, visits per project are exact (every path GoatCounter has, given to its project, and the site total is their sum), plus devices, countries and referrers. Without it, visits come from the public counters of the pages in each sitemap, which are cached for hours |
 
 > ✏️ Everything in the README **outside** the `GAMES` and `ACTIVITY` markers (header, badges, *About me*, footer) is written by hand. The workflow never touches it.
 
