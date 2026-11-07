@@ -187,11 +187,15 @@ def strip_ids(stats: list[dict]) -> list[dict]:
 # Visits per project, exact: every path GoatCounter has, each one given to its project. This is
 # better than adding up the public counters, which are cached for hours, only know the pages
 # listed in each sitemap and depend on the trailing slash.
-GC_SINCE = "2026-01-01T00:00:00Z"   # before the GoatCounter site existed, so: every visit
+GC_SINCE = "2026-10-01T00:00:00Z"   # before the GoatCounter site existed, so: every visit
 
 
 def gc_paths(token: str, end: str) -> list[dict] | None:
-    """[{path, event, count}] for every path since GC_SINCE (visitors), or None on error."""
+    """[{path, event, count, daily}] for every path since GC_SINCE, or None on error.
+
+    count is its visitors in the whole span and daily is {day: visitors}, straight from
+    GoatCounter, so the history can be rebuilt day by day instead of guessed from totals.
+    """
     out, seen = [], []
     while True:
         query = {"start": GC_SINCE, "end": end, "limit": "100"}
@@ -201,7 +205,9 @@ def gc_paths(token: str, end: str) -> list[dict] | None:
         if body is None:
             return None
         hits = body.get("hits") or []
-        out += [{"path": h.get("path") or "", "event": bool(h.get("event")), "count": int(h.get("count") or 0)} for h in hits]
+        out += [{"path": h.get("path") or "", "event": bool(h.get("event")), "count": int(h.get("count") or 0),
+                 "daily": {st["day"][:10]: int(st.get("daily") or 0) for st in h.get("stats") or [] if st.get("daily")}}
+                for h in hits]
         seen += [str(h["path_id"]) for h in hits if "path_id" in h]
         if not body.get("more") or not hits or len(seen) > 5000:
             return out
@@ -214,17 +220,35 @@ def owner(path: str, sites: set[str]) -> str:
 
 
 def by_project(paths: list[dict], sites: set[str]) -> tuple[dict, dict]:
-    """Visitors per repo and plays per repo (events partida/<repo>)."""
+    """Visitors per repo per day, and plays per repo per day (events partida/<repo>): {repo: {day: n}}."""
     visits, plays = {}, {}
     for h in paths:
         if h["event"]:
-            if h["path"].startswith("partida/"):
-                repo = h["path"].split("/", 1)[1]
-                plays[repo] = plays.get(repo, 0) + h["count"]
+            if not h["path"].startswith("partida/"):
+                continue
+            target = plays.setdefault(h["path"].split("/", 1)[1], {})
         else:
-            repo = owner(h["path"], sites)
-            visits[repo] = visits.get(repo, 0) + h["count"]
+            target = visits.setdefault(owner(h["path"], sites), {})
+        for day, n in h["daily"].items():
+            target[day] = target.get(day, 0) + n
     return visits, plays
+
+
+def cumulative(daily: dict, days: list[str]) -> dict:
+    """Running total for every day in `days` (the format the website reads: one total per day)."""
+    out, total = {}, 0
+    for day in days:
+        total += daily.get(day, 0)
+        out[day] = total
+    return out
+
+
+def span_days(series: list[dict], today: str) -> list[str]:
+    """From the day before the first visit (a zero to start from) to today."""
+    first = min((d for s in series for d in s), default=today)
+    start = datetime.strptime(first, "%Y-%m-%d") - timedelta(days=1)
+    end = datetime.strptime(today, "%Y-%m-%d")
+    return [(start + timedelta(days=i)).strftime("%Y-%m-%d") for i in range((end - start).days + 1)]
 
 
 def collect_gc(data: dict, now: datetime) -> None:
@@ -284,8 +308,10 @@ def collect(data: dict, now: datetime) -> dict:
     gc_token = os.environ.get("GOATCOUNTER_TOKEN") or None
     api = gc_paths(gc_token, now.replace(minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")) if gc_token else None
     api_visits, api_plays = by_project(api, sites) if api else ({}, {})
+    days = span_days(list(api_visits.values()) + list(api_plays.values()), today) if api else []
     if api:
-        print(f"GoatCounter API: {len(api)} paths, {sum(api_visits.values())} visitors, {sum(api_plays.values())} plays")
+        print(f"GoatCounter API: {len(api)} paths, {sum(sum(v.values()) for v in api_visits.values())} visitors, "
+              f"{sum(sum(v.values()) for v in api_plays.values())} plays, since {days[0]}")
 
     for r in repos:
         name = r["name"]
@@ -319,9 +345,12 @@ def collect(data: dict, now: datetime) -> dict:
                       "The TRAFFIC_TOKEN needs read access to Administration on this repo.")
 
         if entry["pages"] and api:
-            entry["pages_hits"][today] = api_visits.get(name, 0)
+            # The whole history, rebuilt from GoatCounter's own daily numbers
+            entry["pages_hits"] = cumulative(api_visits.get(name, {}), days)
             if api_plays.get(name):
-                entry.setdefault("plays", {})[today] = api_plays[name]
+                entry["plays"] = cumulative(api_plays[name], days)
+            else:
+                entry.pop("plays", None)
         elif entry["pages"]:
             counts = [goat_count(p) for p in entry["pages_paths"]]
             known = [c for c in counts if c is not None]
@@ -335,9 +364,16 @@ def collect(data: dict, now: datetime) -> dict:
     collect_gc(data, now)
 
     # The site total is the sum of the projects, so the numbers on the website add up
-    total = sum(api_visits.values()) if api else goat_count("TOTAL")
-    if total is not None:
-        data["site"][today] = total
+    if api:
+        everything = {}
+        for daily in api_visits.values():
+            for day, n in daily.items():
+                everything[day] = everything.get(day, 0) + n
+        data["site"] = cumulative(everything, days)
+    else:
+        total = goat_count("TOTAL")
+        if total is not None:
+            data["site"][today] = total
 
     data.update({"user": USER, "goatcounter": GOAT, "updated": now.isoformat(timespec="seconds")})
     return data
