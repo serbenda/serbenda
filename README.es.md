@@ -215,10 +215,10 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(actualizado hoy)</sub>
-- **[stand-up](https://github.com/serbenda/stand-up)** · `JavaScript` — Inglés de A1 a C1 para todos: día a día, entrevistas, reuniones, temas técnicos y expresiones reales. Lectura fácil, audio en cada frase y a tu ritmo, también pensado para personas con dislexia. <sub>(actualizado hoy)</sub>
-- **[despensa](https://github.com/serbenda/despensa)** · `JavaScript` — Guía práctica de alimentación para toda la familia: perder peso sin dietas milagro, comer bien de pequeños y rendir entrenando. Basada en fuentes públicas. <sub>(actualizado hoy)</sub>
+- **[alvaros](https://github.com/serbenda/alvaros)** · `JavaScript` — Sin descripción todavía. <sub>(actualizado hoy)</sub>
+- **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` · ⭐ 1 — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(actualizado hoy)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(actualizado hoy)</sub>
-- **[marquesina](https://github.com/serbenda/marquesina)** · `JavaScript` — Mapa en tiempo real de los autobuses de EMT Madrid que llegan a tus paradas: dónde están, cuánto les falta y si te da tiempo a salir. <sub>(actualizado hoy)</sub>
+- **[stand-up](https://github.com/serbenda/stand-up)** · `JavaScript` — Inglés de A1 a C1 para todos: día a día, entrevistas, reuniones, temas técnicos y expresiones reales. Lectura fácil, audio en cada frase y a tu ritmo, también pensado para personas con dislexia. <sub>(actualizado hoy)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">

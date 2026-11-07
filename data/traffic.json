@@ -2,7 +2,7 @@
  "gc": {
   "countries": [
    {
-    "count": 1571,
+    "count": 1596,
     "name": "Spain"
    },
    {
@@ -52,8 +52,8 @@
   ],
   "days": 30,
   "devices": {
-   "computer": 468,
-   "phone": 1243
+   "computer": 470,
+   "phone": 1266
   },
   "end": "2026-11-07",
   "referrers": [
@@ -62,7 +62,7 @@
     "name": "www.linkedin.com"
    },
    {
-    "count": 406,
+    "count": 425,
     "name": "(unknown)"
    },
    {
@@ -98,7 +98,7 @@
     "name": "hucha.bendi.dev/lupa"
    },
    {
-    "count": 12,
+    "count": 14,
     "name": "ayudas.bendi.dev"
    },
    {
@@ -205,11 +205,11 @@
    "gc": {
     "devices": {
      "computer": 3,
-     "phone": 6
+     "phone": 11
     },
     "referrers": [
      {
-      "count": 9,
+      "count": 14,
       "name": "(unknown)"
      }
     ]
@@ -225,7 +225,7 @@
     "2026-11-04": 0,
     "2026-11-05": 0,
     "2026-11-06": 5,
-    "2026-11-07": 9
+    "2026-11-07": 14
    },
    "pages_path": "/alvaros/",
    "pages_paths": [
@@ -241,9 +241,9 @@
     "2026-11-04": 0,
     "2026-11-05": 0,
     "2026-11-06": 4,
-    "2026-11-07": 7
+    "2026-11-07": 10
    },
-   "pushed_at": "2026-11-07T08:19:40Z",
+   "pushed_at": "2026-11-07T09:19:23Z",
    "referrers": [
     {
      "count": 2,
@@ -413,7 +413,7 @@
     "/atalaya/"
    ],
    "pages_url": "https://serbenda.github.io/atalaya/",
-   "pushed_at": "2026-11-07T08:37:57Z",
+   "pushed_at": "2026-11-07T08:45:38Z",
    "referrers": [
     {
      "count": 14,
@@ -570,12 +570,16 @@
    "gc": {
     "devices": {
      "computer": 10,
-     "phone": 14
+     "phone": 15
     },
     "referrers": [
      {
       "count": 23,
       "name": "(unknown)"
+     },
+     {
+      "count": 1,
+      "name": "ayudas.bendi.dev/catalogo"
      },
      {
       "count": 1,
@@ -594,7 +598,7 @@
     "2026-11-04": 0,
     "2026-11-05": 47,
     "2026-11-06": 49,
-    "2026-11-07": 49
+    "2026-11-07": 52
    },
    "pages_path": "/ayudas/",
    "pages_paths": [
@@ -3287,11 +3291,11 @@
    "gc": {
     "devices": {
      "computer": 3,
-     "phone": 3
+     "phone": 4
     },
     "referrers": [
      {
-      "count": 3,
+      "count": 4,
       "name": "(unknown)"
      }
     ]
@@ -3307,7 +3311,7 @@
     "2026-11-04": 4,
     "2026-11-05": 4,
     "2026-11-06": 6,
-    "2026-11-07": 6
+    "2026-11-07": 7
    },
    "pages_path": "/school-rush/",
    "pages_paths": [
@@ -3323,9 +3327,9 @@
     "2026-11-04": 3,
     "2026-11-05": 3,
     "2026-11-06": 5,
-    "2026-11-07": 5
+    "2026-11-07": 6
    },
-   "pushed_at": "2026-10-30T12:52:34Z",
+   "pushed_at": "2026-11-07T09:17:48Z",
    "referrers": [
     {
      "count": 11,
@@ -3539,7 +3543,7 @@
     "/serbenda/"
    ],
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-11-07T08:39:41Z",
+   "pushed_at": "2026-11-07T08:41:50Z",
    "referrers": [
     {
      "count": 24,
@@ -3742,7 +3746,7 @@
     "2026-11-04": 69,
     "2026-11-05": 73,
     "2026-11-06": 81,
-    "2026-11-07": 86
+    "2026-11-07": 91
    },
    "pages_path": "/",
    "pages_paths": [
@@ -3753,7 +3757,7 @@
     "/serbenda.github.io/visitas/"
    ],
    "pages_url": "https://bendi.dev/",
-   "pushed_at": "2026-11-07T08:32:14Z",
+   "pushed_at": "2026-11-07T08:49:29Z",
    "referrers": [
     {
      "count": 12,
@@ -4380,7 +4384,7 @@
     "/uptime/"
    ],
    "pages_url": "https://serbenda.github.io/uptime/",
-   "pushed_at": "2026-11-07T08:40:37Z",
+   "pushed_at": "2026-11-07T11:40:44Z",
    "referrers": [
     {
      "count": 12,
@@ -4475,8 +4479,8 @@
   "2026-11-04": 1537,
   "2026-11-05": 1602,
   "2026-11-06": 1651,
-  "2026-11-07": 1660
+  "2026-11-07": 1674
  },
- "updated": "2026-11-07T08:41:01+00:00",
+ "updated": "2026-11-07T11:44:56+00:00",
  "user": "serbenda"
 }
