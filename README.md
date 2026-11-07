@@ -214,9 +214,9 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 ## ⚡ Recent activity
 
 <!-- ACTIVITY:START -->
+- **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(updated today)</sub>
 - **[alvaros](https://github.com/serbenda/alvaros)** · `JavaScript` — No description yet. <sub>(updated today)</sub>
-- **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
 - **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated today)</sub>
 - **[despensa](https://github.com/serbenda/despensa)** · `JavaScript` — Guía práctica de alimentación para toda la familia: perder peso sin dietas milagro, comer bien de pequeños y rendir entrenando. Basada en fuentes públicas. <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
