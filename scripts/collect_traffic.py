@@ -135,7 +135,10 @@ def goat_count(path: str) -> int | None:
 # GC_DAYS days: phone vs computer, countries and where visitors come from, for the whole
 # site and for each project. Without the key this part is skipped.
 GC_DAYS = 30
-PHONE_SIZES = {"phones", "tablets and large phones"}
+# The sizes page answers with ids and no names: phone (up to 600px), tablet (up to 1000px),
+# desktop, desktophd and unknown
+PHONE_SIZES = {"phone", "tablet"}
+COMPUTER_SIZES = {"desktop", "desktophd"}
 
 
 def gc_api(page: str, token: str, start: str, end: str, paths: list[str] | None = None, limit: int = 10) -> list[dict]:
@@ -155,19 +158,25 @@ def gc_api(page: str, token: str, start: str, end: str, paths: list[str] | None 
         return []
     finally:
         time.sleep(0.4)   # well under the API rate limit
-    return [{"name": x.get("name") or "(unknown)", "count": int(x.get("count") or 0)} for x in stats if x.get("count")]
+    # No name means no referrer (direct visits) or no screen size: kept as "(unknown)", the id stays
+    return [{"id": x.get("id") or "", "name": x.get("name") or "(unknown)", "count": int(x.get("count") or 0)}
+            for x in stats if x.get("count")]
 
 
 def devices(sizes: list[dict]) -> dict:
     """Screen sizes grouped into phone (and tablet) vs computer."""
     out = {"phone": 0, "computer": 0}
     for x in sizes:
-        name = x["name"].lower()
-        if name in PHONE_SIZES:
+        if x["id"] in PHONE_SIZES:
             out["phone"] += x["count"]
-        elif "computer" in name:
+        elif x["id"] in COMPUTER_SIZES:
             out["computer"] += x["count"]
     return out
+
+
+def strip_ids(stats: list[dict]) -> list[dict]:
+    """Only name and count are stored for countries and referrers."""
+    return [{"name": x["name"], "count": x["count"]} for x in stats]
 
 
 def collect_gc(data: dict, now: datetime) -> None:
@@ -181,8 +190,8 @@ def collect_gc(data: dict, now: datetime) -> None:
     site = {
         "days": GC_DAYS, "start": span[0][:10], "end": span[1][:10],
         "devices": devices(gc_api("sizes", token, *span)),
-        "countries": gc_api("locations", token, *span, limit=12),
-        "referrers": gc_api("toprefs", token, *span, limit=12),
+        "countries": strip_ids(gc_api("locations", token, *span, limit=12)),
+        "referrers": strip_ids(gc_api("toprefs", token, *span, limit=20)),
     }
     if not any(site["devices"].values()) and not site["countries"]:
         print("::warning title=collect_traffic::The GoatCounter API returned nothing: check GOATCOUNTER_TOKEN.")
@@ -195,7 +204,7 @@ def collect_gc(data: dict, now: datetime) -> None:
         names = [p.rstrip("/") or "/" for p in entry.get("pages_paths") or [entry.get("pages_path", f"/{name}/")]]
         entry["gc"] = {
             "devices": devices(gc_api("sizes", token, *span, paths=names)),
-            "referrers": gc_api("toprefs", token, *span, paths=names, limit=5),
+            "referrers": strip_ids(gc_api("toprefs", token, *span, paths=names, limit=10)),
         }
 
 
