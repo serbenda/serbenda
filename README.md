@@ -35,6 +35,15 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <table>
 <tr>
 <td width="50%" valign="top">
+<a href="https://bendi.dev/alvaros/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/alvaros.webp" alt="Álvaro&#x27;s Gastrobar" width="100%"></a>
+
+**Álvaro's Gastrobar**<br>
+<sub>A week behind the bar at Álvaro's Gastrobar: mini-games with Blanca and the whole team, and the coin game against Blanca. For kids, grandparents and friendly rivalries.</sub>
+
+<a href="https://bendi.dev/alvaros/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/alvaros">Code</a>
+
+</td>
+<td width="50%" valign="top">
 <a href="https://bendi.dev/dungeons-and-deployments/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/dungeons-and-deployments.webp" alt="Dungeons &amp; Deployments" width="100%"></a>
 
 **Dungeons & Deployments**<br>
@@ -43,6 +52,8 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/dungeons-and-deployments/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/dungeons-and-deployments">Code</a>
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://bendi.dev/chapas/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/chapas.webp" alt="La Vuelta de Chapas" width="100%"></a>
 
@@ -52,8 +63,6 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/chapas/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/chapas">Code</a>
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 <a href="https://bendi.dev/school-rush/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/school-rush.webp" alt="School Rush" width="100%"></a>
 
@@ -63,6 +72,8 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/school-rush/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/school-rush">Code</a>
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://bendi.dev/hemiciclo-fighters/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/hemiciclo-fighters.webp" alt="Hemiciclo Fighters" width="100%"></a>
 
@@ -72,8 +83,6 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/hemiciclo-fighters/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/hemiciclo-fighters">Code</a>
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 <a href="https://bendi.dev/story-reader/"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/story-reader.webp" alt="La biblioteca mágica" width="100%"></a>
 
@@ -83,6 +92,8 @@ They all run in the browser, phones included. Nothing to install and no ads.
 <a href="https://bendi.dev/story-reader/"><b>▶ Play</b></a> · <a href="https://github.com/serbenda/story-reader">Code</a>
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/serbenda/deploy-quest"><img src="https://raw.githubusercontent.com/serbenda/serbenda.github.io/main/img/games/deploy-quest.webp" alt="Deploy Quest" width="100%"></a>
 
@@ -204,10 +215,10 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(updated today)</sub>
+- **[alvaros](https://github.com/serbenda/alvaros)** · `JavaScript` — No description yet. <sub>(updated today)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
-- **[ayudas](https://github.com/serbenda/ayudas)** · `JavaScript` · [▶ demo](https://ayudas.bendi.dev/) — Find out which public benefits you may be entitled to in Spain. A few questions, step-by-step guidance, no sign-up and nothing leaves your browser. <sub>(updated today)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 3 days ago)</sub>
-- **[radio](https://github.com/serbenda/radio)** · `JavaScript` — Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado. <sub>(updated 3 days ago)</sub>
+- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated today)</sub>
+- **[despensa](https://github.com/serbenda/despensa)** · `JavaScript` — Guía práctica de alimentación para toda la familia: perder peso sin dietas milagro, comer bien de pequeños y rendir entrenando. Basada en fuentes públicas. <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
