@@ -216,9 +216,9 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `JavaScript` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(updated today)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 1 day ago)</sub>
-- **[alvaros](https://github.com/serbenda/alvaros)** · `JavaScript` — No description yet. <sub>(updated 1 day ago)</sub>
-- **[school-rush](https://github.com/serbenda/school-rush)** · `JavaScript` · ⭐ 1 — Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰ <sub>(updated 2 days ago)</sub>
+- **[snowlog](https://github.com/serbenda/snowlog)** — No description yet. <sub>(updated today)</sub>
+- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 2 days ago)</sub>
+- **[alvaros](https://github.com/serbenda/alvaros)** · `JavaScript` — No description yet. <sub>(updated 2 days ago)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
