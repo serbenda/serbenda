@@ -2,11 +2,11 @@
  "gc": {
   "countries": [
    {
-    "count": 1918,
+    "count": 1928,
     "name": "Spain"
    },
    {
-    "count": 66,
+    "count": 68,
     "name": "United States"
    },
    {
@@ -52,13 +52,13 @@
   ],
   "days": 30,
   "devices": {
-   "computer": 555,
-   "phone": 1543
+   "computer": 559,
+   "phone": 1552
   },
-  "end": "2026-11-19",
+  "end": "2026-11-20",
   "referrers": [
    {
-    "count": 630,
+    "count": 636,
     "name": "(unknown)"
    },
    {
@@ -66,11 +66,11 @@
     "name": "www.linkedin.com"
    },
    {
-    "count": 283,
+    "count": 284,
     "name": "hucha.bendi.dev"
    },
    {
-    "count": 90,
+    "count": 91,
     "name": "com.linkedin.android"
    },
    {
@@ -90,15 +90,15 @@
     "name": "bolsillo.bendi.dev"
    },
    {
-    "count": 33,
+    "count": 34,
     "name": "hucha.bendi.dev/presupuesto"
    },
    {
-    "count": 31,
+    "count": 33,
     "name": "ayudas.bendi.dev"
    },
    {
-    "count": 17,
+    "count": 18,
     "name": "hucha.bendi.dev/lupa"
    },
    {
@@ -138,7 +138,7 @@
     "name": "bolsillo.bendi.dev/ahorro"
    }
   ],
-  "start": "2026-10-20"
+  "start": "2026-10-21"
  },
  "goatcounter": "serbenda",
  "repos": {
@@ -252,12 +252,12 @@
    "description": "",
    "gc": {
     "devices": {
-     "computer": 7,
+     "computer": 8,
      "phone": 42
     },
     "referrers": [
      {
-      "count": 45,
+      "count": 46,
       "name": "(unknown)"
      },
      {
@@ -289,7 +289,8 @@
     "2026-11-16": 49,
     "2026-11-17": 49,
     "2026-11-18": 49,
-    "2026-11-19": 49
+    "2026-11-19": 50,
+    "2026-11-20": 50
    },
    "pages_path": "/alvaros/",
    "pages_paths": [
@@ -317,7 +318,8 @@
     "2026-11-16": 28,
     "2026-11-17": 28,
     "2026-11-18": 28,
-    "2026-11-19": 28
+    "2026-11-19": 28,
+    "2026-11-20": 28
    },
    "pushed_at": "2026-11-07T14:09:34Z",
    "referrers": [
@@ -562,6 +564,10 @@
     "2026-11-18": [
      12,
      6
+    ],
+    "2026-11-19": [
+     18,
+     9
     ]
    },
    "description": "Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando.",
@@ -599,15 +605,16 @@
     "2026-11-15": 1,
     "2026-11-16": 1,
     "2026-11-17": 4,
-    "2026-11-18": 4,
-    "2026-11-19": 5
+    "2026-11-18": 5,
+    "2026-11-19": 5,
+    "2026-11-20": 5
    },
    "pages_path": "/atalaya/",
    "pages_paths": [
     "/atalaya/"
    ],
    "pages_url": "https://serbenda.github.io/atalaya/",
-   "pushed_at": "2026-11-19T09:27:33Z",
+   "pushed_at": "2026-11-20T08:36:33Z",
    "referrers": [
     {
      "count": 6,
@@ -737,6 +744,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -855,11 +866,11 @@
    "gc": {
     "devices": {
      "computer": 19,
-     "phone": 75
+     "phone": 78
     },
     "referrers": [
      {
-      "count": 55,
+      "count": 56,
       "name": "(unknown)"
      },
      {
@@ -867,7 +878,7 @@
       "name": "www.linkedin.com"
      },
      {
-      "count": 11,
+      "count": 12,
       "name": "com.linkedin.android"
      },
      {
@@ -881,6 +892,10 @@
      {
       "count": 2,
       "name": "ayudas.bendi.dev/catalogo"
+     },
+     {
+      "count": 1,
+      "name": "ayudas.bendi.dev"
      },
      {
       "count": 1,
@@ -914,8 +929,9 @@
     "2026-11-15": 122,
     "2026-11-16": 125,
     "2026-11-17": 128,
-    "2026-11-18": 128,
-    "2026-11-19": 94
+    "2026-11-18": 139,
+    "2026-11-19": 142,
+    "2026-11-20": 145
    },
    "pages_path": "/ayudas/",
    "pages_paths": [
@@ -1180,6 +1196,10 @@
     "2026-11-18": [
      1,
      1
+    ],
+    "2026-11-19": [
+     1,
+     1
     ]
    },
    "description": "A Python tool designed to extract transaction data from Bankinter VISA card statements in PDF format and convert it into a structured CSV file for easy analysis.",
@@ -1330,6 +1350,10 @@
      0
     ],
     "2026-11-18": [
+     0,
+     0
+    ],
+    "2026-11-19": [
      0,
      0
     ]
@@ -1542,7 +1566,8 @@
     "2026-11-16": 127,
     "2026-11-17": 127,
     "2026-11-18": 127,
-    "2026-11-19": 127
+    "2026-11-19": 127,
+    "2026-11-20": 127
    },
    "pages_path": "/bolsillo/",
    "pages_paths": [
@@ -1770,6 +1795,10 @@
     "2026-11-18": [
      382,
      59
+    ],
+    "2026-11-19": [
+     534,
+     106
     ]
    },
    "description": "",
@@ -1803,17 +1832,18 @@
     "2026-11-16": 0,
     "2026-11-17": 0,
     "2026-11-18": 0,
-    "2026-11-19": 0
+    "2026-11-19": 0,
+    "2026-11-20": 0
    },
    "pages_path": "/bsketch/",
    "pages_paths": [
     "/bsketch/"
    ],
    "pages_url": "https://serbenda.github.io/bsketch/",
-   "pushed_at": "2026-11-19T09:52:30Z",
+   "pushed_at": "2026-11-20T14:03:20Z",
    "referrers": [
     {
-     "count": 8,
+     "count": 11,
      "referrer": "github.com",
      "uniques": 2
     }
@@ -1879,6 +1909,10 @@
     ],
     "2026-11-18": [
      82,
+     1
+    ],
+    "2026-11-19": [
+     64,
      1
     ]
    }
@@ -2020,6 +2054,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     2,
+     2
     ]
    },
    "description": "Juego de chapas de los 80: la vuelta ciclista por turnos, para jugar en el móvil o la tablet. Hecho para jugar con mis hijas.",
@@ -2065,8 +2103,9 @@
     "2026-11-15": 13,
     "2026-11-16": 13,
     "2026-11-17": 13,
-    "2026-11-18": 14,
-    "2026-11-19": 15
+    "2026-11-18": 15,
+    "2026-11-19": 15,
+    "2026-11-20": 15
    },
    "pages_path": "/chapas/",
    "pages_paths": [
@@ -2094,7 +2133,8 @@
     "2026-11-16": 9,
     "2026-11-17": 9,
     "2026-11-18": 9,
-    "2026-11-19": 9
+    "2026-11-19": 9,
+    "2026-11-20": 9
    },
    "pushed_at": "2026-10-30T12:53:31Z",
    "referrers": [],
@@ -2236,6 +2276,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -2374,6 +2418,10 @@
      0
     ],
     "2026-11-18": [
+     0,
+     0
+    ],
+    "2026-11-19": [
      0,
      0
     ]
@@ -2522,6 +2570,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -2650,6 +2702,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     1,
+     1
     ]
    },
    "description": "Guía práctica de alimentación para toda la familia: perder peso sin dietas milagro, comer bien de pequeños y rendir entrenando. Basada en fuentes públicas.",
@@ -2683,7 +2739,8 @@
     "2026-11-16": 11,
     "2026-11-17": 11,
     "2026-11-18": 11,
-    "2026-11-19": 11
+    "2026-11-19": 11,
+    "2026-11-20": 11
    },
    "pages_path": "/despensa/",
    "pages_paths": [
@@ -2826,6 +2883,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -2966,6 +3027,10 @@
     "2026-11-18": [
      2,
      2
+    ],
+    "2026-11-19": [
+     4,
+     4
     ]
    },
    "description": "Beat 'em up de fantasía en pixel art: cuatro héroes del equipo de desarrollo, solos o en cooperativo, cruzan las catacumbas del CPD, las cuevas del Mainframe y la nube. Sin dependencias, funciona en el navegador y en el móvil.",
@@ -3016,7 +3081,8 @@
     "2026-11-16": 20,
     "2026-11-17": 21,
     "2026-11-18": 22,
-    "2026-11-19": 22
+    "2026-11-19": 22,
+    "2026-11-20": 22
    },
    "pages_path": "/dungeons-and-deployments/",
    "pages_paths": [
@@ -3044,7 +3110,8 @@
     "2026-11-16": 11,
     "2026-11-17": 11,
     "2026-11-18": 11,
-    "2026-11-19": 11
+    "2026-11-19": 11,
+    "2026-11-20": 11
    },
    "pushed_at": "2026-10-30T14:03:11Z",
    "referrers": [],
@@ -3186,6 +3253,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -3324,6 +3395,10 @@
      0
     ],
     "2026-11-18": [
+     0,
+     0
+    ],
+    "2026-11-19": [
      0,
      0
     ]
@@ -3483,6 +3558,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -3623,6 +3702,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     1,
+     1
     ]
    },
    "description": "Juego de lucha 2D estilo recreativa de los 90 con políticos ficticios. HTML + JS, sin dependencias.",
@@ -3661,7 +3744,8 @@
     "2026-11-16": 2,
     "2026-11-17": 2,
     "2026-11-18": 2,
-    "2026-11-19": 2
+    "2026-11-19": 2,
+    "2026-11-20": 2
    },
    "pages_path": "/hemiciclo-fighters/",
    "pages_paths": [
@@ -3689,7 +3773,8 @@
     "2026-11-16": 2,
     "2026-11-17": 2,
     "2026-11-18": 2,
-    "2026-11-19": 2
+    "2026-11-19": 2,
+    "2026-11-20": 2
    },
    "pushed_at": "2026-10-30T12:52:52Z",
    "referrers": [],
@@ -3831,6 +3916,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -3963,13 +4052,17 @@
     "2026-11-18": [
      1,
      1
+    ],
+    "2026-11-19": [
+     2,
+     2
     ]
    },
    "description": "Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente.",
    "gc": {
     "devices": {
-     "computer": 242,
-     "phone": 1081
+     "computer": 244,
+     "phone": 1085
     },
     "referrers": [
      {
@@ -3977,11 +4070,11 @@
       "name": "www.linkedin.com"
      },
      {
-      "count": 282,
+      "count": 283,
       "name": "hucha.bendi.dev"
      },
      {
-      "count": 214,
+      "count": 216,
       "name": "(unknown)"
      },
      {
@@ -4001,11 +4094,11 @@
       "name": "hucha.bendi.dev/quien-gasta"
      },
      {
-      "count": 33,
+      "count": 34,
       "name": "hucha.bendi.dev/presupuesto"
      },
      {
-      "count": 17,
+      "count": 18,
       "name": "hucha.bendi.dev/lupa"
      },
      {
@@ -4036,8 +4129,9 @@
     "2026-11-15": 1319,
     "2026-11-16": 1321,
     "2026-11-17": 1322,
-    "2026-11-18": 1322,
-    "2026-11-19": 1323
+    "2026-11-18": 1323,
+    "2026-11-19": 1325,
+    "2026-11-20": 1329
    },
    "pages_path": "/hucha/",
    "pages_paths": [
@@ -4058,9 +4152,9 @@
    "pushed_at": "2026-11-07T15:52:50Z",
    "referrers": [
     {
-     "count": 12,
+     "count": 10,
      "referrer": "github.com",
-     "uniques": 2
+     "uniques": 1
     }
    ],
    "stars": 0,
@@ -4191,6 +4285,10 @@
      1
     ],
     "2026-11-18": [
+     0,
+     0
+    ],
+    "2026-11-19": [
      0,
      0
     ]
@@ -4325,6 +4423,10 @@
     "2026-11-18": [
      6,
      1
+    ],
+    "2026-11-19": [
+     6,
+     1
     ]
    },
    "description": "Mapa en tiempo real de los autobuses de EMT Madrid que llegan a tus paradas: dónde están, cuánto les falta y si te da tiempo a salir.",
@@ -4358,7 +4460,8 @@
     "2026-11-16": 4,
     "2026-11-17": 4,
     "2026-11-18": 4,
-    "2026-11-19": 4
+    "2026-11-19": 4,
+    "2026-11-20": 4
    },
    "pages_path": "/marquesina/",
    "pages_paths": [
@@ -4368,7 +4471,7 @@
    "pushed_at": "2026-11-07T08:37:40Z",
    "referrers": [
     {
-     "count": 3,
+     "count": 2,
      "referrer": "github.com",
      "uniques": 2
     },
@@ -4513,6 +4616,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     1,
+     1
     ]
    }
   },
@@ -4924,6 +5031,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    },
    "description": "Iniciación a la radioafición: escucha estaciones de todo el mundo, aprende cómo funciona y da tus primeros pasos como radioaficionado.",
@@ -4994,7 +5105,8 @@
     "2026-11-16": 63,
     "2026-11-17": 63,
     "2026-11-18": 63,
-    "2026-11-19": 63
+    "2026-11-19": 63,
+    "2026-11-20": 63
    },
    "pages_path": "/radio/",
    "pages_paths": [
@@ -5015,7 +5127,13 @@
    ],
    "pages_url": "https://radio.bendi.dev/",
    "pushed_at": "2026-11-02T17:13:56Z",
-   "referrers": [],
+   "referrers": [
+    {
+     "count": 1,
+     "referrer": "github.com",
+     "uniques": 1
+    }
+   ],
    "stars": 0,
    "url": "https://github.com/serbenda/radio",
    "views": {
@@ -5142,6 +5260,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     1,
+     1
     ]
    }
   },
@@ -5282,6 +5404,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     3,
+     3
     ]
    },
    "description": "Despierta, desayuna, asea, viste y esquiva el tráfico: ¡lleva a los peques al cole antes de la campana! 🏫⏰",
@@ -5320,7 +5446,8 @@
     "2026-11-16": 9,
     "2026-11-17": 9,
     "2026-11-18": 9,
-    "2026-11-19": 9
+    "2026-11-19": 9,
+    "2026-11-20": 9
    },
    "pages_path": "/school-rush/",
    "pages_paths": [
@@ -5348,7 +5475,8 @@
     "2026-11-16": 8,
     "2026-11-17": 8,
     "2026-11-18": 8,
-    "2026-11-19": 8
+    "2026-11-19": 8,
+    "2026-11-20": 8
    },
    "pushed_at": "2026-11-07T09:17:48Z",
    "referrers": [],
@@ -5488,6 +5616,10 @@
      0
     ],
     "2026-11-18": [
+     0,
+     0
+    ],
+    "2026-11-19": [
      0,
      0
     ]
@@ -5663,14 +5795,15 @@
     "2026-11-16": 0,
     "2026-11-17": 0,
     "2026-11-18": 0,
-    "2026-11-19": 0
+    "2026-11-19": 0,
+    "2026-11-20": 0
    },
    "pages_path": "/serbenda/",
    "pages_paths": [
     "/serbenda/"
    ],
    "pages_url": "https://serbenda.github.io/serbenda/",
-   "pushed_at": "2026-11-18T14:04:23Z",
+   "pushed_at": "2026-11-19T14:29:35Z",
    "referrers": [],
    "stars": 0,
    "url": "https://github.com/serbenda/serbenda",
@@ -5946,6 +6079,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    },
    "description": "Bendi’s personal site: about me, an arcade zone with my games and their visits · bendi.dev",
@@ -5979,7 +6116,8 @@
     "2026-11-16": 155,
     "2026-11-17": 158,
     "2026-11-18": 162,
-    "2026-11-19": 0
+    "2026-11-19": 164,
+    "2026-11-20": 165
    },
    "pages_path": "/",
    "pages_paths": [
@@ -6132,6 +6270,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -6261,14 +6403,15 @@
     "2026-11-16": 0,
     "2026-11-17": 0,
     "2026-11-18": 0,
-    "2026-11-19": 0
+    "2026-11-19": 0,
+    "2026-11-20": 0
    },
    "pages_path": "/snowlog/",
    "pages_paths": [
     "/snowlog/"
    ],
    "pages_url": "https://serbenda.github.io/snowlog/",
-   "pushed_at": "2026-11-17T21:39:37Z",
+   "pushed_at": "2026-11-19T16:41:23Z",
    "referrers": [
     {
      "count": 4,
@@ -6531,7 +6674,8 @@
     "2026-11-16": 1,
     "2026-11-17": 1,
     "2026-11-18": 1,
-    "2026-11-19": 1
+    "2026-11-19": 1,
+    "2026-11-20": 1
    },
    "pages_path": "/stand-up/",
    "pages_paths": [
@@ -6812,6 +6956,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    },
    "description": "Cuentos interactivos para leer en voz alta, pensados para la dislexia: pistas al azar, 4 niveles y reconocimiento de voz.",
@@ -6858,7 +7006,8 @@
     "2026-11-16": 35,
     "2026-11-17": 35,
     "2026-11-18": 35,
-    "2026-11-19": 35
+    "2026-11-19": 35,
+    "2026-11-20": 35
    },
    "pages_path": "/story-reader/",
    "pages_paths": [
@@ -6886,7 +7035,8 @@
     "2026-11-16": 15,
     "2026-11-17": 15,
     "2026-11-18": 15,
-    "2026-11-19": 15
+    "2026-11-19": 15,
+    "2026-11-20": 15
    },
    "pushed_at": "2026-11-01T20:37:20Z",
    "referrers": [
@@ -7034,6 +7184,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   },
@@ -7158,6 +7312,10 @@
     "2026-11-18": [
      786,
      213
+    ],
+    "2026-11-19": [
+     849,
+     234
     ]
    },
    "description": "Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard.",
@@ -7196,17 +7354,18 @@
     "2026-11-16": 5,
     "2026-11-17": 5,
     "2026-11-18": 5,
-    "2026-11-19": 5
+    "2026-11-19": 5,
+    "2026-11-20": 5
    },
    "pages_path": "/uptime/",
    "pages_paths": [
     "/uptime/"
    ],
    "pages_url": "https://serbenda.github.io/uptime/",
-   "pushed_at": "2026-11-19T14:20:39Z",
+   "pushed_at": "2026-11-20T14:01:14Z",
    "referrers": [
     {
-     "count": 6,
+     "count": 5,
      "referrer": "github.com",
      "uniques": 2
     }
@@ -7333,6 +7492,10 @@
     "2026-11-18": [
      0,
      0
+    ],
+    "2026-11-19": [
+     0,
+     0
     ]
    }
   }
@@ -7357,9 +7520,10 @@
   "2026-11-15": 1933,
   "2026-11-16": 1941,
   "2026-11-17": 1952,
-  "2026-11-18": 1958,
-  "2026-11-19": 2098
+  "2026-11-18": 1972,
+  "2026-11-19": 1980,
+  "2026-11-20": 1988
  },
- "updated": "2026-11-19T14:27:43+00:00",
+ "updated": "2026-11-20T14:03:39+00:00",
  "user": "serbenda"
 }
