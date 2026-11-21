@@ -214,11 +214,11 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 ## ⚡ Actividad reciente
 
 <!-- ACTIVITY:START -->
-- **[bsketch](https://github.com/serbenda/bsketch)** · `Shell` · [▶ demo](http://bendi.dev/bsketch/) — Sin descripción todavía. <sub>(actualizado hoy)</sub>
 - **[uptime](https://github.com/serbenda/uptime)** · `Python` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(actualizado hoy)</sub>
+- **[bsketch](https://github.com/serbenda/bsketch)** · `JavaScript` · [▶ demo](http://bendi.dev/bsketch/) — Sin descripción todavía. <sub>(actualizado hoy)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(actualizado hoy)</sub>
 - **[snowlog](https://github.com/serbenda/snowlog)** · `JavaScript` — Sin descripción todavía. <sub>(actualizado hoy)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(actualizado hace 12 días)</sub>
+- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(actualizado hace 13 días)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
