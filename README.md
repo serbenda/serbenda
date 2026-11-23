@@ -215,10 +215,10 @@ Off the clock: small games with my daughters, a homelab that keeps growing and a
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `Python` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(updated today)</sub>
-- **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
 - **[bsketch](https://github.com/serbenda/bsketch)** · `JavaScript` · [▶ demo](http://bendi.dev/bsketch/) — No description yet. <sub>(updated today)</sub>
-- **[snowlog](https://github.com/serbenda/snowlog)** · `JavaScript` — No description yet. <sub>(updated 1 day ago)</sub>
-- **[hucha](https://github.com/serbenda/hucha)** · `JavaScript` — Dónde va el dinero público en España, explicado claro. Datos oficiales actualizados automáticamente. <sub>(updated 14 days ago)</sub>
+- **[project-template](https://github.com/serbenda/project-template)** · `Shell` — A Claude Code template for any new project: a sandboxed agent behind a guard hook, git hooks and CI (Gitleaks, Semgrep, OSV-Scanner), with light and full modes for any stack. <sub>(updated today)</sub>
+- **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(updated today)</sub>
+- **[snowlog](https://github.com/serbenda/snowlog)** · `JavaScript` — No description yet. <sub>(updated today)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
