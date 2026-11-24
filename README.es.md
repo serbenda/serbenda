@@ -215,10 +215,10 @@ Fuera del trabajo: juegos pequeños con mis hijas, un homelab que no para de cre
 
 <!-- ACTIVITY:START -->
 - **[uptime](https://github.com/serbenda/uptime)** · `Python` · [▶ demo](https://uptime.bendi.dev/) — Real-time status of the IT services we use every day: GitHub, Microsoft 365, Azure, Red Hat, Google Cloud, AWS, Cloudflare, and more. Track incidents, scheduled maintenance, and service outages—all in one dashboard. <sub>(actualizado hoy)</sub>
-- **[bsketch](https://github.com/serbenda/bsketch)** · `JavaScript` · [▶ demo](http://bendi.dev/bsketch/) — Sin descripción todavía. <sub>(actualizado hoy)</sub>
-- **[project-template](https://github.com/serbenda/project-template)** · `Shell` — A Claude Code template for any new project: a sandboxed agent behind a guard hook, git hooks and CI (Gitleaks, Semgrep, OSV-Scanner), with light and full modes for any stack. <sub>(actualizado hoy)</sub>
 - **[atalaya](https://github.com/serbenda/atalaya)** · `Python` — Visor de la situación mundial: mapa en tiempo real con conflictos, noticias y catástrofes naturales, y un nivel de alerta por país que detecta cuándo algo se está calentando. <sub>(actualizado hoy)</sub>
-- **[snowlog](https://github.com/serbenda/snowlog)** · `JavaScript` — Sin descripción todavía. <sub>(actualizado hoy)</sub>
+- **[bsketch](https://github.com/serbenda/bsketch)** · `JavaScript` · [▶ demo](http://bendi.dev/bsketch/) — Sin descripción todavía. <sub>(actualizado hace 1 día)</sub>
+- **[project-template](https://github.com/serbenda/project-template)** · `Shell` — A Claude Code template for any new project: a sandboxed agent behind a guard hook, git hooks and CI (Gitleaks, Semgrep, OSV-Scanner), with light and full modes for any stack. <sub>(actualizado hace 1 día)</sub>
+- **[snowlog](https://github.com/serbenda/snowlog)** · `JavaScript` — Sin descripción todavía. <sub>(actualizado hace 1 día)</sub>
 <!-- ACTIVITY:END -->
 
 <p align="center">
